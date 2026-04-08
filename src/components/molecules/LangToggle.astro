@@ -1,0 +1,23 @@
+---
+import clsx from 'clsx';
+
+interface Props {
+  currentLang?: 'es' | 'en';
+  class?: string;
+}
+
+const { currentLang = 'es', class: className } = Astro.props;
+
+const baseBtn = "px-3 py-1.5 rounded-md text-[13px] font-bold transition-all duration-200 cursor-pointer";
+const activeBtn = "bg-white text-[#1B4F72] shadow-[0_1px_3px_rgba(0,0,0,0.08)]";
+const inactiveBtn = "bg-transparent text-[#868E96] hover:text-[#1B4F72]";
+---
+
+<div class={clsx("flex gap-1 bg-[#F1F3F5] rounded-lg p-[3px]", className)}>
+  <button class={clsx(baseBtn, currentLang === 'es' ? activeBtn : inactiveBtn)}>
+    ES
+  </button>
+  <button class={clsx(baseBtn, currentLang === 'en' ? activeBtn : inactiveBtn)}>
+    EN
+  </button>
+</div>

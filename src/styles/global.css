@@ -13,4 +13,54 @@
 
   --font-heading: "Plus Jakarta Sans Variable", sans-serif;
   --font-body: "DM Sans Variable", sans-serif;
+
+  /* Custom Brand Gradients */
+  --background-brand-orange-grad: linear-gradient(135deg, #f76707, #e8590c);
+  --background-brand-blue-grad: linear-gradient(135deg, #1a6faf, #2e86c1);
+  --background-hero-overlay: linear-gradient(
+    135deg,
+    rgba(12, 35, 64, 0.93) 0%,
+    rgba(10, 22, 40, 0.88) 50%,
+    rgba(13, 40, 71, 0.85) 100%
+  );
+  --background-urgency-grad: linear-gradient(135deg, #e03131, #e8590c);
+
+  /* Keyframe Animations */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(46, 204, 113, 0); }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-blink: blink 1.5s ease-in-out infinite;
+  --animate-pulse-custom: pulse 2s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out both;
+}
+
+@layer utilities {
+  .bg-hero-overlay {
+    background: var(--background-hero-overlay);
+  }
+  .bg-brand-orange-grad {
+    background: var(--background-brand-orange-grad);
+  }
+  .bg-brand-blue-grad {
+    background: var(--background-brand-blue-grad);
+  }
+  .bg-urgency-grad {
+    background: var(--background-urgency-grad);
+  }
 }

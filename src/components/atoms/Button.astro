@@ -1,0 +1,39 @@
+---
+import clsx from 'clsx';
+
+interface Props {
+  href?: string;
+  type?: 'button' | 'submit';
+  variant?: 'primary' | 'secondary' | 'navy';
+  class?: string;
+}
+
+const { 
+  href, 
+  type = 'button', 
+  variant = 'primary', 
+  class: className,
+  ...rest 
+} = Astro.props;
+
+const baseStyles = "inline-flex items-center justify-center gap-2.5 rounded-xl font-heading text-[17px] font-bold transition-all duration-250 cursor-pointer hover:-translate-y-0.5";
+
+const variants = {
+  primary: "bg-brand-orange-grad text-white px-8 py-4 shadow-[0_4px_20px_rgba(247,103,7,0.35)] hover:shadow-[0_8px_30px_rgba(247,103,7,0.45)]",
+  secondary: "bg-white/10 border border-white/20 text-white px-7 py-4 hover:bg-white/15",
+  navy: "bg-brand-navy text-white px-5 py-2.5 hover:bg-[#1B4F72]"
+};
+
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag
+  href={href}
+  type={href ? undefined : type}
+  class={clsx(baseStyles, variants[variant], className)}
+  {...rest}
+>
+  <slot name="before" />
+  <slot />
+  <slot name="after" />
+</Tag>

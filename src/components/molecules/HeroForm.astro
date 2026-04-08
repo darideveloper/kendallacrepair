@@ -1,0 +1,70 @@
+---
+import clsx from 'clsx';
+import Button from '../atoms/Button.astro';
+import Input from '../atoms/Input.astro';
+import Textarea from '../atoms/Textarea.astro';
+
+interface Props {
+  class?: string;
+  id?: string;
+}
+
+const { class: className, id } = Astro.props;
+---
+
+<div id={id} class={clsx(
+  "hero-form-card relative overflow-hidden bg-white rounded-[20px] p-9 shadow-[0_20px_60px_rgba(0,0,0,0.15)] animate-fade-in-up",
+  "before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-gradient-to-r before:from-[#f76707] before:to-brand-blue",
+  className
+)}>
+  <div class="form-header text-center mb-7">
+    <h3 class="text-[22px] font-extrabold text-[#212529] mb-1.5 font-heading">Cotizacion Gratis</h3>
+    <p class="text-sm text-[#868e96]">Recibe respuesta en minutos</p>
+  </div>
+
+  <form id="hero-contact-form" class="flex flex-col gap-4">
+    <Input 
+      label="Tu Nombre" 
+      name="name" 
+      placeholder="Ej. Maria Gonzalez" 
+    />
+    <Input 
+      label="Telefono" 
+      name="phone" 
+      type="tel" 
+      placeholder="(305) 000-0000" 
+      required 
+    />
+    <Input 
+      label="Email (opcional)" 
+      name="email" 
+      type="email" 
+      placeholder="tu@email.com" 
+    />
+    <Textarea 
+      label="Cual es el problema?" 
+      name="message" 
+      placeholder="Ej. Mi AC enciende pero no enfria..." 
+    />
+
+    <Button type="submit" class="w-full mt-2" variant="primary">
+      Solicita Tu Cotizacion Gratis &rarr;
+    </Button>
+    
+    <p class="text-center text-[12px] text-[#adb5bd] mt-3">
+      🔒 Tu informacion esta segura. Sin spam.
+    </p>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('hero-contact-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Handle form submission logic here (e.g., API call)
+      // For now, redirect to /thank-you as per instructions
+      window.location.href = '/thank-you';
+    });
+  }
+</script>
