@@ -1,9 +1,15 @@
 ---
 import clsx from 'clsx';
+import { Image } from 'astro:assets';
 import Badge from '../atoms/Badge.astro';
 import Button from '../atoms/Button.astro';
+import Icon from '../atoms/Icon.astro';
 import HeroForm from '../molecules/HeroForm.astro';
 import TrustItem from '../molecules/TrustItem.astro';
+import { SITE } from '../../constants/site';
+
+// Import hero image
+import heroImage from '../../assets/images/hero/foto-trane-single.jpg';
 
 interface Props {
   class?: string;
@@ -14,10 +20,12 @@ const { class: className } = Astro.props;
 
 <section class={clsx("hero relative min-h-[620px] flex items-center overflow-hidden", className)}>
   <div class="hero-bg absolute inset-0 z-0">
-    <img
-      src="/ui-design/foto-trane-single.jpg"
+    <Image
+      src={heroImage}
       alt="AC Repair Kendall"
       class="w-full h-full object-cover"
+      quality="high"
+      loading="eager"
     />
     <div class="absolute inset-0 bg-hero-overlay"></div>
   </div>
@@ -40,20 +48,8 @@ const { class: className } = Astro.props;
       </p>
       
       <div class="hero-ctas flex flex-wrap gap-3.5 mb-10">
-        <Button href="tel:+13055551234" variant="primary">
-          <svg
-            slot="before"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-          </svg>
+        <Button href={`tel:${SITE.phone.value}`} variant="primary">
+          <Icon name="phone" size={20} slot="before" />
           Llama Ahora — Estimado Gratis
         </Button>
         

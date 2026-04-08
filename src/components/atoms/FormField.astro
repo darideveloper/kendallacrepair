@@ -1,0 +1,21 @@
+---
+import clsx from 'clsx';
+
+interface Props {
+  label?: string;
+  for?: string;
+  required?: boolean;
+  class?: string;
+}
+
+const { label, for: id, required, class: className } = Astro.props;
+---
+
+<div class={clsx("flex flex-col gap-1.5", className)}>
+  {label && (
+    <label for={id} class="text-[13px] font-semibold text-[#495057]">
+      {label} {required && <span class="text-brand-red">*</span>}
+    </label>
+  )}
+  <slot />
+</div>

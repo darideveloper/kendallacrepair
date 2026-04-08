@@ -1,31 +1,4 @@
-# design-system Specification
-
-## Purpose
-TBD - created by archiving change apply-global-branding. Update Purpose after archive.
-## Requirements
-### Requirement: Design System Visualization
-The application SHALL provide a dedicated route to visualize the global branding and UI components.
-
-#### Scenario: Accessing the design system page in development
-- Given the application is running in development mode
-- When a user navigates to `/design-system`
-- Then the page should render sections for colors, typography, and logos
-
-#### Scenario: Accessing the design system page in production
-- Given the application is running in production mode
-- When a user navigates to `/design-system`
-- Then the application SHALL redirect to the 404 page
-
-#### Scenario: Color Palette Visibility
-- Given the design system page is rendered
-- When the color section is viewed
-- Then it should display swatches for Navy (#0C2340), Blue (#1A6FAF), Sky (#5DADE2), Orange (#F76707), and Red (#E03131)
-
-#### Scenario: Typography Showcase
-- Given the design system page is rendered
-- When the typography section is viewed
-- Then it should display samples of "Plus Jakarta Sans Variable" and "DM Sans Variable"
-
+## ADDED Requirements
 ### Requirement: Mandatory DRY and Atomic Design Patterns
 The application MUST follow DRY (Don't Repeat Yourself) and Atomic Design patterns for all UI development.
 
@@ -48,4 +21,3 @@ The application MUST follow DRY (Don't Repeat Yourself) and Atomic Design patter
 - Given a component requiring conditional styling or variant-based classes
 - When those classes are applied
 - Then the application MUST use the `clsx` library instead of template literals or Astro's `class:list` to ensure readability and consistency
-

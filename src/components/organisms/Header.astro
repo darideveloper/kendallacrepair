@@ -1,25 +1,20 @@
 ---
 import clsx from 'clsx';
 import Button from '../atoms/Button.astro';
+import Icon from '../atoms/Icon.astro';
 import LangToggle from '../molecules/LangToggle.astro';
+import { SITE, NAV_LINKS } from '../../constants/site';
 
 interface Props {
   class?: string;
 }
 
 const { class: className } = Astro.props;
-
-const navLinks = [
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#como-funciona', label: 'Como Funciona' },
-  { href: '#testimonios', label: 'Resenas' },
-  { href: '#faq', label: 'FAQ' },
-];
 ---
 
 <header class={clsx("header sticky top-0 z-[99] bg-white py-2 border-b border-[#E9ECEF] shadow-[0_1px_3px_rgba(0,0,0,0.08)]", className)}>
   <div class="header-inner max-w-[1200px] mx-auto px-6 flex items-center justify-between">
-    <a href="/" class="logo flex items-center">
+    <a href="/" class="logo flex items-center" aria-label={SITE.name}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="180" height="40" class="h-10 md:h-12 w-auto">
         <g transform="translate(8, 8)">
           <rect x="0" y="0" width="64" height="64" rx="14" fill="#1A6FAF"/>
@@ -42,7 +37,7 @@ const navLinks = [
 
     <nav class="hidden lg:block">
       <ul class="flex gap-7 list-none">
-        {navLinks.map((link) => (
+        {NAV_LINKS.map((link) => (
           <li>
             <a href={link.href} class="text-base font-medium text-[#495057] transition-colors hover:text-brand-blue font-body">
               {link.label}
@@ -54,31 +49,80 @@ const navLinks = [
 
     <div class="header-right flex items-center gap-4">
       <LangToggle class="hidden md:flex" />
-      <Button href="tel:+13055551234" variant="navy" class="md:px-5 md:py-2.5">
-        <svg
-          slot="before"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          width="18"
-          height="18"
-        >
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-        </svg>
-        <span class="hidden md:inline">(305) 555-1234</span>
+      <Button href={`tel:${SITE.phone.value}`} variant="navy" class="md:px-5 md:py-2.5">
+        <Icon name="phone" size={18} slot="before" />
+        <span class="hidden md:inline">{SITE.phone.display}</span>
       </Button>
       
-      <!-- Mobile Menu Toggle (to be implemented with functionality if needed) -->
-      <button class="lg:hidden p-2 text-[#495057]" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+      <button 
+        id="mobile-menu-toggle"
+        class="lg:hidden p-2 text-[#495057] focus:outline-none" 
+        aria-label="Abrir Menu"
+        aria-expanded="false"
+      >
+        <Icon name="menu" size={24} id="menu-icon-open" />
+        <Icon name="x" size={24} class="hidden" id="menu-icon-close" />
       </button>
     </div>
   </div>
+
+  <!-- Mobile Menu Drawer -->
+  <div 
+    id="mobile-menu" 
+    class="lg:hidden fixed inset-0 z-[100] bg-white translate-x-full transition-transform duration-300 ease-in-out pt-20"
+  >
+    <nav class="px-6">
+      <ul class="flex flex-col gap-6 list-none">
+        {NAV_LINKS.map((link) => (
+          <li>
+            <a href={link.href} class="mobile-nav-link text-xl font-bold text-[#0C2340] font-heading block border-b border-gray-100 pb-4">
+              {link.label}
+            </a>
+          </li>
+        ))}
+        <li class="pt-4">
+          <Button href={`tel:${SITE.phone.value}`} variant="primary" class="w-full">
+            <Icon name="phone" size={20} slot="before" />
+            Llamar Ahora
+          </Button>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const openIcon = document.getElementById('menu-icon-open');
+  const closeIcon = document.getElementById('menu-icon-close');
+  const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function toggleMenu() {
+    const isOpen = mobileMenu?.classList.contains('translate-x-0');
+    
+    if (isOpen) {
+      mobileMenu?.classList.replace('translate-x-0', 'translate-x-full');
+      openIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      toggleBtn?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    } else {
+      mobileMenu?.classList.replace('translate-x-full', 'translate-x-0');
+      openIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+      toggleBtn?.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  toggleBtn?.addEventListener('click', toggleMenu);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu?.classList.contains('translate-x-0')) {
+        toggleMenu();
+      }
+    });
+  });
+</script>

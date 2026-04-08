@@ -1,8 +1,4 @@
-# hero-section Specification
-
-## Purpose
-TBD - created by archiving change implement-hero-section. Update Purpose after archive.
-## Requirements
+## MODIFIED Requirements
 ### Requirement: Hero Layout
 The application SHALL provide a `Hero.astro` organism as the primary landing section.
 
@@ -22,18 +18,3 @@ The application SHALL provide a `Hero.astro` organism as the primary landing sec
 - When rendered on any device
 - Then it SHALL use Astro's native `<Image />` component for background image rendering
 - And it SHALL provide a valid background image at `src/assets/images/hero/foto-trane-single.jpg`
-
-### Requirement: Fixed Mobile Interaction
-The application SHALL provide fixed interaction points for mobile users.
-
-#### Scenario: Bottom call bar visibility
-- Given the application is viewed on a mobile device (max-width: 640px)
-- When the user scrolls the page
-- Then a fixed orange bar with a "Call Now" link SHALL be visible at the bottom of the viewport
-
-#### Scenario: Floating action buttons
-- Given the application is active
-- When rendered on any device
-- Then a floating WhatsApp button SHALL be anchored to the bottom-left corner
-- And a floating Chat button SHALL be anchored to the bottom-right corner
-

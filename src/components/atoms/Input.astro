@@ -1,5 +1,6 @@
 ---
 import clsx from 'clsx';
+import FormField from './FormField.astro';
 
 interface Props extends astroHTML.JSX.InputHTMLAttributes {
   label?: string;
@@ -9,16 +10,11 @@ const { label, id, class: className, required, ...rest } = Astro.props;
 const elementId = id || `input-${Math.random().toString(36).substr(2, 9)}`;
 ---
 
-<div class={clsx("flex flex-col gap-1.5", className)}>
-  {label && (
-    <label for={elementId} class="text-[13px] font-semibold text-[#495057]">
-      {label} {required && <span class="text-brand-red">*</span>}
-    </label>
-  )}
+<FormField label={label} for={elementId} required={required} class={className}>
   <input
     id={elementId}
     required={required}
     class="w-full px-4 py-3.5 bg-[#F8F9FA] border-2 border-[#E9ECEF] rounded-lg font-body text-base text-[#343A40] transition-all outline-none focus:border-brand-blue focus:bg-white focus:ring-3 focus:ring-brand-blue/12 placeholder:text-[#868E96]"
     {...rest}
   />
-</div>
+</FormField>

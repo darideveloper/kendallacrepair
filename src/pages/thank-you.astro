@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/atoms/Button.astro';
+import Icon from '../components/atoms/Icon.astro';
+import { SITE } from '../constants/site';
+---
+
+<Layout title={`Gracias | ${SITE.name}`} description="Tu solicitud ha sido recibida. Nos pondremos en contacto contigo pronto.">
+  <section class="min-h-[80vh] flex items-center justify-center px-6 py-20 bg-gray-50">
+    <div class="max-w-2xl w-full bg-white rounded-[32px] p-8 md:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.08)] text-center animate-fade-in-up">
+      <div class="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
+        <Icon name="check" size={48} />
+      </div>
+      
+      <h1 class="text-3xl md:text-5xl font-heading font-extrabold text-[#0C2340] mb-6 leading-tight">
+        ¡Tu solicitud ha sido recibida!
+      </h1>
+      
+      <p class="text-lg md:text-xl text-[#495057] mb-10 font-body leading-relaxed">
+        Gracias por confiar en Kendall AC Repairs. Uno de nuestros tecnicos revisara tu caso y te contactara en los proximos <span class="text-brand-orange font-bold">15-30 minutos</span>.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/" variant="navy" class="px-10">
+          Volver al Inicio
+        </Button>
+        <Button href={`tel:${SITE.phone.value}`} variant="primary" class="px-10">
+          <Icon name="phone" size={20} slot="before" />
+          ¿Necesitas ayuda urgente?
+        </Button>
+      </div>
+      
+      <div class="mt-16 pt-8 border-t border-gray-100">
+        <p class="text-sm text-[#868E96]">
+          Kendall AC Repairs — Servicio de Emergencia 24/7 en Kendall, FL
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

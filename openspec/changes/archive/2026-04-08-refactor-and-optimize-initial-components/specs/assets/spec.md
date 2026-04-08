@@ -1,8 +1,8 @@
-# assets Specification
+## RENAMED Requirements
+- FROM: `### Requirement: Centralized Logo Management`
+- TO: `### Requirement: Centralized Asset Management`
 
-## Purpose
-TBD - created by archiving change apply-global-branding. Update Purpose after archive.
-## Requirements
+## MODIFIED Requirements
 ### Requirement: Centralized Asset Management
 Asset files SHALL be organized in specialized directories for use in layouts and components.
 
@@ -16,4 +16,3 @@ Asset files SHALL be organized in specialized directories for use in layouts and
 - When the image is rendered
 - Then it MUST be stored in `src/assets/images/`
 - And it MUST be rendered using Astro's native `<Image />` component to ensure automatic optimization and WebP conversion
-

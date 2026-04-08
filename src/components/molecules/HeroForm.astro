@@ -27,6 +27,7 @@ const { class: className, id } = Astro.props;
       label="Tu Nombre" 
       name="name" 
       placeholder="Ej. Maria Gonzalez" 
+      required
     />
     <Input 
       label="Telefono" 
@@ -45,6 +46,7 @@ const { class: className, id } = Astro.props;
       label="Cual es el problema?" 
       name="message" 
       placeholder="Ej. Mi AC enciende pero no enfria..." 
+      required
     />
 
     <Button type="submit" class="w-full mt-2" variant="primary">
@@ -63,7 +65,7 @@ const { class: className, id } = Astro.props;
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       // Handle form submission logic here (e.g., API call)
-      // For now, redirect to /thank-you as per instructions
+      // Redirect to /thank-you as per instructions
       window.location.href = '/thank-you';
     });
   }

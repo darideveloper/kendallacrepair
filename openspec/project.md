@@ -28,6 +28,20 @@ Kendall AC Repair is a professional service website for an HVAC company based in
 - **Layouts**: Centralized layouts in `src/layouts/` to ensure consistent metadata and styling across pages.
 - **Global Styles**: Base styles and Tailwind directives are managed in `src/styles/global.css`.
 
+## Mandatory Development Standards (DRY & Performance)
+
+### 1. DRY (Don't Repeat Yourself)
+- **Shared Logic**: If a visual or functional pattern is repeated, it MUST be refactored into a reusable atom or molecule.
+- **Centralized Constants**: Site-wide configuration (phone numbers, addresses, social links) MUST be stored in `src/constants/site.ts`.
+- **Loop Rendering**: Lists of elements MUST be rendered via array mapping to maintain a single source of truth.
+
+### 2. Styling & Dynamic Classes
+- **clsx**: The `clsx` library MUST be used for all conditional styling or variant-based class management. Avoid template literals or Astro's `class:list` for complex logic.
+
+### 3. Image Optimization
+- **Assets Directory**: All project images (JPG, PNG, WebP) MUST be stored in `src/assets/images/`.
+- **Astro Image Component**: All optimized images MUST be rendered using Astro's native `<Image />` component. SVGs and purely static icons can remain in `public/`.
+
 ### Testing Strategy
 [To be defined - Currently no testing framework detected in package.json]
 
