@@ -8,7 +8,7 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<div class={clsx("chat-container fixed bottom-6 right-6 z-[9997] md:bottom-8 md:right-8", className)}>
+<div class={clsx("chat-container fixed bottom-20 right-6 z-[9997] sm:bottom-8 md:right-8", className)}>
   <button 
     id="chat-toggle"
     class="float-chat w-14 h-14 rounded-full bg-brand-blue text-white flex items-center justify-center shadow-[0_4px_20px_rgba(26,111,175,0.35)] transition-transform hover:scale-110 animate-fade-in-up relative"
@@ -20,7 +20,7 @@ const { class: className } = Astro.props;
     </svg>
   </button>
 
-  <div id="chat-popup" class="chat-popup fixed bottom-24 right-6 z-[10000] w-[370px] bg-white rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden scale-90 translate-y-5 opacity-0 pointer-events-none transition-all duration-300 origin-bottom-right sm:left-4 sm:right-4 sm:w-auto">
+  <div id="chat-popup" class="chat-popup fixed bottom-38 right-6 z-[10000] w-[370px] bg-white rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden scale-90 translate-y-5 opacity-0 pointer-events-none transition-all duration-300 origin-bottom-right sm:bottom-24 sm:left-4 sm:right-4 sm:w-auto">
     <div class="chat-hdr bg-[#0c2340] p-5 flex items-center justify-between">
       <div class="chat-hdr-info flex items-center gap-3">
         <div class="chat-hdr-avatar w-10 h-10 rounded-full bg-brand-blue-grad flex items-center justify-center text-lg">❄️</div>
