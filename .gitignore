@@ -24,3 +24,9 @@ pnpm-debug.log*
 .idea/
 
 ui-design/
+
+# Ignore proposals
+openspec/changes/*
+
+# Do not ignore archived proposals
+!openspec/changes/archive/
