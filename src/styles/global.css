@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* Fonts */
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/dm-sans";
+
+@theme {
+  --color-brand-navy: #0C2340;
+  --color-brand-blue: #1A6FAF;
+  --color-brand-sky: #5DADE2;
+  --color-brand-orange: #F76707;
+  --color-brand-red: #E03131;
+
+  --font-heading: "Plus Jakarta Sans Variable", sans-serif;
+  --font-body: "DM Sans Variable", sans-serif;
+}
