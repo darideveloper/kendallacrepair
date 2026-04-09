@@ -21,3 +21,10 @@ The application SHALL store all service-related information in a centralized con
 - Then it SHALL use specialized interfaces to define the structure of each object
 - And it SHALL include `iconName` (using `IconName` from `Icon.astro`) and image paths for all services
 
+### Requirement: How It Works Content Configuration
+The site configuration SHALL include the content for the "How it works" steps.
+
+#### Scenario: Access how it works steps
+- **WHEN** the site constants are accessed
+- **THEN** the `HOW_IT_WORKS_STEPS` array is available containing the title and description for each step.
+

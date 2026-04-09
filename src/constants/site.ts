@@ -242,3 +242,23 @@ export const DETAILED_SERVICES: DetailedService[] = [
   }
 ];
 
+export interface HowItWorksStep {
+  title: string;
+  description: string;
+}
+
+export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
+  {
+    title: 'Llama o Escríbenos',
+    description: 'Por teléfono, formulario, WhatsApp o chat. Cuéntanos el problema.'
+  },
+  {
+    title: 'Diagnóstico Rápido',
+    description: 'Un técnico llega a tu hogar y te da un estimado gratis.'
+  },
+  {
+    title: 'Problema Resuelto',
+    description: 'Aprueba y reparamos tu AC el mismo día con garantía.'
+  }
+];
+

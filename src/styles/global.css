@@ -29,6 +29,11 @@
     rgba(10, 22, 40, 0.88) 50%,
     rgba(13, 40, 71, 0.85) 100%
   );
+  --background-how-overlay: linear-gradient(
+    135deg,
+    rgba(12, 35, 64, 0.95),
+    rgba(10, 22, 40, 0.97)
+  );
   --background-urgency-grad: linear-gradient(135deg, #e03131, #e8590c);
 
   /* Service Category Gradients & Colors */
@@ -81,6 +86,9 @@
 @layer utilities {
   .bg-hero-overlay {
     background: var(--background-hero-overlay);
+  }
+  .bg-how-overlay {
+    background: var(--background-how-overlay);
   }
   .bg-brand-orange-grad {
     background: var(--background-brand-orange-grad);

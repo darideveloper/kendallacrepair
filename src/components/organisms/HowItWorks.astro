@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import clsx from 'clsx';
+import Badge from '../atoms/Badge.astro';
+import StepCard from '../molecules/StepCard.astro';
+import { HOW_IT_WORKS_STEPS } from '../../constants/site';
+import bgImg from '../../assets/images/hero/foto-trane-single.jpg';
+
+interface Props {
+  id?: string;
+  class?: string;
+}
+
+const { id = "como-funciona", class: className } = Astro.props;
+---
+
+<section id={id} class={clsx("how-it-works relative py-20 overflow-hidden", className)}>
+  <div class="absolute inset-0 z-0">
+    <Image 
+      src={bgImg} 
+      alt="Kendall AC Repair Services" 
+      class="w-full h-full object-cover" 
+    />
+    <div class="absolute inset-0 bg-how-overlay"></div>
+  </div>
+  
+  <div class="section-inner relative z-10 max-w-[1200px] mx-auto px-6">
+    <div class="section-header text-center mb-14 animate-fade-in-up">
+      <Badge variant="tag" class="border-none uppercase mb-4">
+        ASI DE FACIL
+      </Badge>
+      <h2 class="text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-white mb-3 font-heading">
+        3 Pasos para Resolver tu Problema
+      </h2>
+      <p class="text-[17px] text-white/60 max-w-[560px] mx-auto leading-relaxed font-body">
+        Sin complicaciones, sin esperas.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 tablet-lg:grid-cols-3 gap-8 max-w-sm tablet-lg:max-w-none mx-auto">
+      {HOW_IT_WORKS_STEPS.map((step, index) => (
+        <StepCard
+          number={index + 1}
+          title={step.title}
+          description={step.description}
+        />
+      ))}
+    </div>
+  </div>
+</section>

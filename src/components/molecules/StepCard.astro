@@ -1,0 +1,20 @@
+---
+import clsx from 'clsx';
+
+interface Props {
+  number: number;
+  title: string;
+  description: string;
+  class?: string;
+}
+
+const { number, title, description, class: className } = Astro.props;
+---
+
+<div class={clsx("text-center py-10 px-7 bg-glass-surface border border-glass-border rounded-[20px] transition-all hover:bg-white/10 hover:-translate-y-1", className)}>
+  <div class="w-[60px] h-[60px] rounded-2xl bg-brand-orange-grad text-white flex items-center justify-center text-2xl font-extrabold mx-auto mb-5 font-heading shadow-[0_4px_16px_rgba(247,103,7,0.3)]">
+    {number}
+  </div>
+  <h3 class="text-[20px] font-bold text-white mb-2.5 font-heading">{title}</h3>
+  <p class="text-[15px] text-white/60 leading-relaxed font-body">{description}</p>
+</div>
