@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import clsx from 'clsx';
+
+interface Props {
+  title: string;
+  description: string;
+  image: ImageMetadata;
+  icon: string;
+  class?: string;
+}
+
+const { title, description, image, icon, class: className } = Astro.props;
+---
+
+<div class={clsx(
+  "service-card bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 relative group hover:border-brand-sky hover:-translate-y-1 hover:shadow-lg",
+  className
+)}>
+  <div class="absolute top-0 left-0 right-0 h-[3px] bg-brand-blue-grad scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-10"></div>
+  
+  <div class="service-img-container h-44 overflow-hidden relative">
+     <Image 
+       src={image} 
+       alt={title} 
+       class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500" 
+       width={400}
+       height={225}
+     />
+  </div>
+
+  <div class="service-body p-6">
+    <h3 class="text-lg font-bold text-gray-900 mb-2 font-heading">
+      <span class="mr-1">{icon}</span> {title}
+    </h3>
+    <p class="text-[14px] text-gray-500 leading-relaxed font-body">
+      {description}
+    </p>
+  </div>
+</div>

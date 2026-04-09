@@ -24,6 +24,7 @@ type IconName =
   | 'activity'
   | 'zap'
   | 'truck'
+  | 'snowflake'
   | 'chevron-down';
 
 interface Props {
@@ -58,6 +59,7 @@ const icons: Record<string, string> = {
   activity: `<polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />`,
   zap: `<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />`,
   truck: `<rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" />`,
+  snowflake: `<path d="M12 2v20M2 12h20M12 2l4 4M12 2L8 4M12 22l4-4M12 22l-4-2M2 12l4 4M2 12l4-4M22 12l-4 4M22 12l-4-4" />`,
   'chevron-down': `<polyline points="6 9 12 15 18 9" />`
 };
 ---
@@ -69,7 +71,7 @@ const icons: Record<string, string> = {
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
-  stroke-width="2.5"
+  stroke-width="2.2"
   stroke-linecap="round"
   stroke-linejoin="round"
   class={clsx(className)}

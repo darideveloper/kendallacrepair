@@ -1,0 +1,54 @@
+---
+import clsx from 'clsx';
+import Icon from './Icon.astro';
+
+import type { IconName } from './Icon.astro';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  category: string;
+  icon: IconName;
+  items: string[];
+}
+
+const { title, subtitle, category, icon, items } = Astro.props;
+---
+
+<div class="svc-accordion border border-gray-200 rounded-xl overflow-hidden mb-3 group [&.open]:border-brand-sky transition-colors duration-300">
+  <button
+    class="svc-accordion-header flex items-center justify-between w-full p-4.5 cursor-pointer bg-gray-50 hover:bg-blue-50 transition-colors gap-3 text-left font-heading border-none outline-none"
+    onclick="this.parentElement.classList.toggle('open')"
+  >
+    <div class={clsx(
+      "svc-icon w-10 h-10 rounded-lg flex items-center justify-center shrink-0",
+      `bg-${category}`,
+      `text-${category}`
+    )}>
+      <Icon name={icon} size={20} />
+    </div>
+    <div class="svc-title flex-1">
+      <strong class="block text-base text-gray-900 font-bold">{title}</strong>
+      <span class="text-sm text-gray-500 font-normal">{subtitle}</span>
+    </div>
+    <div class="svc-chevron w-7 h-7 rounded-full bg-gray-200 flex items-center justify-center transition-transform shrink-0 text-[10px] text-gray-500 group-[.open]:bg-blue-100 group-[.open]:text-brand-blue group-[.open]:rotate-180">
+      ▼
+    </div>
+  </button>
+  <div class="svc-accordion-body max-h-0 overflow-hidden transition-[max-height] duration-400 ease-in-out group-[.open]:max-h-[500px]">
+    <div class="svc-accordion-body-inner p-5 pt-0 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+      {items.map((item) => (
+        <div class="svc-list-item flex items-center gap-2 text-sm text-gray-700 py-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0"></span>
+          {item}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .svc-accordion-body {
+    transition: max-height 0.4s ease-in-out;
+  }
+</style>

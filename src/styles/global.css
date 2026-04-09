@@ -31,6 +31,28 @@
   );
   --background-urgency-grad: linear-gradient(135deg, #e03131, #e8590c);
 
+  /* Service Category Gradients & Colors */
+  --background-diag: linear-gradient(135deg, #d6eaf8, #aed6f1);
+  --color-diag-text: #1a6faf;
+  --background-repair: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  --color-repair-text: #c0392b;
+  --background-refrig: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  --color-refrig-text: #00838f;
+  --background-maint: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  --color-maint-text: #e65100;
+  --background-install: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  --color-install-text: #2e7d32;
+  --background-air: linear-gradient(135deg, #f3e5f5, #ce93d8);
+  --color-air-text: #7b1fa2;
+  --background-duct: linear-gradient(135deg, #eceff1, #cfd8dc);
+  --color-duct-text: #455a64;
+  --background-elec: linear-gradient(135deg, #fff9c4, #fff176);
+  --color-elec-text: #f57f17;
+  --background-comm: linear-gradient(135deg, #e3f2fd, #90caf9);
+  --color-comm-text: #1565c0;
+  --background-emerg: linear-gradient(135deg, #ffebee, #ef9a9a);
+  --color-emerg-text: #c62828;
+
   /* Keyframe Animations */
   @keyframes blink {
     0%, 100% { opacity: 1; }
@@ -72,4 +94,26 @@
   .bg-urgency-grad {
     background: var(--background-urgency-grad);
   }
+
+  /* Service Category Utilities */
+  .bg-diag { background: var(--background-diag); }
+  .text-diag { color: var(--color-diag-text); }
+  .bg-repair { background: var(--background-repair); }
+  .text-repair { color: var(--color-repair-text); }
+  .bg-refrig { background: var(--background-refrig); }
+  .text-refrig { color: var(--color-refrig-text); }
+  .bg-maint { background: var(--background-maint); }
+  .text-maint { color: var(--color-maint-text); }
+  .bg-install { background: var(--background-install); }
+  .text-install { color: var(--color-install-text); }
+  .bg-air { background: var(--background-air); }
+  .text-air { color: var(--color-air-text); }
+  .bg-duct { background: var(--background-duct); }
+  .text-duct { color: var(--color-duct-text); }
+  .bg-elec { background: var(--background-elec); }
+  .text-elec { color: var(--color-elec-text); }
+  .bg-comm { background: var(--background-comm); }
+  .text-comm { color: var(--color-comm-text); }
+  .bg-emerg { background: var(--background-emerg); }
+  .text-emerg { color: var(--color-emerg-text); }
 }
