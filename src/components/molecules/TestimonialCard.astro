@@ -1,0 +1,31 @@
+---
+import clsx from 'clsx';
+import type { Testimonial } from '../../constants/site';
+
+interface Props extends Testimonial {
+  class?: string;
+}
+
+const { quote, author, location, initials, class: className } = Astro.props;
+---
+
+<div class={clsx(
+  "bg-white rounded-xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.08)] border border-gray-200 transition-all duration-300 hover:shadow-[0_4px_16px_rgba(0,0,0,0.1)] hover:-translate-y-0.5",
+  className
+)}>
+  <div class="text-[#f59f00] text-[18px] mb-4 tracking-[2px]">
+    &starf;&starf;&starf;&starf;&starf;
+  </div>
+  <blockquote class="text-[15px] text-gray-600 leading-[1.7] mb-5 italic font-body">
+    &ldquo;{quote}&rdquo;
+  </blockquote>
+  <div class="flex items-center gap-3">
+    <div class="w-11 h-11 rounded-full bg-brand-blue-grad text-white flex items-center justify-center font-bold text-[16px] font-heading shrink-0">
+      {initials}
+    </div>
+    <div>
+      <strong class="block text-[14px] text-gray-800 font-heading">{author}</strong>
+      <span class="text-[13px] text-gray-500 font-body">{location}</span>
+    </div>
+  </div>
+</div>

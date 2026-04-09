@@ -262,3 +262,31 @@ export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
   }
 ];
 
+export interface Testimonial {
+  quote: string;
+  author: string;
+  location: string;
+  initials: string;
+}
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    quote: "Mi AC dejo de enfriar un sabado. Llame y en 45 minutos tenia un tecnico. Increible.",
+    author: "Maria G.",
+    location: "The Hammocks",
+    initials: "MG"
+  },
+  {
+    quote: "Rapidos, profesionales y precio justo. No me vendieron cosas innecesarias.",
+    author: "Carlos R.",
+    location: "Kendale Lakes",
+    initials: "CR"
+  },
+  {
+    quote: "Honestos con el diagnostico. Solucion economica y rapida. Volvere a llamar.",
+    author: "Ana S.",
+    location: "Country Walk",
+    initials: "AS"
+  }
+];
+
