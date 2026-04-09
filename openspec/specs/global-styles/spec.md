@@ -20,11 +20,16 @@ The application SHALL provide font families for headings and body text.
 - Then the respective "Plus Jakarta Sans Variable" or "DM Sans Variable" font should be applied
 
 ### Requirement: Centralized Theme Definitions
-The application SHALL define all brand colors, fonts, and gradients in the global CSS theme.
+The application SHALL define all brand colors, fonts, and responsive breakpoints in the global CSS theme.
 
-#### Scenario: Brand Green Gradient
+#### Scenario: Custom Tablet-LG Breakpoint
 - Given the `src/styles/global.css` file
-- When adding a new brand color variant
-- Then it SHALL define a `--background-brand-green-grad` CSS variable with a linear gradient from `#1b8a50` to `#27ae60`
-- And it SHALL expose a `.bg-brand-green-grad` utility class
+- When defining responsive variants
+- Then it SHALL define a `--breakpoint-tablet-lg` with a value of `900px`
+
+#### Scenario: Glassmorphism Design Tokens
+- Given the `src/styles/global.css` file
+- When defining brand color tokens
+- Then it SHALL define `--color-glass-surface` as a 6% white blend
+- And it SHALL define `--color-glass-border` as a 10% white blend
 

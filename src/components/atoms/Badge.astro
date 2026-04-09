@@ -4,13 +4,22 @@ import clsx from 'clsx';
 interface Props {
   class?: string;
   dotClass?: string;
+  /** @deprecated Use variant="status" or variant="tag" instead */
   showDot?: boolean;
+  variant?: 'status' | 'tag';
 }
 
-const { class: className, dotClass, showDot = true } = Astro.props;
+const { 
+  class: className, 
+  dotClass, 
+  showDot,
+  variant = showDot === false ? 'tag' : 'status'
+} = Astro.props;
+
+const isStatus = variant === 'status';
 ---
 
 <div class={clsx("inline-flex items-center gap-2 px-4 py-2 bg-brand-sky/15 border border-brand-sky/25 text-brand-sky rounded-full text-[13px] font-semibold", className)}>
-  {showDot && <span class={clsx("w-2 h-2 bg-[#2ecc71] rounded-full animate-pulse-custom", dotClass)}></span>}
+  {isStatus && <span class={clsx("w-2 h-2 bg-[#2ecc71] rounded-full animate-pulse-custom", dotClass)}></span>}
   <slot />
 </div>

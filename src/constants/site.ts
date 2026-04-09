@@ -1,3 +1,5 @@
+import type { IconName } from '../components/atoms/Icon.astro';
+
 export const SITE = {
   name: "Kendall AC Repairs",
   description: "Servicio de reparacion de aire acondicionado el mismo dia en Kendall. Tecnicos licenciados, estimados gratis y servicio de emergencia 24/7.",
@@ -27,7 +29,14 @@ export const NEIGHBORHOODS = [
 
 export const MAP_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57486.10!2d-80.39!3d25.68!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus";
 
-export const COVERAGE_BADGES = [
+export interface CoverageBadgeItem {
+  icon: IconName;
+  title: string;
+  subtitle: string;
+  gradient: 'blue' | 'orange' | 'green';
+}
+
+export const COVERAGE_BADGES: CoverageBadgeItem[] = [
   {
     icon: 'check-circle',
     title: 'Licenciado',

@@ -24,11 +24,12 @@ The application SHALL provide a `Button.astro` component with multiple brand var
 ### Requirement: Status Badge Atom
 The application SHALL provide a `Badge.astro` component for displaying short status messages or tags.
 
-#### Scenario: Optional pulsing dot
+#### Scenario: Using semantic variants
 - Given a `Badge.astro` component
-- When it is rendered with a `showDot` prop set to `false`
-- Then it SHALL NOT display the pulsing green dot
-- And it SHALL function as a standard "Tag" for metadata like neighborhood names
+- When it is rendered with a `variant` prop set to `status`
+- Then it SHALL display the pulsing green dot
+- And when the `variant` prop is set to `tag`
+- Then it SHALL NOT display the pulsing dot
 
 ### Requirement: Contact Form Molecule
 The application SHALL provide a `HeroForm.astro` component to capture user inquiries.
@@ -61,10 +62,10 @@ The application SHALL provide a `FormField.astro` component to encapsulate commo
 ### Requirement: Centralized Icon Atom
 The application SHALL provide an `Icon.astro` component to handle SVG rendering from a shared icon set.
 
-#### Scenario: Added icons for coverage
+#### Scenario: Exporting IconName type
 - Given an `Icon.astro` component
-- When it is rendered with the `name` set to `check-circle` or `dollar-sign`
-- Then it SHALL render the corresponding SVG path for that icon
+- When defined with a set of supported icons
+- Then it SHALL export a `type IconName` representing the valid icon identifiers
 
 ### Requirement: Mobile Call Bar
 The application SHALL provide a `MobileCallBar.astro` component that is fixed at the bottom for quick access to phone calls.
@@ -106,4 +107,13 @@ The application SHALL provide a `Coverage.astro` organism to display the service
 - Then it SHALL display a 1.1fr 0.9fr grid with a Google Map on the left and information on the right
 - And when viewed on mobile (width < 900px)
 - Then it SHALL stack the map and information vertically
+
+### Requirement: Accessibility for Embedded Media
+The application SHALL ensure that embedded media like Google Maps follow accessibility best practices.
+
+#### Scenario: Decorative map attribution
+- Given a `Coverage.astro` component with a Google Map iframe
+- When it is rendered
+- Then it SHALL include a descriptive `title` attribute for screen readers
+- And it SHALL have `aria-hidden="false"` only if interaction is expected
 
