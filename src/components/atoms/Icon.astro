@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 
 interface Props {
-  name: 'phone' | 'mail' | 'whatsapp' | 'check' | 'shield' | 'clock' | 'star' | 'chevron-right' | 'menu' | 'x' | 'message-square';
+  name: 'phone' | 'mail' | 'whatsapp' | 'check' | 'shield' | 'clock' | 'star' | 'chevron-right' | 'menu' | 'x' | 'message-square' | 'check-circle' | 'dollar-sign';
   class?: string;
   size?: number;
 }
@@ -20,7 +20,9 @@ const icons = {
   'chevron-right': `<polyline points="9 18 15 12 9 6" />`,
   menu: `<line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" />`,
   x: `<line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />`,
-  'message-square': `<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />`
+  'message-square': `<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />`,
+  'check-circle': `<path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />`,
+  'dollar-sign': `<line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />`
 };
 ---
 

@@ -4,12 +4,13 @@ import clsx from 'clsx';
 interface Props {
   class?: string;
   dotClass?: string;
+  showDot?: boolean;
 }
 
-const { class: className, dotClass } = Astro.props;
+const { class: className, dotClass, showDot = true } = Astro.props;
 ---
 
 <div class={clsx("inline-flex items-center gap-2 px-4 py-2 bg-brand-sky/15 border border-brand-sky/25 text-brand-sky rounded-full text-[13px] font-semibold", className)}>
-  <span class={clsx("w-2 h-2 bg-[#2ecc71] rounded-full animate-pulse-custom", dotClass)}></span>
+  {showDot && <span class={clsx("w-2 h-2 bg-[#2ecc71] rounded-full animate-pulse-custom", dotClass)}></span>}
   <slot />
 </div>

@@ -1,0 +1,36 @@
+---
+import Icon from '../atoms/Icon.astro';
+import clsx from 'clsx';
+
+interface Props {
+  icon: any;
+  title: string;
+  subtitle: string;
+  gradient: 'blue' | 'orange' | 'green';
+  class?: string;
+}
+
+const { icon, title, subtitle, gradient, class: className } = Astro.props;
+
+const gradientClasses = {
+  blue: 'bg-brand-blue-grad',
+  orange: 'bg-brand-orange-grad',
+  green: 'bg-brand-green-grad'
+};
+---
+
+<div class={clsx(
+  "bg-white/6 border border-white/10 rounded-xl p-5 flex items-center gap-3.5 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5",
+  className
+)}>
+  <div class={clsx(
+    "w-11 h-11 rounded-xl flex items-center justify-center shrink-0",
+    gradientClasses[gradient]
+  )}>
+    <Icon name={icon} size={22} class="text-white" />
+  </div>
+  <div>
+    <strong class="block text-sm text-white font-heading mb-0.5">{title}</strong>
+    <span class="text-xs text-white/45">{subtitle}</span>
+  </div>
+</div>

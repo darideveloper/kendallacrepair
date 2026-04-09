@@ -1,0 +1,56 @@
+---
+import CoverageBadge from '../molecules/CoverageBadge.astro';
+import Badge from '../atoms/Badge.astro';
+import { NEIGHBORHOODS, MAP_EMBED_URL, COVERAGE_BADGES } from '../../constants/site';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<section class="bg-brand-navy py-16 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 min-[900px]:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+      
+      <!-- Left: Map Container -->
+      <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 order-2 min-[900px]:order-1">
+        <iframe
+          src={MAP_EMBED_URL}
+          class="w-full h-[360px] block border-0"
+          allowfullscreen=""
+          loading="lazy"
+          title="Zona de Servicio"
+        ></iframe>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="order-1 min-[900px]:order-2">
+        <h2 class="text-3xl font-extrabold text-white mb-2 font-heading">
+          Nuestra Área de Servicio
+        </h2>
+        <p class="text-[15px] text-white/50 mb-8">
+          Cobertura completa en Kendall y Miami-Dade
+        </p>
+
+        <!-- Badge Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          {COVERAGE_BADGES.map((badge) => (
+            <CoverageBadge {...badge as any} />
+          ))}
+        </div>
+
+        <!-- Neighborhoods List -->
+        <div class="flex flex-wrap gap-2">
+          {NEIGHBORHOODS.map((area) => (
+            <Badge showDot={false} class="bg-brand-sky/10 border-brand-sky/20 text-brand-sky py-1.5 px-3">
+              {area}
+            </Badge>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

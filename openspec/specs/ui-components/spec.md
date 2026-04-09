@@ -2,7 +2,6 @@
 
 ## Purpose
 The application provides a consistent set of atoms, molecules, and organisms for high-conversion HVAC service landing pages.
-
 ## Requirements
 ### Requirement: Reusable Button Atom
 The application SHALL provide a `Button.astro` component with multiple brand variants.
@@ -23,12 +22,13 @@ The application SHALL provide a `Button.astro` component with multiple brand var
 - Then it should translate upwards by 2px with an enhanced shadow or increased opacity
 
 ### Requirement: Status Badge Atom
-The application SHALL provide a `Badge.astro` component for displaying short status messages with a pulsing dot.
+The application SHALL provide a `Badge.astro` component for displaying short status messages or tags.
 
-#### Scenario: Displaying "Live" status
+#### Scenario: Optional pulsing dot
 - Given a `Badge.astro` component
-- When it is rendered with the "Tecnicos disponibles ahora" text
-- Then it should display a pulsing green dot to the left of the text
+- When it is rendered with a `showDot` prop set to `false`
+- Then it SHALL NOT display the pulsing green dot
+- And it SHALL function as a standard "Tag" for metadata like neighborhood names
 
 ### Requirement: Contact Form Molecule
 The application SHALL provide a `HeroForm.astro` component to capture user inquiries.
@@ -61,15 +61,10 @@ The application SHALL provide a `FormField.astro` component to encapsulate commo
 ### Requirement: Centralized Icon Atom
 The application SHALL provide an `Icon.astro` component to handle SVG rendering from a shared icon set.
 
-#### Scenario: Rendering a specific icon by name
+#### Scenario: Added icons for coverage
 - Given an `Icon.astro` component
-- When it is rendered with the `name` set to `phone`
-- Then it SHALL render the corresponding SVG path for the phone icon
-
-#### Scenario: Customizing icon styles
-- Given an `Icon.astro` component
-- When it is rendered with custom `class`, `size`, or `color` props
-- Then it SHALL apply those styles to the rendered SVG element
+- When it is rendered with the `name` set to `check-circle` or `dollar-sign`
+- Then it SHALL render the corresponding SVG path for that icon
 
 ### Requirement: Mobile Call Bar
 The application SHALL provide a `MobileCallBar.astro` component that is fixed at the bottom for quick access to phone calls.
@@ -92,3 +87,23 @@ The application SHALL provide floating action buttons that remain accessible and
 - Given the `ChatButton` component with an active `chat-popup`
 - When viewed on a mobile device
 - Then the `chat-popup` SHALL be positioned relative to the toggle button (at least 152px from the bottom) to maintain visibility
+
+### Requirement: Coverage Badge Molecule
+The application SHALL provide a `CoverageBadge.astro` molecule for trust-building information cards.
+
+#### Scenario: Trust card with glassmorphism
+- Given a `CoverageBadge.astro` component
+- When it is rendered with an `icon`, `title`, and `subtitle`
+- Then it SHALL use a semi-transparent background (`bg-white/6`) and a semi-transparent border (`border-white/10`)
+- And it SHALL display the icon within a circular or rounded container using a brand gradient background
+
+### Requirement: Coverage Organism
+The application SHALL provide a `Coverage.astro` organism to display the service area map and trust information.
+
+#### Scenario: Responsive two-column layout
+- Given a `Coverage.astro` component
+- When viewed on a desktop (width >= 900px)
+- Then it SHALL display a 1.1fr 0.9fr grid with a Google Map on the left and information on the right
+- And when viewed on mobile (width < 900px)
+- Then it SHALL stack the map and information vertically
+

@@ -19,3 +19,12 @@ The application SHALL provide font families for headings and body text.
 - When a developer uses `font-heading` or `font-body`
 - Then the respective "Plus Jakarta Sans Variable" or "DM Sans Variable" font should be applied
 
+### Requirement: Centralized Theme Definitions
+The application SHALL define all brand colors, fonts, and gradients in the global CSS theme.
+
+#### Scenario: Brand Green Gradient
+- Given the `src/styles/global.css` file
+- When adding a new brand color variant
+- Then it SHALL define a `--background-brand-green-grad` CSS variable with a linear gradient from `#1b8a50` to `#27ae60`
+- And it SHALL expose a `.bg-brand-green-grad` utility class
+

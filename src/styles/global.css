@@ -17,6 +17,7 @@
   /* Custom Brand Gradients */
   --background-brand-orange-grad: linear-gradient(135deg, #f76707, #e8590c);
   --background-brand-blue-grad: linear-gradient(135deg, #1a6faf, #2e86c1);
+  --background-brand-green-grad: linear-gradient(135deg, #1b8a50, #27ae60);
   --background-hero-overlay: linear-gradient(
     135deg,
     rgba(12, 35, 64, 0.93) 0%,
@@ -59,6 +60,9 @@
   }
   .bg-brand-blue-grad {
     background: var(--background-brand-blue-grad);
+  }
+  .bg-brand-green-grad {
+    background: var(--background-brand-green-grad);
   }
   .bg-urgency-grad {
     background: var(--background-urgency-grad);
