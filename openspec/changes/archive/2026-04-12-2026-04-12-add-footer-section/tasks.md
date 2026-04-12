@@ -1,0 +1,4 @@
+- [x] Update `src/styles/global.css` to include `--color-footer-bg`, `--color-footer-text`, and `--color-footer-border` in the `@theme` block.
+- [x] Create `src/components/organisms/Footer.astro` using data from `src/constants/site.ts` and following the design specification.
+- [x] Update `src/layouts/Layout.astro` to import and include the `<Footer />` component after the `<main>` content.
+- [x] Verify the layout is responsive and matches the design visually on mobile and desktop.

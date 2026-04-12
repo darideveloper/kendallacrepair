@@ -81,6 +81,11 @@
   --animate-blink: blink 1.5s ease-in-out infinite;
   --animate-pulse-custom: pulse 2s ease-in-out infinite;
   --animate-fade-in-up: fadeInUp 0.8s ease-out both;
+
+  /* Footer Colors */
+  --color-footer-bg: #060d18;
+  --color-footer-text: rgba(255, 255, 255, 0.5);
+  --color-footer-border: rgba(255, 255, 255, 0.06);
 }
 
 @layer utilities {

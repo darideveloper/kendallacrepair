@@ -42,3 +42,14 @@ The application SHALL provide specific brand gradients for different service cat
 - Then it SHALL define background gradients for all service categories (diag, repair, refrig, maint, install, air, duct, elec, comm, emerg)
 - And it SHALL map these to utility classes for easy access in components
 
+### Requirement: Footer CSS Variables
+The global CSS theme MUST be updated to include the colors required for the footer component.
+
+#### Scenario: Add footer theme colors
+Add the following CSS variables to the `@theme` block in `src/styles/global.css` to match the footer design:
+```css
+  --color-footer-bg: #060d18;
+  --color-footer-text: rgba(255, 255, 255, 0.5);
+  --color-footer-border: rgba(255, 255, 255, 0.06);
+```
+

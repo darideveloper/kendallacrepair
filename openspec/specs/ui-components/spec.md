@@ -179,3 +179,11 @@ The application SHALL provide an `FAQ.astro` organism that acts as the container
 - **THEN** it SHALL display the section tag "PREGUNTAS FRECUENTES"
 - **AND** it SHALL render a list of `FAQItem` molecules mapped from the centralized configuration data
 
+### Requirement: Footer component integration
+The Layout component MUST be updated to include the new footer globally.
+
+#### Scenario: Integrate Footer in Layout
+Update `src/layouts/Layout.astro` to import and render the `Footer` component.
+- Import `Footer` from `../components/organisms/Footer.astro`.
+- Place `<Footer />` immediately after the closing `</main>` tag, before the global floating elements.
+
