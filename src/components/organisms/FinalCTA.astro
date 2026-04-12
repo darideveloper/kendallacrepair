@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import clsx from 'clsx';
 import { SITE } from '../../constants/site';
 import Button from '../atoms/Button.astro';
 import Icon from '../atoms/Icon.astro';
@@ -12,14 +13,14 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<section class:list={["relative py-20 overflow-hidden text-center bg-brand-navy", className]}>
+<section class={clsx("relative py-20 overflow-hidden text-center bg-brand-navy", className)}>
   <div class="absolute inset-0 z-0">
     <Image 
       src={bgImage} 
       alt="Reparación de aire acondicionado en Kendall" 
       class="w-full h-full object-cover opacity-40"
     />
-    <div class="absolute inset-0 bg-hero-overlay"></div>
+    <div class="absolute inset-0 bg-how-overlay"></div>
   </div>
 
   <div class="relative z-10 max-w-[1200px] mx-auto px-6">
