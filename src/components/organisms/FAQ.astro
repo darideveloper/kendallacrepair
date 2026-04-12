@@ -1,0 +1,22 @@
+---
+import FAQItem from '../molecules/FAQItem.astro';
+import { FAQ_ITEMS } from '../../constants/site';
+---
+
+<section id="faq" class="faq py-20 bg-white">
+  <div class="section-inner max-w-[1200px] mx-auto px-6">
+    <div class="section-header text-center mb-14 animate-fade-in-up">
+      <span class="section-tag inline-block bg-blue-50 text-brand-blue px-4 py-1.5 rounded-full text-[13px] font-semibold mb-4">
+        PREGUNTAS FRECUENTES
+      </span>
+      <h2 class="text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-gray-900 mb-3 font-heading">
+        Preguntas? Tenemos Respuestas
+      </h2>
+    </div>
+    <div class="faq-list max-w-[760px] mx-auto">
+      {FAQ_ITEMS.map((item) => (
+        <FAQItem question={item.question} answer={item.answer} />
+      ))}
+    </div>
+  </div>
+</section>

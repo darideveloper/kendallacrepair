@@ -262,6 +262,30 @@ export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
   }
 ];
 
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export const FAQ_ITEMS: FAQItem[] = [
+  {
+    question: "Cuanto cuesta reparar un AC en Kendall?",
+    answer: "Diagnosticos comunes van de $75 a $200. Mayoria se resuelven el mismo dia. Llama para estimado gratis."
+  },
+  {
+    question: "Ofrecen servicio de emergencia?",
+    answer: "Si, servicio 24/7 los 365 dias. Siempre hay un tecnico disponible en Kendall."
+  },
+  {
+    question: "Los tecnicos estan licenciados?",
+    answer: "Todos licenciados por Florida con seguro de responsabilidad completo."
+  },
+  {
+    question: "Que areas cubren?",
+    answer: "Todo Kendall: The Hammocks, Kendale Lakes, Tamiami, Country Walk, Three Lakes, Richmond West."
+  }
+];
+
 export interface Testimonial {
   quote: string;
   author: string;
