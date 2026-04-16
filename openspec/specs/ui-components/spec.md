@@ -32,18 +32,18 @@ The application SHALL provide a `Badge.astro` component for displaying short sta
 - Then it SHALL NOT display the pulsing dot
 
 ### Requirement: Contact Form Molecule
-The application SHALL provide a `HeroForm.astro` component to capture user inquiries.
+The application SHALL provide a `HeroForm.astro` component to capture user inquiries using native HTML submission.
 
-#### Scenario: Required form fields
+#### Scenario: Native form submission behavior
 - Given a `HeroForm.astro` component
-- When it is rendered
-- Then it SHALL contain fields for Name, Phone, Email, and Problem
-- And the Phone field SHALL be mandatory
+- When the user submits the form
+- Then the browser SHALL perform a native `POST` request to the `apiEndpoint`
+- And the application SHALL NOT intercept the submission with client-side JavaScript `fetch` calls
 
 #### Scenario: Form submission redirection
-- Given the `HeroForm.astro` is submitted
-- When the submission is successful
-- Then the application SHALL redirect the user to `/thank-you`
+- Given the `HeroForm.astro` is submitted via native HTML `POST`
+- When the submission is processed by the backend
+- Then the application SHALL redirect the user to `/thank-you` via the server-side redirect response
 - And the application SHALL provide a valid page at `/thank-you`
 
 ### Requirement: Shared Form Wrapper Atom
@@ -186,4 +186,14 @@ The Layout component MUST be updated to include the new footer globally.
 Update `src/layouts/Layout.astro` to import and render the `Footer` component.
 - Import `Footer` from `../components/organisms/Footer.astro`.
 - Place `<Footer />` immediately after the closing `</main>` tag, before the global floating elements.
+
+### Requirement: Contact Form API Integration
+The application SHALL provide API integration for the contact form to submit data securely and reliably.
+
+#### Scenario: Form payload structure
+- Given a `HeroForm.astro` component
+- When the user submits the form
+- Then it SHALL send the payload via `POST` as `multipart/form-data`
+- And it SHALL include the hidden fields `api_key`, `user`, `subject`, and `redirect` mapped from environment variables
+- And it SHALL include user-provided data `name`, `phone`, `email`, and `message`
 

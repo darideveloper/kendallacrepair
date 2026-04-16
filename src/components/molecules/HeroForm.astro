@@ -10,6 +10,12 @@ interface Props {
 }
 
 const { class: className, id } = Astro.props;
+
+const endpoint = import.meta.env.CONTACT_FORM_ENDPOINT;
+const user = import.meta.env.CONTACT_FORM_USER;
+const apiKey = import.meta.env.CONTACT_FORM_API_KEY;
+const siteUrl = import.meta.env.SITE_URL || Astro.site?.origin || 'http://localhost:4321';
+const redirectUrl = `${siteUrl}/thank-you`;
 ---
 
 <div id={id} class={clsx(
@@ -22,7 +28,19 @@ const { class: className, id } = Astro.props;
     <p class="text-sm text-[#868e96]">Recibe respuesta en minutos</p>
   </div>
 
-  <form id="hero-contact-form" class="flex flex-col gap-4">
+  <form 
+    id="hero-contact-form" 
+    class="flex flex-col gap-4"
+    action={endpoint}
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <!-- Hidden fields for the backend -->
+    <input type="hidden" name="api_key" value={apiKey} />
+    <input type="hidden" name="user" value={user} />
+    <input type="hidden" name="subject" value="Nuevo Lead - Kendall AC Repair" />
+    <input type="hidden" name="redirect" value={redirectUrl} />
+
     <Input 
       label="Tu Nombre" 
       name="name" 
@@ -59,14 +77,3 @@ const { class: className, id } = Astro.props;
   </form>
 </div>
 
-<script>
-  const form = document.getElementById('hero-contact-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // Handle form submission logic here (e.g., API call)
-      // Redirect to /thank-you as per instructions
-      window.location.href = '/thank-you';
-    });
-  }
-</script>
