@@ -15,4 +15,8 @@ export default defineConfig({
   },
   site: 'https://kendallacrepair.com',
   integrations: [showTailwindcssBreakpoint(), react(), sitemap()],
+  server: {
+    port: 4321, // Forces Astro to stay on 4321
+    strictPort: true, // Prevents Vite from switching to 5173 if 4321 is busy
+  },
 })
