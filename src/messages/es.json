@@ -238,17 +238,20 @@
       {
         "quote": "Mi AC dejó de enfriar un sábado. Llamé y en 45 minutos tenía un técnico. Increíble.",
         "author": "Maria G.",
-        "location": "The Hammocks"
+        "location": "The Hammocks",
+        "initials": "MG"
       },
       {
         "quote": "Rápidos, profesionales y precio justo. No me vendieron cosas innecesarias.",
         "author": "Carlos R.",
-        "location": "Kendale Lakes"
+        "location": "Kendale Lakes",
+        "initials": "CR"
       },
       {
         "quote": "Honestos con el diagnóstico. Solución económica y rápida. Volveré a llamar.",
         "author": "Ana S.",
-        "location": "Country Walk"
+        "location": "Country Walk",
+        "initials": "AS"
       }
     ]
   },

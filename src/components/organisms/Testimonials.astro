@@ -2,6 +2,7 @@
 import { useTranslations } from '../../lib/i18n/utils';
 import type { Lang } from '../../lib/i18n/ui';
 import TestimonialCard from '../molecules/TestimonialCard.astro';
+import { CLIENT_IMAGES, type Testimonial } from '../../constants/site';
 
 interface Props {
   lang: Lang;
@@ -10,7 +11,11 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-const testimonials = t('testimonials.items') as any as { quote: string; author: string; location: string; initials: string }[];
+const testimonialData = t('testimonials.items') as any as Testimonial[];
+const testimonials = testimonialData.map(item => ({
+  ...item,
+  image: CLIENT_IMAGES[item.author]
+}));
 ---
 
 <section class="py-20 bg-gray-50" id="testimonios">

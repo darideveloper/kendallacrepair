@@ -238,17 +238,20 @@
       {
         "quote": "My AC stopped cooling on a Saturday. I called and in 45 minutes I had a technician. Incredible.",
         "author": "Maria G.",
-        "location": "The Hammocks"
+        "location": "The Hammocks",
+        "initials": "MG"
       },
       {
         "quote": "Fast, professional and fair price. They didn't sell me unnecessary things.",
         "author": "Carlos R.",
-        "location": "Kendale Lakes"
+        "location": "Kendale Lakes",
+        "initials": "CR"
       },
       {
         "quote": "Honest with the diagnosis. Economical and fast solution. I will call again.",
         "author": "Ana S.",
-        "location": "Country Walk"
+        "location": "Country Walk",
+        "initials": "AS"
       }
     ]
   },

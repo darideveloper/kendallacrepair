@@ -4,6 +4,9 @@ import emergencyImg from '../assets/images/services/foto-tecnico-emergencia.png'
 import repairImg from '../assets/images/services/foto-tecnico-reparacion.jpg';
 import installationImg from '../assets/images/services/foto-trane-dual.jpg';
 import maintenanceImg from '../assets/images/services/foto-carrier-unit.jpg';
+import mariaImg from '../assets/images/clients/client-maria.jpg';
+import carlosImg from '../assets/images/clients/client-carlos.jpg';
+import anaImg from '../assets/images/clients/client-ana.jpg';
 
 export const SITE = {
   name: "Kendall AC Repairs",
@@ -67,6 +70,20 @@ export const DETAILED_SERVICES: DetailedService[] = [
   { id: 'elec', category: 'elec', icon: 'zap' },
   { id: 'comm', category: 'comm', icon: 'truck' }
 ];
+
+export interface Testimonial {
+  quote: string;
+  author: string;
+  location: string;
+  initials: string;
+  image?: ImageMetadata;
+}
+
+export const CLIENT_IMAGES: Record<string, ImageMetadata> = {
+  'Maria G.': mariaImg,
+  'Carlos R.': carlosImg,
+  'Ana S.': anaImg
+};
 
 export const HOW_IT_WORKS_STEPS_COUNT = 3;
 export const TESTIMONIALS_COUNT = 3;
