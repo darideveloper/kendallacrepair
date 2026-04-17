@@ -1,0 +1,60 @@
+---
+import { useTranslations, getLocalizedPath } from '../../lib/i18n/utils';
+import { languages, type Lang } from '../../lib/i18n/ui';
+import type { PageKey } from '../../lib/i18n/routes';
+
+interface Props {
+  lang: Lang;
+  pageKey: PageKey;
+  title?: string;
+  description?: string;
+}
+
+const { lang, pageKey, title: overrideTitle, description: overrideDescription } = Astro.props;
+const t = useTranslations(lang);
+
+const title = overrideTitle || t(`pages.${pageKey}.title`);
+const description = overrideDescription || t(`pages.${pageKey}.description`);
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://kendallacrepair.com');
+
+// Helper to get absolute URL for alternates
+const getAbsoluteUrl = (path: string) => {
+  const baseUrl = Astro.site?.origin || 'https://kendallacrepair.com';
+  return `${baseUrl}${path === '/' ? '' : path}`;
+};
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+
+<!-- Hreflang Tags -->
+{
+  Object.keys(languages).map((l) => (
+    <link
+      rel="alternate"
+      hreflang={l}
+      href={getAbsoluteUrl(getLocalizedPath(pageKey, l as Lang))}
+    />
+  ))
+}
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href={getAbsoluteUrl(getLocalizedPath(pageKey, 'en'))}
+/>

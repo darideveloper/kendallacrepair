@@ -1,0 +1,292 @@
+{
+  "site": {
+    "name": "Kendall AC Repairs",
+    "description": "Same-day air conditioning repair service in Kendall. Licensed technicians, free estimates and 24/7 emergency service.",
+    "location": "Kendall, FL",
+    "whatsapp_message": "Hello! I need an AC repair in Kendall."
+  },
+  "pages": {
+    "home": {
+      "title": "Kendall AC Repair - 24/7 Same-Day Emergency Service",
+      "description": "Expert AC repair, maintenance and installation in Kendall, FL. Licensed technicians, free estimates and emergency service available."
+    },
+    "thank_you": {
+      "title": "Thank You - Kendall AC Repair",
+      "description": "Thank you for contacting us. We will get back to you shortly.",
+      "h1": "Your request has been received!",
+      "message": "Thank you for trusting Kendall AC Repairs. One of our technicians will review your case and contact you in the next <span class=\"text-brand-orange font-bold\">15-30 minutes</span>.",
+      "back_home": "Back to Home",
+      "urgent_help": "Need urgent help?"
+    }
+  },
+  "hero": {
+    "image_alt": "AC Repair Kendall",
+    "badge": "Technicians available now in Kendall",
+    "title_part1": "AC Repair in Kendall",
+    "title_part2": "Fast. Reliable. Today.",
+    "description": "Connecting homeowners in Kendall with licensed and insured AC technicians — same-day service, free estimates.",
+    "cta_call": "Call Now — Free Estimate",
+    "cta_online": "Request Online Quote",
+    "trust_licensed": "Licensed and Insured",
+    "trust_same_day": "Same-Day Service",
+    "trust_estimates": "Free Estimates"
+  },
+  "nav": {
+    "services": "Services",
+    "how_it_works": "How It Works",
+    "testimonials": "Reviews",
+    "faq": "FAQ",
+    "open_menu": "Open Menu"
+  },
+  "footer": {
+    "about": "Connecting homeowners in Kendall with the best AC technicians.",
+    "services_title": "Services",
+    "areas_title": "Service Areas",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "neighborhoods": [
+    "Kendall", "The Hammocks", "Kendale Lakes", "Tamiami", "Country Walk", "Three Lakes", "Richmond West"
+  ],
+  "badges": {
+    "licensed": {
+      "title": "Licensed",
+      "subtitle": "State of Florida"
+    },
+    "insured": {
+      "title": "Insured",
+      "subtitle": "Full coverage"
+    },
+    "emergency": {
+      "title": "24/7 Emergency",
+      "subtitle": "Always available"
+    },
+    "estimates": {
+      "title": "Free Estimates",
+      "subtitle": "No commitment"
+    }
+  },
+  "services": {
+    "section_tag": "OUR SERVICES",
+    "section_title": "Complete Air Conditioning Solutions",
+    "section_description": "Residential and commercial. Diagnosis, repair, installation and maintenance.",
+    "featured": {
+      "emergency": {
+        "title": "24/7 AC Emergency",
+        "description": "AC stopped working at midnight? A technician at your door in less than an hour."
+      },
+      "repair": {
+        "title": "AC Repair",
+        "description": "Expert diagnosis and same-day repair. Not cooling, making noises, leaking."
+      },
+      "installation": {
+        "title": "AC Installation",
+        "description": "Professional installation of new systems, mini splits and thermostats."
+      },
+      "maintenance": {
+        "title": "Preventive Maintenance",
+        "description": "Monthly, quarterly and annual plans to avoid costly failures."
+      }
+    },
+    "detail_title": "All Our Services",
+    "detail_subtitle": "Click on each category to see the details"
+  },
+  "detailed_services": {
+    "diag": {
+      "title": "Diagnostic Services",
+      "subtitle": "Complete evaluation of your system",
+      "items": [
+        "Complete A/C system inspection",
+        "Airflow and performance analysis",
+        "Electrical component testing",
+        "Refrigerant level and pressure check",
+        "Leak detection"
+      ]
+    },
+    "repair": {
+      "title": "Repair Services",
+      "subtitle": "Fast and reliable solutions",
+      "items": [
+        "Repair of A/C that doesn't cool",
+        "Capacitor, contactor and relay replacement",
+        "Compressor repair and replacement",
+        "Fan motor repair",
+        "Refrigerant leak repair",
+        "Drain cleaning and repair"
+      ]
+    },
+    "refrig": {
+      "title": "Refrigerant Services",
+      "subtitle": "Optimal cooling performance",
+      "items": [
+        "Refrigerant recharge",
+        "Leak detection and sealing",
+        "System pressure optimization"
+      ]
+    },
+    "maint": {
+      "title": "Preventive Maintenance",
+      "subtitle": "Monthly, quarterly and annual plans",
+      "items": [
+        "Coil cleaning",
+        "Filter change",
+        "Electrical inspection and adjustment",
+        "Thermostat calibration",
+        "Drain cleaning",
+        "Monthly, quarterly and annual plans"
+      ]
+    },
+    "install": {
+      "title": "Installation Services",
+      "subtitle": "New systems and replacements",
+      "items": [
+        "Installation of new systems",
+        "Central air systems",
+        "Mini split systems",
+        "Smart thermostat installation",
+        "Equipment upgrade and replacement"
+      ]
+    },
+    "air": {
+      "title": "Indoor Air Quality",
+      "subtitle": "Advanced purification and filtration",
+      "items": [
+        "Air purifier installation",
+        "Advanced filtration systems",
+        "UV light systems",
+        "Dehumidifier installation",
+        "Solutions to prevent mold"
+      ]
+    },
+    "duct": {
+      "title": "Duct Services",
+      "subtitle": "Installation, cleaning and sealing",
+      "items": [
+        "Duct installation and replacement",
+        "Duct cleaning",
+        "Air leak sealing",
+        "Air balancing"
+      ]
+    },
+    "elec": {
+      "title": "HVAC Electrical Services",
+      "subtitle": "Safe and reliable operation",
+      "items": [
+        "Breaker and fuse replacement",
+        "Wiring repair",
+        "Electrical diagnosis"
+      ]
+    },
+    "comm": {
+      "title": "Commercial Services",
+      "subtitle": "Solutions for businesses",
+      "items": [
+        "Rooftop unit service",
+        "Maintenance programs",
+        "Diagnosis and troubleshooting",
+        "Equipment installation and replacement",
+        "Priority service"
+      ]
+    }
+  },
+  "how_it_works": {
+    "bg_alt": "Kendall AC Repair Services",
+    "section_tag": "THAT EASY",
+    "section_title": "3 Steps to Solve your Problem",
+    "section_description": "No complications, no waiting.",
+    "steps": [
+      {
+        "title": "Call or Write Us",
+        "description": "By phone, form, WhatsApp or chat. Tell us the problem."
+      },
+      {
+        "title": "Quick Diagnosis",
+        "description": "A technician arrives at your home and gives you a free estimate."
+      },
+      {
+        "title": "Problem Solved",
+        "description": "Approve and we repair your AC the same day with a warranty."
+      }
+    ]
+  },
+  "faq": {
+    "section_tag": "FREQUENTLY ASKED QUESTIONS",
+    "section_title": "Questions? We Have Answers",
+    "items": [
+      {
+        "question": "How much does it cost to repair an AC in Kendall?",
+        "answer": "Common diagnostics range from $75 to $200. Most are resolved the same day. Call for a free estimate."
+      },
+      {
+        "question": "Do you offer emergency service?",
+        "answer": "Yes, 24/7 service 365 days a year. There is always a technician available in Kendall."
+      },
+      {
+        "question": "Are the technicians licensed?",
+        "answer": "All licensed by Florida with full liability insurance."
+      },
+      {
+        "question": "What areas do you cover?",
+        "answer": "All of Kendall: The Hammocks, Kendale Lakes, Tamiami, Country Walk, Three Lakes, Richmond West."
+      }
+    ]
+  },
+  "testimonials": {
+    "section_tag": "REVIEWS",
+    "section_title": "What Our Customers Say",
+    "items": [
+      {
+        "quote": "My AC stopped cooling on a Saturday. I called and in 45 minutes I had a technician. Incredible.",
+        "author": "Maria G.",
+        "location": "The Hammocks"
+      },
+      {
+        "quote": "Fast, professional and fair price. They didn't sell me unnecessary things.",
+        "author": "Carlos R.",
+        "location": "Kendale Lakes"
+      },
+      {
+        "quote": "Honest with the diagnosis. Economical and fast solution. I will call again.",
+        "author": "Ana S.",
+        "location": "Country Walk"
+      }
+    ]
+  },
+  "coverage": {
+    "title": "Our Service Area",
+    "subtitle": "Full coverage in Kendall and Miami-Dade",
+    "map_title": "Service coverage map in Kendall"
+  },
+  "final_cta": {
+    "bg_alt": "AC repair in Kendall",
+    "title": "Your AC Needs Repair?<br />Don't Wait Any Longer.",
+    "benefits": "Free estimates &bull; Same-day service &bull; Available 24/7"
+  },
+  "forms": {
+    "hero": {
+      "title": "Free Estimate",
+      "subtitle": "Get a technician today",
+      "subject": "New Lead",
+      "name_label": "Your Name",
+      "name_placeholder": "e.g. Maria Gonzalez",
+      "phone_label": "Phone Number",
+      "email_label": "Email (optional)",
+      "message_label": "What is the problem?",
+      "message_placeholder": "e.g. My AC turns on but doesn't cool...",
+      "submit": "Get Your Free Estimate",
+      "success": "Thank you! We'll contact you shortly.",
+      "privacy_note": "🔒 Your information is safe. No spam."
+    }
+  },
+  "ui": {
+    "call_now": "Call Now",
+    "emergency_call": "Emergency Call",
+    "whatsapp": "WhatsApp",
+    "emergency_call_banner": "24/7 EMERGENCY SERVICE IN KENDALL — CALL NOW",
+    "chat_with_ai": "Chat with AI",
+    "chat_agent_name": "Ana - AC Assistant",
+    "chat_agent_status": "Online • Instant response",
+    "chat_welcome": "Hello! 👋 Your AC is not cooling? We can have a technician in your Kendall area <strong>today</strong>.<br><br>What problem are you having?",
+    "chat_placeholder": "Write your message..."
+  }
+}

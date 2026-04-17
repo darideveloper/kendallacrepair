@@ -1,14 +1,48 @@
 ---
 import CoverageBadge from '../molecules/CoverageBadge.astro';
 import Badge from '../atoms/Badge.astro';
-import { NEIGHBORHOODS, MAP_EMBED_URL, COVERAGE_BADGES } from '../../constants/site';
+import { MAP_EMBED_URL } from '../../constants/site';
 import clsx from 'clsx';
+import { useTranslations } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 
 interface Props {
+  lang: Lang;
   class?: string;
 }
 
-const { class: className } = Astro.props;
+const { lang, class: className } = Astro.props;
+const t = useTranslations(lang);
+
+const neighborhoods = t('neighborhoods') as string[];
+const badgesData = t('badges') as any;
+
+const coverageBadges = [
+  {
+    icon: 'check-circle',
+    title: badgesData.licensed.title,
+    subtitle: badgesData.licensed.subtitle,
+    gradient: 'blue'
+  },
+  {
+    icon: 'shield',
+    title: badgesData.insured.title,
+    subtitle: badgesData.insured.subtitle,
+    gradient: 'blue'
+  },
+  {
+    icon: 'clock',
+    title: badgesData.emergency.title,
+    subtitle: badgesData.emergency.subtitle,
+    gradient: 'orange'
+  },
+  {
+    icon: 'dollar-sign',
+    title: badgesData.estimates.title,
+    subtitle: badgesData.estimates.subtitle,
+    gradient: 'green'
+  }
+];
 ---
 
 <section class={clsx("bg-brand-navy py-16 relative overflow-hidden", className)}>
@@ -22,29 +56,34 @@ const { class: className } = Astro.props;
           class="w-full h-[360px] block border-0"
           allowfullscreen=""
           loading="lazy"
-          title="Mapa de cobertura de servicio en Kendall"
+          title={t('coverage.map_title')}
         ></iframe>
       </div>
 
       <!-- Right: Content -->
       <div class="order-1 tablet-lg:order-2">
         <h2 class="text-3xl font-extrabold text-white mb-2 font-heading">
-          Nuestra Área de Servicio
+          {t('coverage.title')}
         </h2>
         <p class="text-[15px] text-white/50 mb-8">
-          Cobertura completa en Kendall y Miami-Dade
+          {t('coverage.subtitle')}
         </p>
 
         <!-- Badge Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          {COVERAGE_BADGES.map((badge) => (
-            <CoverageBadge {...badge} />
+          {coverageBadges.map((badge) => (
+            <CoverageBadge 
+              icon={badge.icon as any} 
+              title={badge.title} 
+              subtitle={badge.subtitle} 
+              gradient={badge.gradient as any} 
+            />
           ))}
         </div>
 
         <!-- Neighborhoods List -->
         <div class="flex flex-wrap gap-2">
-          {NEIGHBORHOODS.map((area) => (
+          {neighborhoods.map((area) => (
             <Badge variant="tag" class="bg-brand-sky/10 border-brand-sky/20 text-brand-sky py-1.5 px-3">
               {area}
             </Badge>

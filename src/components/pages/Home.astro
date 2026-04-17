@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../organisms/Hero.astro';
+import Coverage from '../organisms/Coverage.astro';
+import Services from '../organisms/Services.astro';
+import HowItWorks from '../organisms/HowItWorks.astro';
+import Testimonials from '../organisms/Testimonials.astro';
+import FAQ from '../organisms/FAQ.astro';
+import FinalCTA from '../organisms/FinalCTA.astro';
+import type { Lang } from '../../lib/i18n/ui';
+import type { PageKey } from '../../lib/i18n/routes';
+
+interface Props {
+  lang: Lang;
+  pageKey: PageKey;
+}
+
+const { lang, pageKey } = Astro.props;
+---
+
+<Layout {lang} {pageKey}>
+  <Hero {lang} />
+  <Coverage {lang} />
+  <Services {lang} />
+  <HowItWorks {lang} />
+  <Testimonials {lang} />
+  <FAQ {lang} />
+  <FinalCTA {lang} />
+</Layout>

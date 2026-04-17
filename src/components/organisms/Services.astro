@@ -3,32 +3,52 @@ import clsx from 'clsx';
 import ServiceCard from '../molecules/ServiceCard.astro';
 import AccordionItem from '../atoms/AccordionItem.astro';
 import { FEATURED_SERVICES, DETAILED_SERVICES } from '../../constants/site';
+import { useTranslations } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 
 interface Props {
+  lang: Lang;
   id?: string;
   class?: string;
 }
 
-const { id = "servicios", class: className } = Astro.props;
+const { lang, id = "servicios", class: className } = Astro.props;
+const t = useTranslations(lang);
+
+const featuredServices = FEATURED_SERVICES.map(svc => ({
+  ...svc,
+  title: t(`services.featured.${svc.id}.title`),
+  description: t(`services.featured.${svc.id}.description`),
+}));
+
+const detailedServices = DETAILED_SERVICES.map(svc => {
+  const translations = t(`detailed_services.${svc.id}`) as any;
+  return {
+    ...svc,
+    title: translations.title,
+    subtitle: translations.subtitle,
+    items: translations.items,
+  };
+});
 ---
 
 <section id={id} class={clsx("services py-20 bg-white", className)}>
   <div class="section-inner max-w-[1200px] mx-auto px-6">
     <div class="section-header text-center mb-14 animate-fade-in-up">
       <span class="section-tag inline-block bg-blue-50 text-brand-blue px-4 py-1.5 rounded-full text-[13px] font-semibold mb-4">
-        NUESTROS SERVICIOS
+        {t('services.section_tag')}
       </span>
       <h2 class="text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-gray-900 mb-3 font-heading">
-        Soluciones Completas de Aire Acondicionado
+        {t('services.section_title')}
       </h2>
       <p class="text-[17px] text-gray-500 max-w-[560px] mx-auto leading-relaxed font-body">
-        Residencial y comercial. Diagnóstico, reparación, instalación y mantenimiento.
+        {t('services.section_description')}
       </p>
     </div>
 
     <!-- Featured Services Grid -->
     <div class="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-      {FEATURED_SERVICES.map((svc) => (
+      {featuredServices.map((svc) => (
         <ServiceCard
           title={svc.title}
           description={svc.description}
@@ -42,15 +62,15 @@ const { id = "servicios", class: className } = Astro.props;
     <div class="services-detail max-w-[900px] mx-auto">
       <div class="services-detail-title text-center mb-8">
         <h3 class="text-[22px] font-bold text-gray-900 mb-1.5 font-heading">
-          Todos Nuestros Servicios
+          {t('services.detail_title')}
         </h3>
         <p class="text-[15px] text-gray-500 font-body">
-          Haz clic en cada categoría para ver el detalle
+          {t('services.detail_subtitle')}
         </p>
       </div>
 
       <div class="svc-accordion-list">
-        {DETAILED_SERVICES.map((svc) => (
+        {detailedServices.map((svc) => (
           <AccordionItem
             title={svc.title}
             subtitle={svc.subtitle}

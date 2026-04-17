@@ -3,22 +3,27 @@ import { Image } from 'astro:assets';
 import clsx from 'clsx';
 import Badge from '../atoms/Badge.astro';
 import StepCard from '../molecules/StepCard.astro';
-import { HOW_IT_WORKS_STEPS } from '../../constants/site';
+import { useTranslations } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 import bgImg from '../../assets/images/hero/foto-trane-single.jpg';
 
 interface Props {
+  lang: Lang;
   id?: string;
   class?: string;
 }
 
-const { id = "como-funciona", class: className } = Astro.props;
+const { lang, id = "como-funciona", class: className } = Astro.props;
+const t = useTranslations(lang);
+
+const steps = t('how_it_works.steps') as any as { title: string; description: string }[];
 ---
 
 <section id={id} class={clsx("how-it-works relative py-20 overflow-hidden", className)}>
   <div class="absolute inset-0 z-0">
     <Image 
       src={bgImg} 
-      alt="Kendall AC Repair Services" 
+      alt={t('how_it_works.bg_alt')}
       class="w-full h-full object-cover" 
     />
     <div class="absolute inset-0 bg-how-overlay"></div>
@@ -27,18 +32,18 @@ const { id = "como-funciona", class: className } = Astro.props;
   <div class="section-inner relative z-10 max-w-[1200px] mx-auto px-6">
     <div class="section-header text-center mb-14 animate-fade-in-up">
       <Badge variant="tag" class="border-none uppercase mb-4">
-        ASI DE FACIL
+        {t('how_it_works.section_tag')}
       </Badge>
       <h2 class="text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-white mb-3 font-heading">
-        3 Pasos para Resolver tu Problema
+        {t('how_it_works.section_title')}
       </h2>
       <p class="text-[17px] text-white/60 max-w-[560px] mx-auto leading-relaxed font-body">
-        Sin complicaciones, sin esperas.
+        {t('how_it_works.section_description')}
       </p>
     </div>
     
     <div class="grid grid-cols-1 tablet-lg:grid-cols-3 gap-8 max-w-sm tablet-lg:max-w-none mx-auto">
-      {HOW_IT_WORKS_STEPS.map((step, index) => (
+      {steps.map((step, index) => (
         <StepCard
           number={index + 1}
           title={step.title}

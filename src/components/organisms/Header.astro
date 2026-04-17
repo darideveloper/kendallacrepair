@@ -3,18 +3,33 @@ import clsx from 'clsx';
 import Button from '../atoms/Button.astro';
 import Icon from '../atoms/Icon.astro';
 import LangToggle from '../molecules/LangToggle.astro';
-import { SITE, NAV_LINKS } from '../../constants/site';
+import { SITE } from '../../constants/site';
+import { useTranslations, getLocalizedPath } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
+import type { PageKey } from '../../lib/i18n/routes';
 
 interface Props {
+  lang: Lang;
+  pageKey: PageKey;
   class?: string;
 }
 
-const { class: className } = Astro.props;
+const { lang, pageKey, class: className } = Astro.props;
+const t = useTranslations(lang);
+
+const navLinks = [
+  { href: '#servicios', label: t('nav.services') },
+  { href: '#como-funciona', label: t('nav.how_it_works') },
+  { href: '#testimonios', label: t('nav.testimonials') },
+  { href: '#faq', label: t('nav.faq') },
+];
+
+const homePath = getLocalizedPath('home', lang);
 ---
 
 <header class={clsx("header sticky top-0 z-[99] bg-white py-2 border-b border-[#E9ECEF] shadow-[0_1px_3px_rgba(0,0,0,0.08)]", className)}>
   <div class="header-inner max-w-[1200px] mx-auto px-6 flex items-center justify-between">
-    <a href="/" class="logo flex items-center" aria-label={SITE.name}>
+    <a href={homePath} class="logo flex items-center" aria-label={SITE.name}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="180" height="40" class="h-10 md:h-12 w-auto">
         <g transform="translate(8, 8)">
           <rect x="0" y="0" width="64" height="64" rx="14" fill="#1A6FAF"/>
@@ -37,7 +52,7 @@ const { class: className } = Astro.props;
 
     <nav class="hidden lg:block">
       <ul class="flex gap-7 list-none">
-        {NAV_LINKS.map((link) => (
+        {navLinks.map((link) => (
           <li>
             <a href={link.href} class="text-base font-medium text-[#495057] transition-colors hover:text-brand-blue font-body">
               {link.label}
@@ -48,7 +63,7 @@ const { class: className } = Astro.props;
     </nav>
 
     <div class="header-right flex items-center gap-4">
-      <LangToggle class="hidden md:flex" />
+      <LangToggle {lang} {pageKey} class="hidden md:flex" />
       <Button href={`tel:${SITE.phone.value}`} variant="navy" class="md:px-5 md:py-2.5">
         <Icon name="phone" size={18} slot="before" />
         <span class="hidden md:inline">{SITE.phone.display}</span>
@@ -57,7 +72,7 @@ const { class: className } = Astro.props;
       <button 
         id="mobile-menu-toggle"
         class="lg:hidden p-2 text-[#495057] focus:outline-none" 
-        aria-label="Abrir Menu"
+        aria-label={t('nav.open_menu')}
         aria-expanded="false"
       >
         <Icon name="menu" size={24} id="menu-icon-open" />
@@ -73,7 +88,7 @@ const { class: className } = Astro.props;
   >
     <nav class="px-6">
       <ul class="flex flex-col gap-6 list-none">
-        {NAV_LINKS.map((link) => (
+        {navLinks.map((link) => (
           <li>
             <a href={link.href} class="mobile-nav-link text-xl font-bold text-[#0C2340] font-heading block border-b border-gray-100 pb-4">
               {link.label}
@@ -83,7 +98,7 @@ const { class: className } = Astro.props;
         <li class="pt-4">
           <Button href={`tel:${SITE.phone.value}`} variant="primary" class="w-full">
             <Icon name="phone" size={20} slot="before" />
-            Llamar Ahora
+            {t('ui.call_now')}
           </Button>
         </li>
       </ul>

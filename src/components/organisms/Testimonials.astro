@@ -1,21 +1,31 @@
 ---
-import { TESTIMONIALS } from '../../constants/site';
+import { useTranslations } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 import TestimonialCard from '../molecules/TestimonialCard.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const testimonials = t('testimonials.items') as any as { quote: string; author: string; location: string; initials: string }[];
 ---
 
 <section class="py-20 bg-gray-50" id="testimonios">
   <div class="max-w-[1200px] mx-auto px-6">
     <div class="text-center mb-14 animate-fade-in-up">
       <span class="section-tag inline-block bg-blue-50 text-brand-blue px-4 py-1.5 rounded-full text-[13px] font-semibold mb-4">
-        RESENAS
+        {t('testimonials.section_tag')}
       </span>
       <h2 class="text-[clamp(28px,4vw,40px)] font-extrabold text-gray-900 mb-3 font-heading">
-        Lo que Dicen Nuestros Clientes
+        {t('testimonials.section_title')}
       </h2>
     </div>
     
     <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
-      {TESTIMONIALS.map(testimonial => (
+      {testimonials.map(testimonial => (
         <TestimonialCard {...testimonial} />
       ))}
     </div>

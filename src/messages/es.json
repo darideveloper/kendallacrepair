@@ -1,0 +1,292 @@
+{
+  "site": {
+    "name": "Kendall AC Repairs",
+    "description": "Servicio de reparación de aire acondicionado el mismo día en Kendall. Técnicos licenciados, estimados gratis y servicio de emergencia 24/7.",
+    "location": "Kendall, FL",
+    "whatsapp_message": "¡Hola! Necesito una reparación de AC en Kendall."
+  },
+  "pages": {
+    "home": {
+      "title": "Reparación de Aire Acondicionado en Kendall - Servicio de Emergencia 24/7",
+      "description": "Expertos en reparación, mantenimiento e instalación de aire acondicionado en Kendall, FL. Técnicos licenciados, estimados gratis y servicio de emergencia."
+    },
+    "thank_you": {
+      "title": "Gracias - Kendall AC Repair",
+      "description": "Gracias por contactarnos. Nos pondremos en contacto con usted pronto.",
+      "h1": "¡Tu solicitud ha sido recibida!",
+      "message": "Gracias por confiar en Kendall AC Repairs. Uno de nuestros técnicos revisará tu caso y te contactará en los próximos <span class=\"text-brand-orange font-bold\">15-30 minutos</span>.",
+      "back_home": "Volver al Inicio",
+      "urgent_help": "¿Necesitas ayuda urgente?"
+    }
+  },
+  "hero": {
+    "image_alt": "Reparación de AC Kendall",
+    "badge": "Técnicos disponibles ahora en Kendall",
+    "title_part1": "Reparación de AC en Kendall",
+    "title_part2": "Rápido. Confiable. Hoy Mismo.",
+    "description": "Conectamos a los dueños de casa en Kendall con técnicos de AC licenciados y asegurados — servicio el mismo día, estimados gratis.",
+    "cta_call": "Llama Ahora — Estimado Gratis",
+    "cta_online": "Solicita Cotización Online",
+    "trust_licensed": "Licenciado y Asegurado",
+    "trust_same_day": "Servicio Mismo Día",
+    "trust_estimates": "Estimados Gratis"
+  },
+  "nav": {
+    "services": "Servicios",
+    "how_it_works": "Cómo Funciona",
+    "testimonials": "Reseñas",
+    "faq": "FAQ",
+    "open_menu": "Abrir Menú"
+  },
+  "footer": {
+    "about": "Conectamos a los dueños de casa en Kendall con los mejores técnicos de AC.",
+    "services_title": "Servicios",
+    "areas_title": "Áreas de Servicio",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "neighborhoods": [
+    "Kendall", "The Hammocks", "Kendale Lakes", "Tamiami", "Country Walk", "Three Lakes", "Richmond West"
+  ],
+  "badges": {
+    "licensed": {
+      "title": "Licenciado",
+      "subtitle": "Estado de Florida"
+    },
+    "insured": {
+      "title": "Asegurado",
+      "subtitle": "Cobertura completa"
+    },
+    "emergency": {
+      "title": "Emergencia 24/7",
+      "subtitle": "Siempre disponibles"
+    },
+    "estimates": {
+      "title": "Estimados Gratis",
+      "subtitle": "Sin compromiso"
+    }
+  },
+  "services": {
+    "section_tag": "NUESTROS SERVICIOS",
+    "section_title": "Soluciones Completas de Aire Acondicionado",
+    "section_description": "Residencial y comercial. Diagnóstico, reparación, instalación y mantenimiento.",
+    "featured": {
+      "emergency": {
+        "title": "Emergencia AC 24/7",
+        "description": "¿Tu AC dejó de funcionar a medianoche? Un técnico en tu puerta en menos de una hora."
+      },
+      "repair": {
+        "title": "Reparación de AC",
+        "description": "Diagnóstico experto y reparación el mismo día. No enfría, hace ruidos, gotea."
+      },
+      "installation": {
+        "title": "Instalación de AC",
+        "description": "Instalación profesional de sistemas nuevos, mini splits y termostatos."
+      },
+      "maintenance": {
+        "title": "Mantenimiento Preventivo",
+        "description": "Planes mensuales, trimestrales y anuales para evitar fallas costosas."
+      }
+    },
+    "detail_title": "Todos Nuestros Servicios",
+    "detail_subtitle": "Haz clic en cada categoría para ver el detalle"
+  },
+  "detailed_services": {
+    "diag": {
+      "title": "Servicios de Diagnóstico",
+      "subtitle": "Evaluación completa de tu sistema",
+      "items": [
+        "Inspección completa del sistema de A/C",
+        "Análisis de flujo de aire y rendimiento",
+        "Pruebas de componentes eléctricos",
+        "Revisión de nivel y presión de refrigerante",
+        "Detección de fugas"
+      ]
+    },
+    "repair": {
+      "title": "Servicios de Reparación",
+      "subtitle": "Soluciones rápidas y confiables",
+      "items": [
+        "Reparación de A/C que no enfría",
+        "Reemplazo de capacitor, contactor y relay",
+        "Reparación y reemplazo de compresor",
+        "Reparación de motores de ventilador",
+        "Reparación de fugas de refrigerante",
+        "Limpieza y reparación de drenaje"
+      ]
+    },
+    "refrig": {
+      "title": "Servicios de Refrigerante",
+      "subtitle": "Rendimiento de enfriamiento óptimo",
+      "items": [
+        "Recarga de refrigerante",
+        "Detección y sellado de fugas",
+        "Optimización de presión del sistema"
+      ]
+    },
+    "maint": {
+      "title": "Mantenimiento Preventivo",
+      "subtitle": "Planes mensuales, trimestrales y anuales",
+      "items": [
+        "Limpieza de serpentines",
+        "Cambio de filtros",
+        "Inspección y ajuste eléctrico",
+        "Calibración del termostato",
+        "Limpieza de drenaje",
+        "Planes mensuales, trimestrales y anuales"
+      ]
+    },
+    "install": {
+      "title": "Servicios de Instalación",
+      "subtitle": "Sistemas nuevos y reemplazos",
+      "items": [
+        "Instalación de sistemas nuevos",
+        "Sistemas de aire central",
+        "Sistemas mini split",
+        "Instalación de termostatos inteligentes",
+        "Actualización y reemplazo de equipos"
+      ]
+    },
+    "air": {
+      "title": "Calidad de Aire Interior",
+      "subtitle": "Purificación y filtración avanzada",
+      "items": [
+        "Instalación de purificadores de aire",
+        "Sistemas avanzados de filtración",
+        "Sistemas de luz UV",
+        "Instalación de deshumidificadores",
+        "Soluciones para prevenir moho"
+      ]
+    },
+    "duct": {
+      "title": "Servicios de Ductos",
+      "subtitle": "Instalación, limpieza y sellado",
+      "items": [
+        "Instalación y reemplazo de ductos",
+        "Limpieza de ductos",
+        "Sellado de fugas de aire",
+        "Balanceo de aire"
+      ]
+    },
+    "elec": {
+      "title": "Servicios Eléctricos HVAC",
+      "subtitle": "Operación segura y confiable",
+      "items": [
+        "Reemplazo de breakers y fusibles",
+        "Reparación de cableado",
+        "Diagnóstico eléctrico"
+      ]
+    },
+    "comm": {
+      "title": "Servicios Comerciales",
+      "subtitle": "Soluciones para negocios",
+      "items": [
+        "Servicio de unidades rooftop",
+        "Programas de mantenimiento",
+        "Diagnóstico y solución de problemas",
+        "Instalación y reemplazo de equipos",
+        "Servicio prioritario"
+      ]
+    }
+  },
+  "how_it_works": {
+    "bg_alt": "Servicios de Reparación de AC en Kendall",
+    "section_tag": "ASÍ DE FÁCIL",
+    "section_title": "3 Pasos para Resolver tu Problema",
+    "section_description": "Sin complicaciones, sin esperas.",
+    "steps": [
+      {
+        "title": "Llama o Escríbenos",
+        "description": "Por teléfono, formulario, WhatsApp o chat. Cuéntanos el problema."
+      },
+      {
+        "title": "Diagnóstico Rápido",
+        "description": "Un técnico llega a tu hogar y te da un estimado gratis."
+      },
+      {
+        "title": "Problema Resuelto",
+        "description": "Aprueba y reparamos tu AC el mismo día con garantía."
+      }
+    ]
+  },
+  "faq": {
+    "section_tag": "PREGUNTAS FRECUENTES",
+    "section_title": "Preguntas? Tenemos Respuestas",
+    "items": [
+      {
+        "question": "¿Cuánto cuesta reparar un AC en Kendall?",
+        "answer": "Diagnósticos comunes van de $75 a $200. La mayoría se resuelven el mismo día. Llama para estimado gratis."
+      },
+      {
+        "question": "¿Ofrecen servicio de emergencia?",
+        "answer": "Sí, servicio 24/7 los 365 días. Siempre hay un técnico disponible en Kendall."
+      },
+      {
+        "question": "¿Los técnicos están licenciados?",
+        "answer": "Todos licenciados por Florida con seguro de responsabilidad completo."
+      },
+      {
+        "question": "¿Qué áreas cubren?",
+        "answer": "Todo Kendall: The Hammocks, Kendale Lakes, Tamiami, Country Walk, Three Lakes, Richmond West."
+      }
+    ]
+  },
+  "testimonials": {
+    "section_tag": "RESEÑAS",
+    "section_title": "Lo que Dicen Nuestros Clientes",
+    "items": [
+      {
+        "quote": "Mi AC dejó de enfriar un sábado. Llamé y en 45 minutos tenía un técnico. Increíble.",
+        "author": "Maria G.",
+        "location": "The Hammocks"
+      },
+      {
+        "quote": "Rápidos, profesionales y precio justo. No me vendieron cosas innecesarias.",
+        "author": "Carlos R.",
+        "location": "Kendale Lakes"
+      },
+      {
+        "quote": "Honestos con el diagnóstico. Solución económica y rápida. Volveré a llamar.",
+        "author": "Ana S.",
+        "location": "Country Walk"
+      }
+    ]
+  },
+  "coverage": {
+    "title": "Nuestra Área de Servicio",
+    "subtitle": "Cobertura completa en Kendall y Miami-Dade",
+    "map_title": "Mapa de cobertura de servicio en Kendall"
+  },
+  "final_cta": {
+    "bg_alt": "Reparación de aire acondicionado en Kendall",
+    "title": "¿Tu AC Necesita Reparación?<br />No Esperes Más.",
+    "benefits": "Estimados gratis &bull; Servicio el mismo día &bull; Disponible 24/7"
+  },
+  "forms": {
+    "hero": {
+      "title": "Cotización Gratis",
+      "subtitle": "Recibe respuesta en minutos",
+      "subject": "Nuevo Lead",
+      "name_label": "Tu Nombre",
+      "name_placeholder": "Ej. Maria Gonzalez",
+      "phone_label": "Teléfono",
+      "email_label": "Email (opcional)",
+      "message_label": "¿Cuál es el problema?",
+      "message_placeholder": "Ej. Mi AC enciende pero no enfría...",
+      "submit": "Solicita Tu Cotización Gratis",
+      "success": "¡Gracias! Te contactaremos pronto.",
+      "privacy_note": "🔒 Tu información está segura. Sin spam."
+    }
+  },
+  "ui": {
+    "call_now": "Llamar Ahora",
+    "emergency_call": "Llamada de Emergencia",
+    "whatsapp": "WhatsApp",
+    "emergency_call_banner": "SERVICIO DE EMERGENCIA 24/7 EN KENDALL — LLAMA AHORA",
+    "chat_with_ai": "Chat con IA",
+    "chat_agent_name": "Ana - Asistente AC",
+    "chat_agent_status": "En línea • Respuesta instantánea",
+    "chat_welcome": "¡Hola! 👋 ¿Tu AC no está enfriando? Podemos tener un técnico en tu zona de Kendall <strong>hoy mismo</strong>.<br><br>¿Cuál es el problema que estás teniendo?",
+    "chat_placeholder": "Escribe tu mensaje..."
+  }
+}

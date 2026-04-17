@@ -4,28 +4,31 @@ import clsx from 'clsx';
 import { SITE } from '../../constants/site';
 import Button from '../atoms/Button.astro';
 import Icon from '../atoms/Icon.astro';
+import { useTranslations } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 import bgImage from '../../assets/images/hero/foto-trane-single.jpg';
 
 interface Props {
+  lang: Lang;
   class?: string;
 }
 
-const { class: className } = Astro.props;
+const { lang, class: className } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <section class={clsx("relative py-20 overflow-hidden text-center bg-brand-navy", className)}>
   <div class="absolute inset-0 z-0">
     <Image 
       src={bgImage} 
-      alt="Reparación de aire acondicionado en Kendall" 
+      alt={t('final_cta.bg_alt')}
       class="w-full h-full object-cover opacity-40"
     />
     <div class="absolute inset-0 bg-how-overlay"></div>
   </div>
 
   <div class="relative z-10 max-w-[1200px] mx-auto px-6">
-    <h2 class="text-[clamp(28px,4vw,42px)] font-extrabold text-white mb-4 leading-tight font-heading animate-fade-in-up">
-      Tu AC Necesita Reparación?<br />No Esperes Más.
+    <h2 class="text-[clamp(28px,4vw,42px)] font-extrabold text-white mb-4 leading-tight font-heading animate-fade-in-up" set:html={t('final_cta.title')}>
     </h2>
     
     <a 
@@ -36,17 +39,16 @@ const { class: className } = Astro.props;
       {SITE.phone.display}
     </a>
     
-    <p class="text-lg text-white/60 mb-9 animate-fade-in-up" style="animation-delay: 0.2s;">
-      Estimados gratis &bull; Servicio el mismo día &bull; Disponible 24/7
+    <p class="text-lg text-white/60 mb-9 animate-fade-in-up" style="animation-delay: 0.2s;" set:html={t('final_cta.benefits')}>
     </p>
 
     <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
       <Button href={`tel:${SITE.phone.value}`}>
         <Icon name="phone" size={20} slot="before" />
-        Llama Ahora
+        {t('ui.call_now')}
       </Button>
       <Button href="#formulario" variant="secondary">
-        Solicita Cotización
+        {t('hero.cta_online')}
       </Button>
     </div>
   </div>

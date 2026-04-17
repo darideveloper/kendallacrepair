@@ -1,0 +1,40 @@
+---
+import { routes } from '../lib/i18n/routes';
+import Home from '../components/pages/Home.astro';
+import ThankYou from '../components/pages/ThankYou.astro';
+import type { Lang } from '../lib/i18n/ui';
+import type { PageKey } from '../lib/i18n/routes';
+
+export async function getStaticPaths() {
+  const paths = [];
+  
+  for (const [key, langPaths] of Object.entries(routes)) {
+    const pageKey = key as PageKey;
+    
+    // English path
+    paths.push({ 
+      params: { path: langPaths.en || undefined }, 
+      props: { pageKey, lang: 'en' as Lang } 
+    });
+    
+    // Spanish path
+    paths.push({ 
+      params: { path: langPaths.es }, 
+      props: { pageKey, lang: 'es' as Lang } 
+    });
+  }
+  
+  return paths;
+}
+
+const { pageKey, lang } = Astro.props;
+
+const components = {
+  home: Home,
+  thank_you: ThankYou,
+};
+
+const Component = components[pageKey];
+---
+
+<Component lang={lang} pageKey={pageKey} />

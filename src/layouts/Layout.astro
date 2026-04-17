@@ -6,44 +6,50 @@ import Footer from '../components/organisms/Footer.astro';
 import WhatsAppButton from '../components/molecules/WhatsAppButton.astro';
 import ChatButton from '../components/molecules/ChatButton.astro';
 import MobileCallBar from '../components/molecules/MobileCallBar.astro';
+import BaseSEO from '../components/atoms/BaseSEO.astro';
+import type { Lang } from '../lib/i18n/ui';
+import type { PageKey } from '../lib/i18n/routes';
 
 interface Props {
+  lang: Lang;
+  pageKey: PageKey;
   title?: string;
   description?: string;
 }
 
 const { 
-  title = "Kendall AC Repairs | Reparacion de AC en Kendall, FL",
-  description = "Servicio de reparacion de aire acondicionado el mismo dia en Kendall. Tecnicos licenciados, estimados gratis y servicio de emergencia 24/7."
+  lang,
+  pageKey,
+  title,
+  description
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <title>{title}</title>
+    <BaseSEO {lang} {pageKey} {title} {description} />
   </head>
   <body class="font-body text-[#343a40] bg-white overflow-x-hidden antialiased">
-    <UrgencyBanner />
-    <Header />
+    <UrgencyBanner {lang} />
+    <Header {lang} {pageKey} />
     
     <main>
       <slot />
     </main>
 
-    <Footer />
+    <Footer {lang} />
 
     <!-- Global Floating Elements -->
-    <WhatsAppButton />
-    <ChatButton />
-    <MobileCallBar />
+    <WhatsAppButton {lang} />
+    <ChatButton {lang} />
+    <MobileCallBar {lang} />
   </body>
 </html>

@@ -3,19 +3,24 @@ import clsx from 'clsx';
 import Button from '../atoms/Button.astro';
 import Input from '../atoms/Input.astro';
 import Textarea from '../atoms/Textarea.astro';
+import { useTranslations, getLocalizedPath } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 
 interface Props {
+  lang: Lang;
   class?: string;
   id?: string;
 }
 
-const { class: className, id } = Astro.props;
+const { lang, class: className, id } = Astro.props;
+const t = useTranslations(lang);
 
 const endpoint = import.meta.env.CONTACT_FORM_ENDPOINT;
 const user = import.meta.env.CONTACT_FORM_USER;
 const apiKey = import.meta.env.CONTACT_FORM_API_KEY;
 const siteUrl = import.meta.env.SITE_URL || Astro.site?.origin || 'http://localhost:4321';
-const redirectUrl = `${siteUrl}/thank-you`;
+const redirectPath = getLocalizedPath('thank_you', lang);
+const redirectUrl = `${siteUrl}${redirectPath}`;
 ---
 
 <div id={id} class={clsx(
@@ -24,8 +29,8 @@ const redirectUrl = `${siteUrl}/thank-you`;
   className
 )}>
   <div class="form-header text-center mb-7">
-    <h3 class="text-[22px] font-extrabold text-[#212529] mb-1.5 font-heading">Cotizacion Gratis</h3>
-    <p class="text-sm text-[#868e96]">Recibe respuesta en minutos</p>
+    <h3 class="text-[22px] font-extrabold text-[#212529] mb-1.5 font-heading">{t('forms.hero.title')}</h3>
+    <p class="text-sm text-[#868e96]">{t('forms.hero.subtitle')}</p>
   </div>
 
   <form 
@@ -38,42 +43,41 @@ const redirectUrl = `${siteUrl}/thank-you`;
     <!-- Hidden fields for the backend -->
     <input type="hidden" name="api_key" value={apiKey} />
     <input type="hidden" name="user" value={user} />
-    <input type="hidden" name="subject" value="Nuevo Lead - Kendall AC Repair" />
+    <input type="hidden" name="subject" value={`${t('site.name')} - ${t('forms.hero.subject')}`} />
     <input type="hidden" name="redirect" value={redirectUrl} />
 
     <Input 
-      label="Tu Nombre" 
+      label={t('forms.hero.name_label')} 
       name="name" 
-      placeholder="Ej. Maria Gonzalez" 
+      placeholder={t('forms.hero.name_placeholder')} 
       required
     />
     <Input 
-      label="Telefono" 
+      label={t('forms.hero.phone_label')} 
       name="phone" 
       type="tel" 
       placeholder="(305) 000-0000" 
       required 
     />
     <Input 
-      label="Email (opcional)" 
+      label={t('forms.hero.email_label')} 
       name="email" 
       type="email" 
       placeholder="tu@email.com" 
     />
     <Textarea 
-      label="Cual es el problema?" 
+      label={t('forms.hero.message_label')} 
       name="message" 
-      placeholder="Ej. Mi AC enciende pero no enfria..." 
+      placeholder={t('forms.hero.message_placeholder')} 
       required
     />
 
     <Button type="submit" class="w-full mt-2" variant="primary">
-      Solicita Tu Cotizacion Gratis &rarr;
+      {t('forms.hero.submit')} &rarr;
     </Button>
     
     <p class="text-center text-[12px] text-[#adb5bd] mt-3">
-      🔒 Tu informacion esta segura. Sin spam.
+      {t('forms.hero.privacy_note')}
     </p>
   </form>
 </div>
-

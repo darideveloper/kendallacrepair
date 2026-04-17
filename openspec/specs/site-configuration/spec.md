@@ -3,23 +3,23 @@
 ## Purpose
 TBD - created by archiving change implement-coverage-section. Update Purpose after archive.
 ## Requirements
-### Requirement: Centralized Service Area Data
-The application SHALL store all geographic and service area data in a centralized configuration file with strict type safety.
+### Requirement: Centralized Service Area Configuration
+The application SHALL store geographic configuration in `src/constants/site.ts`, while localized names and labels SHALL be stored in translation files.
 
 #### Scenario: Type-safe coverage constants
 - Given the `src/constants/site.ts` file
-- When adding coverage section data
-- Then it SHALL define an interface `CoverageBadgeData` using `IconName` from `Icon.astro`
-- And the `COVERAGE_BADGES` constant SHALL be strictly typed using that interface
+- When defining `COVERAGE_BADGES` or `NEIGHBORHOODS`
+- Then it SHALL use structural configuration (icons, categories) in the constant
+- And localized labels SHALL be retrieved via the i18n system
 
-### Requirement: Centralized Services Data
-The application SHALL store all service-related information in a centralized configuration file with strict type safety.
+### Requirement: Centralized Services Configuration
+The application SHALL store service-related structural data (images, icons) in a centralized configuration file.
 
 #### Scenario: Type-safe services configuration
 - Given the `src/constants/site.ts` file
 - When defining `FEATURED_SERVICES` and `DETAILED_SERVICES`
-- Then it SHALL use specialized interfaces to define the structure of each object
-- And it SHALL include `iconName` (using `IconName` from `Icon.astro`) and image paths for all services
+- Then it SHALL include image metadata and icon definitions
+- And all user-facing text for these services SHALL be managed via translation files
 
 ### Requirement: How It Works Content Configuration
 The site configuration SHALL include the content for the "How it works" steps.

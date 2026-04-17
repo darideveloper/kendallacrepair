@@ -1,16 +1,20 @@
 ---
 import { SITE } from '../../constants/site';
 import clsx from 'clsx';
+import { useTranslations } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 
 interface Props {
+  lang: Lang;
   class?: string;
 }
 
-const { class: className } = Astro.props;
+const { lang, class: className } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <div class={clsx("urgency-banner bg-urgency-grad text-white text-center py-2.5 px-4 text-sm font-semibold relative z-[100]", className)}>
   <a href={`tel:${SITE.phone.value}`} class="hover:underline">
-    <span class="animate-blink mr-1">●</span> SERVICIO DE EMERGENCIA 24/7 EN KENDALL — LLAMA AHORA
+    <span class="animate-blink mr-1">●</span> {t('ui.emergency_call_banner')}
   </a>
 </div>

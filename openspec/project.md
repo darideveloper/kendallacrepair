@@ -26,6 +26,7 @@ Kendall AC Repair is a professional service website for an HVAC company based in
 ### Architecture Patterns
 - **Atomic Design**: Components are organized into `atoms`, `molecules`, and `organisms` within `src/components/`.
 - **Layouts**: Centralized layouts in `src/layouts/` to ensure consistent metadata and styling across pages.
+- **Localized Routing**: Single catch-all router (`src/pages/[...path].astro`) driven by `src/lib/i18n/routes.ts` for clean, SEO-friendly localized URLs.
 - **Global Styles**: Base styles and Tailwind directives are managed in `src/styles/global.css`.
 
 ## Mandatory Development Standards (DRY & Performance)

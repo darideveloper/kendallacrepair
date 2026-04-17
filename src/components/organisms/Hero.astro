@@ -7,22 +7,26 @@ import Icon from '../atoms/Icon.astro';
 import HeroForm from '../molecules/HeroForm.astro';
 import TrustItem from '../molecules/TrustItem.astro';
 import { SITE } from '../../constants/site';
+import { useTranslations } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 
 // Import hero image
 import heroImage from '../../assets/images/hero/foto-trane-single.jpg';
 
 interface Props {
+  lang: Lang;
   class?: string;
 }
 
-const { class: className } = Astro.props;
+const { lang, class: className } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <section class={clsx("hero relative min-h-[620px] flex items-center overflow-hidden", className)}>
   <div class="hero-bg absolute inset-0 z-0">
     <Image
       src={heroImage}
-      alt="AC Repair Kendall"
+      alt={t('hero.image_alt')}
       class="w-full h-full object-cover"
       quality="high"
       loading="eager"
@@ -33,38 +37,38 @@ const { class: className } = Astro.props;
   <div class="hero-inner max-w-[1200px] mx-auto px-6 py-10 lg:py-[60px] grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-[60px] items-center relative z-[2] w-full">
     <div class="hero-content animate-fade-in-up">
       <Badge class="mb-6">
-        Tecnicos disponibles ahora en Kendall
+        {t('hero.badge')}
       </Badge>
       
       <h1 class="font-heading text-[32px] md:text-[42px] lg:text-[52px] font-extrabold text-white leading-[1.1] mb-5">
-        Reparacion de AC en Kendall<br />
+        {t('hero.title_part1')}<br />
         <span class="bg-gradient-to-r from-[#fd7e14] to-[#f76707] bg-clip-text text-transparent">
-          Rapido. Confiable. Hoy Mismo.
+          {t('hero.title_part2')}
         </span>
       </h1>
       
       <p class="text-[18px] text-white/70 leading-relaxed mb-8 max-w-[520px] font-body">
-        Conectamos a los duenos de casa en Kendall con tecnicos de AC licenciados y asegurados — servicio el mismo dia, estimados gratis.
+        {t('hero.description')}
       </p>
       
       <div class="hero-ctas flex flex-wrap gap-3.5 mb-10">
         <Button href={`tel:${SITE.phone.value}`} variant="primary">
           <Icon name="phone" size={20} slot="before" />
-          Llama Ahora — Estimado Gratis
+          {t('hero.cta_call')}
         </Button>
         
         <Button href="#formulario" variant="secondary">
-          Solicita Cotizacion Online
+          {t('hero.cta_online')}
         </Button>
       </div>
       
       <div class="trust-row flex flex-wrap gap-6">
-        <TrustItem icon="🛡️">Licenciado y Asegurado</TrustItem>
-        <TrustItem icon="🕒">Servicio Mismo Dia</TrustItem>
-        <TrustItem icon="⭐">Estimados Gratis</TrustItem>
+        <TrustItem icon="🛡️">{t('hero.trust_licensed')}</TrustItem>
+        <TrustItem icon="🕒">{t('hero.trust_same_day')}</TrustItem>
+        <TrustItem icon="⭐">{t('hero.trust_estimates')}</TrustItem>
       </div>
     </div>
     
-    <HeroForm id="formulario" />
+    <HeroForm id="formulario" {lang} />
   </div>
 </section>

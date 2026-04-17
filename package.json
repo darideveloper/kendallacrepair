@@ -7,9 +7,10 @@
   },
   "scripts": {
     "dev": "portless kendallacrepair npx astro dev",
-    "build": "astro build",
+    "build": "npm run validate-i18n && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "validate-i18n": "tsx scripts/validate-i18n.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
@@ -28,6 +29,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "astro-show-tailwindcss-breakpoint": "^2.0.0"
+    "astro-show-tailwindcss-breakpoint": "^2.0.0",
+    "tsx": "^4.21.0"
   }
 }
