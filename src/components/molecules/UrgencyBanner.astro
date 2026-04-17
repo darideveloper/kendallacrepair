@@ -1,4 +1,5 @@
 ---
+import { SITE } from '../../constants/site';
 import clsx from 'clsx';
 
 interface Props {
@@ -9,7 +10,7 @@ const { class: className } = Astro.props;
 ---
 
 <div class={clsx("urgency-banner bg-urgency-grad text-white text-center py-2.5 px-4 text-sm font-semibold relative z-[100]", className)}>
-  <a href="tel:+13055551234" class="hover:underline">
+  <a href={`tel:${SITE.phone.value}`} class="hover:underline">
     <span class="animate-blink mr-1">●</span> SERVICIO DE EMERGENCIA 24/7 EN KENDALL — LLAMA AHORA
   </a>
 </div>

@@ -10,12 +10,12 @@ export const SITE = {
   description: "Servicio de reparacion de aire acondicionado el mismo dia en Kendall. Tecnicos licenciados, estimados gratis y servicio de emergencia 24/7.",
   url: "https://kendallacrepair.com",
   phone: {
-    display: "(305) 555-1234",
-    value: "+13055551234"
+    display: "(305) 306-4511",
+    value: "+13053064511"
   },
   whatsapp: {
     message: "Hola! Necesito una reparacion de AC en Kendall.",
-    phone: "13055551234"
+    phone: "13053064511"
   },
   location: "Kendall, FL",
   email: "info@kendallacrepair.com"

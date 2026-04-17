@@ -1,4 +1,5 @@
 ---
+import { SITE } from '../../constants/site';
 import clsx from 'clsx';
 
 interface Props {
@@ -8,8 +9,8 @@ interface Props {
 }
 
 const { 
-  phone = "13055551234", 
-  message = "Hola, necesito reparacion de AC en Kendall",
+  phone = SITE.whatsapp.phone, 
+  message = SITE.whatsapp.message,
   class: className 
 } = Astro.props;
 
