@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../atoms/Button.astro';
+import Icon from '../atoms/Icon.astro';
+import { useTranslations, getLocalizedPath } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
+import type { PageKey } from '../../lib/i18n/routes';
+
+interface Props {
+  lang: Lang;
+  pageKey: PageKey;
+}
+
+const { lang, pageKey } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Layout {lang} {pageKey}>
+  <section class="py-24 px-6 min-h-[60vh] flex items-center justify-center text-center">
+    <div class="max-w-2xl mx-auto">
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-brand-orange/10 rounded-full mb-8">
+        <Icon name="alert-triangle" size={40} class="text-brand-orange" />
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-brand-navy mb-6">
+        {t('pages.404.h1')}
+      </h1>
+      
+      <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+        {t('pages.404.message')}
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <Button href={getLocalizedPath('home', lang)} variant="primary">
+          <Icon name="home" size={20} slot="before" />
+          {t('pages.404.back_home')}
+        </Button>
+        
+        <Button href="tel:+13053064511" variant="secondary">
+          <Icon name="phone" size={20} slot="before" />
+          Call Support
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

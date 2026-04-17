@@ -2,6 +2,7 @@
 import { useTranslations, getLocalizedPath } from '../../lib/i18n/utils';
 import { languages, type Lang } from '../../lib/i18n/ui';
 import type { PageKey } from '../../lib/i18n/routes';
+import { SITE } from '../../constants/site';
 
 interface Props {
   lang: Lang;
@@ -16,6 +17,8 @@ const t = useTranslations(lang);
 const title = overrideTitle || t(`pages.${pageKey}.title`);
 const description = overrideDescription || t(`pages.${pageKey}.description`);
 
+const fullTitle = pageKey === 'home' ? title : `${title} | ${SITE.name}`;
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://kendallacrepair.com');
 
 // Helper to get absolute URL for alternates
@@ -23,25 +26,112 @@ const getAbsoluteUrl = (path: string) => {
   const baseUrl = Astro.site?.origin || 'https://kendallacrepair.com';
   return `${baseUrl}${path === '/' ? '' : path}`;
 };
+
+const ogImage = getAbsoluteUrl('/images/logos/logo-stacked-color.svg');
+
+// JSON-LD Structured Data
+const neighborhoods = t('neighborhoods') as string[];
+const featuredServices = t('services.featured') as Record<string, any>;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HVACBusiness",
+      "@id": `${SITE.url}/#hvacbusiness`,
+      "name": SITE.name,
+      "url": SITE.url,
+      "telephone": SITE.phone.value,
+      "email": SITE.email,
+      "image": ogImage,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kendall",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.68,
+        "longitude": -80.39
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "serviceArea": neighborhoods.map(n => ({
+        "@type": "Place",
+        "name": n
+      }))
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Air Conditioning Repair",
+      "provider": { "@id": `${SITE.url}/#hvacbusiness` },
+      "areaServed": neighborhoods.map(n => ({ "@type": "Place", "name": n })),
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AC Services",
+        "itemListElement": Object.entries(featuredServices).map(([key, service], index) => ({
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": service.title,
+            "description": service.description
+          },
+          "position": index + 1
+        }))
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": SITE.url
+        },
+        ...(pageKey !== 'home' ? [{
+          "@type": "ListItem",
+          "position": 2,
+          "name": title,
+          "item": getAbsoluteUrl(getLocalizedPath(pageKey, lang))
+        }] : [])
+      ]
+    }
+  ]
+};
 ---
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
+<meta property="twitter:title" content={fullTitle} />
 <meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImage} />
+<meta property="twitter:site" content="@kendallacrepair" />
+<meta property="twitter:creator" content="@kendallacrepair" />
 
 <!-- Hreflang Tags -->
 {
@@ -58,3 +148,6 @@ const getAbsoluteUrl = (path: string) => {
   hreflang="x-default"
   href={getAbsoluteUrl(getLocalizedPath(pageKey, 'en'))}
 />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

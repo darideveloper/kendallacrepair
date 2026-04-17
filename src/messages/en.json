@@ -17,6 +17,13 @@
       "message": "Thank you for trusting Kendall AC Repairs. One of our technicians will review your case and contact you in the next <span class=\"text-brand-orange font-bold\">15-30 minutes</span>.",
       "back_home": "Back to Home",
       "urgent_help": "Need urgent help?"
+    },
+    "404": {
+      "title": "404 - Page Not Found",
+      "description": "The page you are looking for does not exist.",
+      "h1": "Oops! Page not found",
+      "message": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+      "back_home": "Return to Home"
     }
   },
   "hero": {

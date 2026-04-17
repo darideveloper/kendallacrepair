@@ -22,7 +22,10 @@ const t = useTranslations(lang);
     <Image 
       src={bgImage} 
       alt={t('final_cta.bg_alt')}
+      title={t('final_cta.bg_alt')}
       class="w-full h-full object-cover opacity-40"
+      loading="lazy"
+      decoding="async"
     />
     <div class="absolute inset-0 bg-how-overlay"></div>
   </div>
@@ -35,6 +38,7 @@ const t = useTranslations(lang);
       href={`tel:${SITE.phone.value}`}
       class="text-[clamp(32px,5vw,56px)] font-extrabold text-white mb-8 block transition-colors duration-300 hover:text-brand-orange hover:no-underline font-heading animate-fade-in-up"
       style="animation-delay: 0.1s;"
+      aria-label={`${t('ui.call_now')} ${SITE.phone.display}`}
     >
       {SITE.phone.display}
     </a>

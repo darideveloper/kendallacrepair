@@ -23,9 +23,12 @@ const { title, description, image, icon, class: className } = Astro.props;
      <Image 
        src={image} 
        alt={title} 
+       title={title}
        class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500" 
        width={400}
        height={225}
+       loading="lazy"
+       decoding="async"
      />
   </div>
 

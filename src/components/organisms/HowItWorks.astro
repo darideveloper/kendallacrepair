@@ -24,7 +24,10 @@ const steps = t('how_it_works.steps') as any as { title: string; description: st
     <Image 
       src={bgImg} 
       alt={t('how_it_works.bg_alt')}
+      title={t('how_it_works.bg_alt')}
       class="w-full h-full object-cover" 
+      loading="lazy"
+      decoding="async"
     />
     <div class="absolute inset-0 bg-how-overlay"></div>
   </div>

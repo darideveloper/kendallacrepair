@@ -23,6 +23,7 @@ const t = useTranslations(lang)
     id='chat-toggle'
     class='float-chat w-14 h-14 rounded-full bg-brand-blue text-white flex items-center justify-center shadow-[0_4px_20px_rgba(26,111,175,0.35)] transition-transform hover:scale-110 animate-fade-in-up relative'
     title={t('ui.chat_with_ai')}
+    aria-label={t('ui.chat_with_ai')}
   >
     <span
       class='chat-badge absolute -top-0.5 -right-0.5 w-4 h-4 bg-brand-orange rounded-full border-2 border-white animate-pulse-custom'
@@ -58,6 +59,7 @@ const t = useTranslations(lang)
       height='100%'
       style='border: none;'
       title='Chat con IA'
+      loading="lazy"
     ></iframe>
   </div>
 </div>

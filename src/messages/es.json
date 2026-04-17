@@ -12,13 +12,20 @@
     },
     "thank_you": {
       "title": "Gracias - Kendall AC Repair",
-      "description": "Gracias por contactarnos. Nos pondremos en contacto con usted pronto.",
-      "h1": "¡Tu solicitud ha sido recibida!",
-      "message": "Gracias por confiar en Kendall AC Repairs. Uno de nuestros técnicos revisará tu caso y te contactará en los próximos <span class=\"text-brand-orange font-bold\">15-30 minutos</span>.",
+      "description": "Gracias por contactarnos. Nos pondremos en contacto con usted en breve.",
+      "h1": "¡Su solicitud ha sido recibida!",
+      "message": "Gracias por confiar en Kendall AC Repairs. Uno de nuestros técnicos revisará su caso y se pondrá en contacto con usted en los próximos <span class=\"text-brand-orange font-bold\">15-30 minutos</span>.",
       "back_home": "Volver al Inicio",
-      "urgent_help": "¿Necesitas ayuda urgente?"
+      "urgent_help": "¿Necesita ayuda urgente?"
+    },
+    "404": {
+      "title": "404 - Página no encontrada",
+      "description": "La página que estás buscando no existe.",
+      "h1": "¡Oops! Página no encontrada",
+      "message": "La página que estás buscando podría haber sido eliminada, haber cambiado de nombre o no estar disponible temporalmente.",
+      "back_home": "Volver al Inicio"
     }
-  },
+    },
   "hero": {
     "image_alt": "Reparación de AC Kendall",
     "badge": "Técnicos disponibles ahora en Kendall",

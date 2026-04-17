@@ -26,9 +26,12 @@ const { quote, author, location, initials, image, class: className } = Astro.pro
         <Image 
           src={image} 
           alt={author} 
+          title={author}
           width={44} 
           height={44} 
           class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
       ) : (
         <span class="text-white">{initials}</span>

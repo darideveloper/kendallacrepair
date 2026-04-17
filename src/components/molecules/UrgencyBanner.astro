@@ -14,7 +14,7 @@ const t = useTranslations(lang);
 ---
 
 <div class={clsx("urgency-banner bg-urgency-grad text-white text-center py-2.5 px-4 text-sm font-semibold relative z-[100]", className)}>
-  <a href={`tel:${SITE.phone.value}`} class="hover:underline">
+  <a href={`tel:${SITE.phone.value}`} class="hover:underline" aria-label={`${t('ui.emergency_call_banner')} ${SITE.phone.display}`}>
     <span class="animate-blink mr-1">●</span> {t('ui.emergency_call_banner')}
   </a>
 </div>
