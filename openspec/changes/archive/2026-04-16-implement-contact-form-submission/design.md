@@ -20,7 +20,7 @@ The following fields are required by the backend to process the request:
 
 ### Redirection Strategy
 - Redirection is handled by the backend server's response (typically a `302 Found` or `303 See Other`).
-- The `redirect` parameter must be an absolute URL (e.g., `https://kendallacrepair.com/thank-you`) because the submission is made to a different domain.
+- The `redirect` parameter must be an absolute URL (e.g., `https://kendallacrepairs.com/thank-you`) because the submission is made to a different domain.
 
 ## Elimination of Complexity
 By removing the `<script>` block entirely, we:

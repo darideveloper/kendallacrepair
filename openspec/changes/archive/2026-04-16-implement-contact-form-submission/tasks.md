@@ -5,7 +5,7 @@
 - [x] 2.1 Update `src/components/molecules/HeroForm.astro` frontmatter to retrieve API environment variables.
 - [x] 2.2 Configure the `<form>` in `src/components/molecules/HeroForm.astro` with `action`, `method="POST"`, and `enctype="multipart/form-data"`.
 - [x] 2.3 Add required hidden fields: `api_key`, `user`, `subject`, and `redirect`.
-- [x] 2.4 Use `Astro.site` or `import.meta.env.SITE_URL` to ensure the `redirect` URL is absolute (e.g., `https://kendallacrepair.com/thank-you`).
+- [x] 2.4 Use `Astro.site` or `import.meta.env.SITE_URL` to ensure the `redirect` URL is absolute (e.g., `https://kendallacrepairs.com/thank-you`).
 - [x] 2.5 **REMOVE** the `<script>` block entirely to allow native HTML submission.
 
 ## 3. Validation

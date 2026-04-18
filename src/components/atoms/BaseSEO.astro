@@ -26,12 +26,12 @@ const fullTitle = pageKey === 'home' ? title : `${title} | ${SITE.name}`
 
 const canonicalURL = new URL(
   Astro.url.pathname,
-  Astro.site || 'https://kendallacrepair.com',
+  Astro.site || 'https://kendallacrepairs.com',
 )
 
 // Helper to get absolute URL for alternates
 const getAbsoluteUrl = (path: string) => {
-  const baseUrl = Astro.site?.origin || 'https://kendallacrepair.com'
+  const baseUrl = Astro.site?.origin || 'https://kendallacrepairs.com'
   return `${baseUrl}${path === '/' ? '' : path}`
 }
 

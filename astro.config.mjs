@@ -12,10 +12,10 @@ export default defineConfig({
       // Vite specifically needs this set to ensure the HMR 
       // client knows which port to talk to after a restart
       port: process.env.PORT ? parseInt(process.env.PORT) : 4321,
-      strictPort: true, 
+      strictPort: true,
     }
   },
-  site: 'https://kendallacrepair.com',
+  site: 'https://kendallacrepairs.com',
   integrations: [showTailwindcssBreakpoint(), react(), sitemap()],
   server: {
     // Astro's top-level server config

@@ -60,5 +60,5 @@ Kendall AC Repair is a professional service website for an HVAC company based in
 - **Accessibility**: Ensure WCAG compliance for service-based accessibility.
 
 ## External Dependencies
-- **Domain**: kendallacrepair.com
+- **Domain**: kendallacrepairs.com
 - **Sitemap**: /sitemap-index.xml
