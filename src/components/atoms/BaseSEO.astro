@@ -36,6 +36,7 @@ const getAbsoluteUrl = (path: string) => {
 }
 
 const ogImage = getAbsoluteUrl('/images/logos/og-image.png')
+const businessLogo = getAbsoluteUrl('/images/logos/logo-icon-512.png')
 
 // JSON-LD Structured Data
 const neighborhoods = t('neighborhoods') as string[]
@@ -51,7 +52,7 @@ const jsonLd = {
       url: SITE.url,
       telephone: SITE.phone.value,
       email: SITE.email,
-      image: ogImage,
+      image: businessLogo,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Kendall',
@@ -77,7 +78,7 @@ const jsonLd = {
         opens: '00:00',
         closes: '23:59',
       },
-      serviceArea: neighborhoods.map((n) => ({
+      areaServed: neighborhoods.map((n) => ({
         '@type': 'Place',
         name: n,
       })),
@@ -92,13 +93,16 @@ const jsonLd = {
         name: 'AC Services',
         itemListElement: Object.entries(featuredServices).map(
           ([key, service], index) => ({
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: service.title,
-              description: service.description,
-            },
+            '@type': 'ListItem',
             position: index + 1,
+            item: {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: service.title,
+                description: service.description,
+              },
+            },
           }),
         ),
       },

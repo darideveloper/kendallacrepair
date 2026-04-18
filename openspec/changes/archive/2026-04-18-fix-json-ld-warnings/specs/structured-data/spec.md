@@ -1,9 +1,6 @@
-# structured-data Specification
+# Spec Delta: Fix JSON-LD Warnings
 
-## Purpose
-The structured data specification defines the requirements for injecting Schema.org JSON-LD blocks into the website to improve SEO and search engine visibility.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Local Business Schema
 The system SHALL provide structured data for search engines to identify the business as an HVAC service provider in Kendall, FL.
@@ -17,6 +14,8 @@ The system SHALL provide structured data for search engines to identify the busi
 - And it SHALL include `areaServed` matching the localized neighborhoods list.
 - And it SHALL include a square business `image`.
 
+## ADDED Requirements
+
 ### Requirement: Service Catalog Schema
 The system SHALL provide a structured catalog of services within the JSON-LD block.
 
@@ -27,12 +26,3 @@ The system SHALL provide a structured catalog of services within the JSON-LD blo
 - And each element in the array SHALL be a `ListItem`
 - And each `ListItem` SHALL include a `position` property starting from 1
 - And each `ListItem` SHALL include an `item` property containing an `Offer` object.
-
-### Requirement: Breadcrumb Schema
-The system SHALL provide breadcrumb structured data to enhance SERP results.
-
-#### Scenario: BreadcrumbList JSON-LD
-- Given a non-home page (e.g., Thank You)
-- When the page is rendered
-- Then it SHALL include a `BreadcrumbList` schema in the JSON-LD block
-- And it SHALL correctly map the path from Home to the current page.
