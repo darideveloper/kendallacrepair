@@ -31,6 +31,21 @@ The system SHALL correctly identify the canonical version of each page and provi
 - When the head is inspected
 - Then it SHALL include a `<link rel="alternate" hreflang="x-default" ...>` pointing to the English version of the current page.
 
+### Requirement: Standard HTML Meta Tags
+The system SHALL provide standard HTML meta tags for improved SEO and browser metadata.
+
+#### Scenario: Keywords and Author
+- Given the `BaseSEO.astro` component
+- When the page is rendered
+- Then it SHALL include a `<meta name="keywords" ...>` tag with localized keywords
+- And it SHALL include a `<meta name="author" ...>` tag with the business name.
+
+#### Scenario: Robots and Language
+- Given the `BaseSEO.astro` component
+- When the page is rendered
+- Then it SHALL include a `<meta name="robots" content="index, follow">` tag
+- And it SHALL include a `<meta name="language" ...>` tag with the localized language name (e.g., "English" or "Spanish").
+
 ### Requirement: Favicon and App Icons
 The system SHALL provide standard favicon and app icon declarations in the document head for maximum browser and device compatibility.
 

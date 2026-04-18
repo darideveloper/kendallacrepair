@@ -142,6 +142,22 @@ const jsonLd = {
   name='description'
   content={description}
 />
+<meta
+  name='keywords'
+  content={t('site.keywords')}
+/>
+<meta
+  name='author'
+  content={SITE.name}
+/>
+<meta
+  name='robots'
+  content='index, follow'
+/>
+<meta
+  name='language'
+  content={lang === 'en' ? 'English' : 'Spanish'}
+/>
 <link
   rel='canonical'
   href={canonicalURL}
