@@ -1,34 +1,43 @@
 ---
-import clsx from 'clsx';
-import { getLocalizedPath } from '../../lib/i18n/utils';
-import type { Lang } from '../../lib/i18n/ui';
-import type { PageKey } from '../../lib/i18n/routes';
+import clsx from 'clsx'
+import { getLocalizedPath } from '../../lib/i18n/utils'
+import type { Lang } from '../../lib/i18n/ui'
+import type { PageKey } from '../../lib/i18n/routes'
 
 interface Props {
-  lang: Lang;
-  pageKey: PageKey;
-  class?: string;
+  lang: Lang
+  pageKey: PageKey
+  class?: string
 }
 
-const { lang, pageKey, class: className } = Astro.props;
+const { lang, pageKey, class: className } = Astro.props
 
-const baseBtn = "px-3 py-1.5 rounded-md text-[13px] font-bold transition-all duration-200 no-underline inline-block";
-const activeBtn = "bg-white text-[#1B4F72] shadow-[0_1px_3px_rgba(0,0,0,0.08)]";
-const inactiveBtn = "bg-transparent text-[#868E96] hover:text-[#1B4F72]";
+const baseBtn =
+  'px-3 py-1.5 rounded-md text-[13px] font-bold transition-all duration-200 no-underline inline-block'
+const activeBtn = 'bg-white text-[#1B4F72] shadow-[0_1px_3px_rgba(0,0,0,0.08)]'
+const inactiveBtn = 'bg-transparent text-[#868E96] hover:text-[#1B4F72]'
 ---
 
-<div class={clsx("flex gap-1 bg-[#F1F3F5] rounded-lg p-[3px]", className)}>
-  <a 
-    href={getLocalizedPath(pageKey, 'es')} 
-    class={clsx(baseBtn, lang === 'es' ? activeBtn : inactiveBtn)}
-    aria-label="Cambiar a Español"
+<div class={clsx('flex gap-1 bg-[#F1F3F5] rounded-lg p-[3px]', className)}>
+  <a
+    href={getLocalizedPath(pageKey, 'es')}
+    class={clsx(
+      baseBtn,
+      lang === 'es' ? activeBtn : inactiveBtn,
+      'pointer-events-none',
+    )}
+    aria-label='Cambiar a Español'
   >
     ES
   </a>
-  <a 
-    href={getLocalizedPath(pageKey, 'en')} 
-    class={clsx(baseBtn, lang === 'en' ? activeBtn : inactiveBtn)}
-    aria-label="Change to English"
+  <a
+    href={getLocalizedPath(pageKey, 'en')}
+    class={clsx(
+      baseBtn,
+      lang === 'en' ? activeBtn : inactiveBtn,
+      'pointer-events-none',
+    )}
+    aria-label='Change to English'
   >
     EN
   </a>
