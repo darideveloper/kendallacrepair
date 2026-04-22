@@ -1,12 +1,12 @@
 import type { IconName } from '../components/atoms/Icon.astro'
 import type { ImageMetadata } from 'astro'
-import emergencyImg from '../assets/images/services/foto-tecnico-emergencia.png'
-import repairImg from '../assets/images/services/foto-tecnico-reparacion.jpg'
-import installationImg from '../assets/images/services/foto-trane-dual.jpg'
-import maintenanceImg from '../assets/images/services/foto-carrier-unit.jpg'
-import mariaImg from '../assets/images/clients/client-maria.jpg'
-import carlosImg from '../assets/images/clients/client-carlos.jpg'
-import anaImg from '../assets/images/clients/client-ana.jpg'
+import emergencyImg from '../assets/images/services/foto-tecnico-emergencia.webp'
+import repairImg from '../assets/images/services/foto-tecnico-reparacion.webp'
+import installationImg from '../assets/images/services/foto-trane-dual.webp'
+import maintenanceImg from '../assets/images/services/foto-carrier-unit.webp'
+import mariaImg from '../assets/images/clients/client-maria.webp'
+import carlosImg from '../assets/images/clients/client-carlos.webp'
+import anaImg from '../assets/images/clients/client-ana.webp'
 
 export const SITE = {
   name: 'Kendall AC Repairs',
