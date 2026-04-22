@@ -2,25 +2,15 @@
 import { routes } from '../lib/i18n/routes';
 import Home from '../components/pages/Home.astro';
 import ThankYou from '../components/pages/ThankYou.astro';
+import NotFound from '../components/pages/NotFound.astro';
 import type { Lang } from '../lib/i18n/ui';
 import type { PageKey } from '../lib/i18n/routes';
-
-type RoutedPageKey = Exclude<PageKey, '404'>;
-
-interface Props {
-  pageKey: RoutedPageKey;
-  lang: Lang;
-}
 
 export async function getStaticPaths() {
   const paths = [];
   
   for (const [key, langPaths] of Object.entries(routes)) {
-    if (key === '404') {
-      continue;
-    }
-
-    const pageKey = key as RoutedPageKey;
+    const pageKey = key as PageKey;
     
     // English path
     paths.push({ 
@@ -43,6 +33,7 @@ const { pageKey, lang } = Astro.props;
 const components = {
   home: Home,
   thank_you: ThankYou,
+  "404": NotFound,
 };
 
 const Component = components[pageKey];
