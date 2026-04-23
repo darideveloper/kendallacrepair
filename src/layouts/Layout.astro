@@ -9,6 +9,7 @@ import MobileCallBar from '../components/molecules/MobileCallBar.astro';
 import BaseSEO from '../components/atoms/BaseSEO.astro';
 import plusJakartaSansLatinUrl from '@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2?url';
 import dmSansLatinUrl from '@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url';
+import nonCriticalMotionCssUrl from '../styles/noncritical-motion.css?url';
 import type { Lang } from '../lib/i18n/ui';
 import type { PageKey } from '../lib/i18n/routes';
 
@@ -33,11 +34,11 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Preconnect hints -->
-    <link rel="preconnect" href="https://maps.googleapis.com" />
-    <link rel="preconnect" href="https://maps.gstatic.com" />
     <link rel="preload" href={plusJakartaSansLatinUrl} as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href={dmSansLatinUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href={nonCriticalMotionCssUrl} as="style" />
+    <link rel="stylesheet" href={nonCriticalMotionCssUrl} media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href={nonCriticalMotionCssUrl} /></noscript>
 
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

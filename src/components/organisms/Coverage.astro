@@ -50,14 +50,27 @@ const coverageBadges = [
     <div class="grid grid-cols-1 tablet-lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
       
       <!-- Left: Map Container -->
-      <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-glass-border order-2 tablet-lg:order-1">
+      <div
+        id="coverage-map-container"
+        class="rounded-2xl overflow-hidden shadow-2xl border-2 border-glass-border order-2 tablet-lg:order-1"
+      >
         <iframe
-          src={MAP_EMBED_URL}
+          id="coverage-map-frame"
+          data-map-src={MAP_EMBED_URL}
           class="w-full h-[360px] block border-0"
           allowfullscreen=""
           loading="lazy"
           title={t('coverage.map_title')}
         ></iframe>
+        <noscript>
+          <iframe
+            src={MAP_EMBED_URL}
+            class="w-full h-[360px] block border-0"
+            allowfullscreen=""
+            loading="lazy"
+            title={t('coverage.map_title')}
+          ></iframe>
+        </noscript>
       </div>
 
       <!-- Right: Content -->
@@ -94,3 +107,34 @@ const coverageBadges = [
     </div>
   </div>
 </section>
+
+<script>
+  const mapContainer = document.getElementById('coverage-map-container')
+  const mapFrame = document.getElementById('coverage-map-frame')
+
+  function loadCoverageMap() {
+    if (!mapFrame) return
+    if (mapFrame.getAttribute('src')) return
+    const mapSrc = mapFrame.getAttribute('data-map-src')
+    if (!mapSrc) return
+    mapFrame.setAttribute('src', mapSrc)
+  }
+
+  if (mapContainer) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries
+        if (entry && entry.isIntersecting) {
+          loadCoverageMap()
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '320px 0px' }
+    )
+
+    observer.observe(mapContainer)
+    mapContainer.addEventListener('pointerenter', loadCoverageMap, { once: true })
+    mapContainer.addEventListener('touchstart', loadCoverageMap, { once: true })
+    mapContainer.addEventListener('focusin', loadCoverageMap, { once: true })
+  }
+</script>
