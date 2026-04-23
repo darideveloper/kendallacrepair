@@ -1,4 +1,4 @@
-import type { IconName } from '../components/atoms/Icon.astro'
+import type { IconName } from '../types/icon-name'
 import type { ImageMetadata } from 'astro'
 import emergencyImg from '../assets/images/services/foto-tecnico-emergencia.webp'
 import repairImg from '../assets/images/services/foto-tecnico-reparacion.webp'

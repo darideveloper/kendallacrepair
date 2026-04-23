@@ -1,31 +1,6 @@
 ---
 import clsx from 'clsx';
-
-type IconName = 
-  | 'phone' 
-  | 'mail' 
-  | 'whatsapp' 
-  | 'check' 
-  | 'shield' 
-  | 'clock' 
-  | 'star' 
-  | 'chevron-right' 
-  | 'menu' 
-  | 'x' 
-  | 'message-square' 
-  | 'check-circle' 
-  | 'dollar-sign'
-  | 'search'
-  | 'tool'
-  | 'thermometer'
-  | 'calendar'
-  | 'home'
-  | 'wind'
-  | 'activity'
-  | 'zap'
-  | 'truck'
-  | 'snowflake'
-  | 'chevron-down';
+import type { IconName } from '../../types/icon-name';
 
 interface Props {
   name: IconName;
@@ -60,7 +35,8 @@ const icons: Record<string, string> = {
   zap: `<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />`,
   truck: `<rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" />`,
   snowflake: `<path d="M12 2v20M2 12h20M12 2l4 4M12 2L8 4M12 22l4-4M12 22l-4-2M2 12l4 4M2 12l4-4M22 12l-4 4M22 12l-4-4" />`,
-  'chevron-down': `<polyline points="6 9 12 15 18 9" />`
+  'chevron-down': `<polyline points="6 9 12 15 18 9" />`,
+  'alert-triangle': `<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" />`
 };
 ---
 

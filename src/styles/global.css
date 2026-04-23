@@ -129,4 +129,14 @@
   .text-comm { color: var(--color-comm-text); }
   .bg-emerg { background: var(--background-emerg); }
   .text-emerg { color: var(--color-emerg-text); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-up,
+    .animate-blink,
+    .animate-pulse-custom {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
 }
