@@ -1,12 +1,12 @@
 {
-  "name": "kendallacrepair",
+  "name": "kendallacrepairs",
   "type": "module",
   "version": "0.0.1",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "portless kendallacrepair npx astro dev",
+    "dev": "portless kendallacrepairs npx astro dev",
     "build": "npm run validate-i18n && astro build",
     "preview": "astro preview",
     "astro": "astro",
