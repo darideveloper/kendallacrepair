@@ -1,0 +1,40 @@
+---
+import BlankLayout from '../layouts/BlankLayout.astro';
+import clsx from 'clsx';
+import { Image } from 'astro:assets';
+import Badge from '../components/atoms/Badge.astro';
+
+// Import hero image
+import heroImage from '../assets/images/hero/foto-trane-single.webp';
+---
+
+<BlankLayout lang="en" pageKey="home" title="On Maintenance - Kendall AC Repairs" description="The site is currently on maintenance.">
+  <section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={heroImage}
+        alt="Maintenance Background"
+        class="w-full h-full object-cover"
+        quality="high"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-[#1A6FAF]/90 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    
+    <div class="relative z-10 flex flex-col items-center justify-center text-center px-6">
+      <Badge class="mb-6">
+        Maintenance / Mantenimiento
+      </Badge>
+      
+      <h1 class="font-heading text-[42px] md:text-[52px] lg:text-[64px] font-extrabold text-white leading-[1.1] mb-2">
+        On Maintenance
+      </h1>
+      
+      <p class="text-white/80 text-xl md:text-2xl font-body">
+        Sitio en mantenimiento
+      </p>
+    </div>
+  </section>
+</BlankLayout>
