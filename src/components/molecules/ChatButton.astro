@@ -53,14 +53,14 @@ const t = useTranslations(lang)
     >
       <Icon name='x' size={24} />
     </button>
-    <!-- <iframe
+    <iframe
       src='https://n8n.apps.darideveloper.com/webhook/1da5e766-56e7-4e76-8cb4-879be56bfdd2/chat'
       width='100%'
       height='100%'
       style='border: none;'
       title='Chat con IA'
       loading="lazy"
-    ></iframe> -->
+    ></iframe>
   </div>
 </div>
 
@@ -78,17 +78,15 @@ const t = useTranslations(lang)
     }
   }
 
-  // toggleBtn?.addEventListener('click', toggleChat)
+  toggleBtn?.addEventListener('click', toggleChat)
   closePopupBtn?.addEventListener('click', toggleChat)
 
   // Auto-open after 15 seconds if not already opened
-  /*
   setTimeout(() => {
     if (popup && !popup.classList.contains('opacity-100')) {
       toggleChat()
     }
   }, 5000)
-  */
 </script>
 
 <style>
