@@ -113,4 +113,20 @@
   .bg-emerg { background: var(--background-emerg); }
   .text-emerg { color: var(--color-emerg-text); }
 
+  /* Services Section Short Classes */
+  .svc { @apply py-20 bg-white; }
+  .si { @apply max-w-[1200px] mx-auto px-6; }
+  .sh { @apply text-center mb-14; }
+  .st { @apply inline-block bg-blue-50 text-brand-blue px-4 py-1.5 rounded-full text-[13px] font-semibold mb-4; }
+  .sg { @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12; }
+  
+  .sc { @apply bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 relative hover:border-brand-sky hover:-translate-y-1 hover:shadow-lg; }
+  .si2 { @apply w-full h-44 object-cover block; }
+  .sb { @apply p-6; }
+  .sb h3 { @apply text-lg font-bold text-gray-900 mb-2 font-heading; }
+  .sb p { @apply text-[14px] text-gray-500 leading-relaxed mb-4 font-body; }
+  .sc-cta { @apply inline-block text-[14px] font-semibold text-brand-orange hover:text-brand-orange/80 transition-colors font-body; }
+
+  .sh h2 { @apply text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-gray-900 mb-3 font-heading; }
+  .sh p { @apply text-[17px] text-gray-500 max-w-[560px] mx-auto leading-relaxed font-body; }
 }

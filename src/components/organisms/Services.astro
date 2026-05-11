@@ -1,7 +1,6 @@
 ---
 import clsx from 'clsx';
 import ServiceCard from '../molecules/ServiceCard.astro';
-import AccordionItem from '../atoms/AccordionItem.astro';
 import { FEATURED_SERVICES, DETAILED_SERVICES } from '../../constants/site';
 import { useTranslations } from '../../lib/i18n/utils';
 import type { Lang } from '../../lib/i18n/ui';
@@ -21,65 +20,113 @@ const featuredServices = FEATURED_SERVICES.map(svc => ({
   description: t(`services.featured.${svc.id}.description`),
 }));
 
-const detailedServices = DETAILED_SERVICES.map(svc => {
-  const translations = t(`detailed_services.${svc.id}`) as any;
-  return {
-    ...svc,
-    title: translations.title,
-    subtitle: translations.subtitle,
-    items: translations.items,
-  };
-});
+const detailedTranslations = t('services.detailed_services_v2') as any[];
+const detailedServices = DETAILED_SERVICES.map((svc, index) => ({
+  ...svc,
+  title: detailedTranslations[index]?.title,
+  items: detailedTranslations[index]?.items,
+}));
 ---
 
-<section id={id} class={clsx("services py-20 bg-white", className)}>
-  <div class="section-inner max-w-[1200px] mx-auto px-6">
-    <div class="section-header text-center mb-14">
-      <span class="section-tag inline-block bg-blue-50 text-brand-blue px-4 py-1.5 rounded-full text-[13px] font-semibold mb-4">
+<section id={id} class={clsx("svc", className)}>
+  <div class="si">
+    <div class="sh">
+      <span class="st">
         {t('services.section_tag')}
       </span>
-      <h2 class="text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-gray-900 mb-3 font-heading">
+      <h2>
         {t('services.section_title')}
       </h2>
-      <p class="text-[17px] text-gray-500 max-w-[560px] mx-auto leading-relaxed font-body">
+      <p>
         {t('services.section_description')}
       </p>
     </div>
 
     <!-- Featured Services Grid -->
-    <div class="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="sg">
       {featuredServices.map((svc) => (
         <ServiceCard
           title={svc.title}
           description={svc.description}
           image={svc.image}
           icon={svc.icon}
+          ctaText={lang === 'es' ? 'Llamar' : 'Call'}
         />
       ))}
     </div>
 
-    <!-- Expandable Full Service List -->
-    <div class="services-detail max-w-[900px] mx-auto">
-      <div class="services-detail-title text-center mb-8">
-        <h3 class="text-[22px] font-bold text-gray-900 mb-1.5 font-heading">
+    <!-- Detailed Service List -->
+    <div class="detailed-services-container">
+      <div class="detailed-services-header">
+        <h3>
           {t('services.detail_title')}
         </h3>
-        <p class="text-[15px] text-gray-500 font-body">
+        <p>
           {t('services.detail_subtitle')}
         </p>
       </div>
 
-      <div class="svc-accordion-list">
+      <div class="detailed-services-grid">
         {detailedServices.map((svc) => (
-          <AccordionItem
-            title={svc.title}
-            subtitle={svc.subtitle}
-            category={svc.category}
-            icon={svc.icon}
-            items={svc.items}
-          />
+          <div class="detailed-svc-card" style={`border-left: 4px solid ${svc.accentColor};`}>
+            <p class="detailed-svc-title">{svc.title}</p>
+            <p class="detailed-svc-items">{svc.items}</p>
+          </div>
         ))}
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .detailed-services-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .detailed-services-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .detailed-services-header h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #212529;
+    margin-bottom: 6px;
+    font-family: var(--font-heading);
+  }
+  .detailed-services-header p {
+    font-size: 15px;
+    color: #868E96;
+    font-family: var(--font-body);
+  }
+  .detailed-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 768px) {
+    .detailed-services-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .detailed-svc-card {
+    background: #fff;
+    border: 1px solid #E9ECEF;
+    padding: 20px 20px 20px 24px;
+    border-radius: 0 8px 8px 0;
+  }
+  .detailed-svc-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0 0 8px;
+    color: #212529;
+    font-family: var(--font-heading);
+  }
+  .detailed-svc-items {
+    font-size: 13px;
+    color: #6C757D;
+    margin: 0;
+    line-height: 1.7;
+    font-family: var(--font-body);
+  }
+</style>

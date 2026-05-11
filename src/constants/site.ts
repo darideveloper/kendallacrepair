@@ -56,20 +56,16 @@ export const FEATURED_SERVICES: FeaturedService[] = [
 
 export interface DetailedService {
   id: string
-  category: string
-  icon: IconName
+  accentColor: string
 }
 
 export const DETAILED_SERVICES: DetailedService[] = [
-  { id: 'diag', category: 'diag', icon: 'search' },
-  { id: 'repair', category: 'repair', icon: 'tool' },
-  { id: 'refrig', category: 'refrig', icon: 'snowflake' },
-  { id: 'maint', category: 'maint', icon: 'calendar' },
-  { id: 'install', category: 'install', icon: 'home' },
-  { id: 'air', category: 'air', icon: 'wind' },
-  { id: 'duct', category: 'duct', icon: 'activity' },
-  { id: 'elec', category: 'elec', icon: 'zap' },
-  { id: 'comm', category: 'comm', icon: 'truck' },
+  { id: 'repair', accentColor: '#1A6FAF' },
+  { id: 'emergency', accentColor: '#E03131' },
+  { id: 'installation', accentColor: '#27AE60' },
+  { id: 'maintenance', accentColor: '#F59F00' },
+  { id: 'ducts', accentColor: '#7F77DD' },
+  { id: 'quality', accentColor: '#868E96' },
 ]
 
 export interface Testimonial {

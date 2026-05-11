@@ -81,23 +81,49 @@
     "featured": {
       "emergency": {
         "title": "24/7 AC Emergency",
-        "description": "AC stopped working at midnight? A technician at your door in less than an hour."
+        "description": "AC broke at 2 AM? A technician at your door in less than 60 minutes — Sundays and holidays included."
       },
       "repair": {
         "title": "AC Repair",
-        "description": "Expert diagnosis and same-day repair. Not cooling, making noises, leaking."
+        "description": "Not cooling? Strange noises? Leaking? We diagnose and repair the same day — most in less than 2 hours."
       },
       "installation": {
         "title": "AC Installation",
-        "description": "Professional installation of new systems, mini splits and thermostats."
+        "description": "New AC, mini splits, smart thermostats. Free quote, financing available, 90-day warranty."
       },
       "maintenance": {
         "title": "Preventive Maintenance",
-        "description": "Monthly, quarterly and annual plans to avoid costly failures."
+        "description": "Avoid $500+ repairs. Plans starting at $99/year — includes tuning, cleaning, and inspection."
       }
     },
     "detail_title": "All Our Services",
-    "detail_subtitle": "Click on each category to see the details"
+    "detail_subtitle": "Residential and commercial — all brands",
+    "detailed_services_v2": [
+      {
+        "title": "Repair",
+        "items": "Compressor · Capacitor · Contactor · Fan motors · Refrigerant leaks · Drain"
+      },
+      {
+        "title": "Emergency & Diagnosis",
+        "items": "24/7 Response · Total failures · Full inspection · Electrical components · Leak detection"
+      },
+      {
+        "title": "Installation",
+        "items": "Central systems · Mini split · Nest and Ecobee thermostats · Equipment upgrades"
+      },
+      {
+        "title": "Preventive Maintenance",
+        "items": "Coils · Filters · Electrical adjustment · Thermostat · Drain · Monthly and annual plans"
+      },
+      {
+        "title": "Ducts & Electrical",
+        "items": "Duct installation · Cleaning · Leak sealing · Air balancing · Breakers · HVAC wiring"
+      },
+      {
+        "title": "Air Quality & Commercial",
+        "items": "Purifiers · UV Light · Dehumidifiers · Mold · Rooftop units · Priority service"
+      }
+    ]
   },
   "detailed_services": {
     "diag": {

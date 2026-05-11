@@ -81,23 +81,49 @@
     "featured": {
       "emergency": {
         "title": "Emergencia AC 24/7",
-        "description": "¿Tu AC dejó de funcionar a medianoche? Un técnico en tu puerta en menos de una hora."
+        "description": "¿AC se dañó a las 2 AM? Un técnico en tu puerta en menos de 60 minutos — domingos y feriados incluidos."
       },
       "repair": {
         "title": "Reparación de AC",
-        "description": "Diagnóstico experto y reparación el mismo día. No enfría, hace ruidos, gotea."
+        "description": "¿No enfría? ¿Ruidos extraños? ¿Gotea? Diagnosticamos y reparamos el mismo día — la mayoría en menos de 2 horas."
       },
       "installation": {
         "title": "Instalación de AC",
-        "description": "Instalación profesional de sistemas nuevos, mini splits y termostatos."
+        "description": "AC nuevo, mini splits, termostatos inteligentes. Cotización gratis, financiamiento disponible, garantía 90 días."
       },
       "maintenance": {
         "title": "Mantenimiento Preventivo",
-        "description": "Planes mensuales, trimestrales y anuales para evitar fallas costosas."
+        "description": "Evita reparaciones de $500+. Planes desde $99/año — incluye afinación, limpieza e inspección."
       }
     },
     "detail_title": "Todos Nuestros Servicios",
-    "detail_subtitle": "Haz clic en cada categoría para ver el detalle"
+    "detail_subtitle": "Residencial y comercial — todas las marcas",
+    "detailed_services_v2": [
+      {
+        "title": "Reparación",
+        "items": "Compresor · Capacitor · Contactor · Motores ventilador · Fugas refrigerante · Drenaje"
+      },
+      {
+        "title": "Emergencia y diagnóstico",
+        "items": "Respuesta 24/7 · Fallas totales · Inspección completa · Componentes eléctricos · Detección fugas"
+      },
+      {
+        "title": "Instalación",
+        "items": "Sistemas centrales · Mini split · Termostatos Nest y Ecobee · Actualización de equipos"
+      },
+      {
+        "title": "Mantenimiento preventivo",
+        "items": "Serpentines · Filtros · Ajuste eléctrico · Termostato · Drenaje · Planes mensuales y anuales"
+      },
+      {
+        "title": "Ductos y eléctrico",
+        "items": "Instalación ductos · Limpieza · Sellado fugas · Balanceo aire · Breakers · Cableado HVAC"
+      },
+      {
+        "title": "Calidad de aire y comercial",
+        "items": "Purificadores · Luz UV · Deshumidificadores · Moho · Rooftop units · Servicio prioritario"
+      }
+    ]
   },
   "detailed_services": {
     "diag": {
