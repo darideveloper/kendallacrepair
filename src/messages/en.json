@@ -257,22 +257,49 @@
   "faq": {
     "section_tag": "FREQUENTLY ASKED QUESTIONS",
     "section_title": "Questions? We Have Answers",
+    "cta": "More questions?",
+    "cta_phone": "Call us at (305) 306-4511",
+    "cta_whatsapp": "message us on WhatsApp 💬",
     "items": [
       {
         "question": "How much does it cost to repair an AC in Kendall?",
-        "answer": "Common diagnostics range from $75 to $200. Most are resolved the same day. Call for a free estimate."
+        "answer": "Diagnostic visit: FREE. Common repairs range from $150 to $850 depending on the issue. We give you a written estimate BEFORE we start — no surprises."
       },
       {
         "question": "Do you offer emergency service?",
-        "answer": "Yes, 24/7 service 365 days a year. There is always a technician available in Kendall."
+        "answer": "Yes — 24/7, 365 days a year. Average response time in Kendall: 60-90 minutes. We work nights, weekends, and holidays at standard rates."
       },
       {
         "question": "Are the technicians licensed?",
-        "answer": "All licensed by Florida with full liability insurance."
+        "answer": "Yes. All technicians have a Florida State CAC license and $1M liability insurance. We can show you proof before any work."
+      },
+      {
+        "question": "Do you speak Spanish?",
+        "answer": "Yes! Our team is fully bilingual. We serve you in Spanish by phone, WhatsApp, and in person. Your comfort is our priority."
+      },
+      {
+        "question": "How long does it take to arrive?",
+        "answer": "In Kendall and nearby areas, the average arrival time is 1-3 hours. In emergencies, it can be as fast as 60 minutes."
+      },
+      {
+        "question": "Do you charge for the diagnostic visit?",
+        "answer": "No. The diagnostic visit is 100% free. We give you a detailed quote with no obligation. You only pay if you approve the repair."
+      },
+      {
+        "question": "Do you work with all brands?",
+        "answer": "Yes. Carrier, Trane, Goodman, Lennox, Rheem, York, Daikin, Mitsubishi, and all major brands. Central systems and mini splits."
+      },
+      {
+        "question": "Do you offer a warranty?",
+        "answer": "Yes. 90-day warranty on parts and labor for all repairs. New installations include the manufacturer's warranty."
       },
       {
         "question": "What areas do you cover?",
-        "answer": "All of Kendall: The Hammocks, Kendale Lakes, Tamiami, Country Walk, Three Lakes, Richmond West."
+        "answer": "All of Kendall and surrounding areas: The Hammocks (33196), Kendale Lakes (33183), Tamiami (33184), Country Walk (33196), Three Lakes (33177), Richmond West (33186), and Pinecrest. Outside these areas? Call us — we may still cover you."
+      },
+      {
+        "question": "Do you offer payment plans?",
+        "answer": "Yes, we offer financing options for installations and major repairs. Ask about available plans when you get your quote."
       }
     ]
   },

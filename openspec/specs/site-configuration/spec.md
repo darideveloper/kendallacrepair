@@ -29,12 +29,14 @@ The site configuration SHALL include the content for the "How it works" steps.
 - **THEN** the `HOW_IT_WORKS_STEPS` array is available containing the title and description for each step.
 
 ### Requirement: Centralized FAQ Data
-The application SHALL store all FAQ data in a centralized configuration file with strict type safety.
+The application SHALL store all FAQ data in translation files (`src/messages/*.json`) with type-safe `FAQItem` interface usage.
 
 #### Scenario: Type-safe FAQ constants
-- **WHEN** adding FAQ section data to `src/constants/site.ts`
-- **THEN** it SHALL define an interface `FAQItem` with `question` and `answer` string properties
-- **AND** the `FAQ_ITEMS` constant SHALL be strictly typed using that interface
+- **WHEN** adding FAQ section data to translation files
+- **THEN** each FAQ item SHALL define `question` and `answer` string properties
+- **AND** the `FAQ_ITEMS_COUNT` constant in `src/constants/site.ts` SHALL be set to `10`
+- **AND** each language file SHALL contain exactly 10 FAQ items
+- **AND** the first FAQ item SHALL start with the `open` class by default when rendered
 
 ### Requirement: Environment Variable Configuration
 The application SHALL utilize environment variables to securely store and inject API credentials and endpoints for form submission.

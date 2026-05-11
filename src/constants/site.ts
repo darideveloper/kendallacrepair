@@ -86,4 +86,4 @@ export const CLIENT_IMAGES: Record<string, ImageMetadata> = {
 
 export const HOW_IT_WORKS_STEPS_COUNT = 3
 export const TESTIMONIALS_COUNT = 3
-export const FAQ_ITEMS_COUNT = 4
+export const FAQ_ITEMS_COUNT = 10

@@ -257,22 +257,49 @@
   "faq": {
     "section_tag": "PREGUNTAS FRECUENTES",
     "section_title": "Preguntas? Tenemos Respuestas",
+    "cta": "Mas preguntas?",
+    "cta_phone": "Llamanos al (305) 306-4511",
+    "cta_whatsapp": "escribenos por WhatsApp 💬",
     "items": [
       {
-        "question": "¿Cuánto cuesta reparar un AC en Kendall?",
-        "answer": "Diagnósticos comunes van de $75 a $200. La mayoría se resuelven el mismo día. Llama para estimado gratis."
+        "question": "Cuanto cuesta reparar un AC en Kendall?",
+        "answer": "Visita diagnostica: GRATIS. Reparaciones comunes van de $150 a $850 dependiendo del problema. Te damos un presupuesto por escrito ANTES de comenzar — sin sorpresas."
       },
       {
-        "question": "¿Ofrecen servicio de emergencia?",
-        "answer": "Sí, servicio 24/7 los 365 días. Siempre hay un técnico disponible en Kendall."
+        "question": "Ofrecen servicio de emergencia?",
+        "answer": "Si — 24/7, 365 dias al ano. Tiempo promedio de respuesta en Kendall: 60-90 minutos. Trabajamos noches, fines de semana y feriados a tarifas estandar."
       },
       {
-        "question": "¿Los técnicos están licenciados?",
-        "answer": "Todos licenciados por Florida con seguro de responsabilidad completo."
+        "question": "Los tecnicos estan licenciados?",
+        "answer": "Si. Todos los tecnicos tienen licencia CAC del Estado de Florida y seguro de responsabilidad de $1M. Podemos mostrarte la prueba antes de cualquier trabajo."
       },
       {
-        "question": "¿Qué áreas cubren?",
-        "answer": "Todo Kendall: The Hammocks, Kendale Lakes, Tamiami, Country Walk, Three Lakes, Richmond West."
+        "question": "Hablan espanol?",
+        "answer": "Si! Nuestro equipo es completamente bilingue. Te atendemos en espanol por telefono, WhatsApp y en persona. Tu comodidad es nuestra prioridad."
+      },
+      {
+        "question": "Cuanto demoran en llegar?",
+        "answer": "En Kendall y zonas cercanas, el tiempo promedio de llegada es 1-3 horas. En emergencias, puede ser tan rapido como 60 minutos."
+      },
+      {
+        "question": "Cobran por venir a diagnosticar?",
+        "answer": "No. La visita diagnostica es 100% gratis. Te damos un presupuesto detallado sin compromiso. Solo pagas si decides aprobar la reparacion."
+      },
+      {
+        "question": "Trabajan con todas las marcas?",
+        "answer": "Si. Carrier, Trane, Goodman, Lennox, Rheem, York, Daikin, Mitsubishi y todas las marcas principales. Sistemas centrales y mini splits."
+      },
+      {
+        "question": "Ofrecen garantia?",
+        "answer": "Si. Garantia de 90 dias en piezas y mano de obra en todas las reparaciones. Instalaciones nuevas incluyen garantia del fabricante."
+      },
+      {
+        "question": "Que areas cubren?",
+        "answer": "Todo Kendall y alrededores: The Hammocks (33196), Kendale Lakes (33183), Tamiami (33184), Country Walk (33196), Three Lakes (33177), Richmond West (33186) y Pinecrest. Fuera de estas zonas? Llamanos — puede que te cubramos."
+      },
+      {
+        "question": "Aceptan pagos a plazos?",
+        "answer": "Si, ofrecemos opciones de financiamiento para instalaciones y reparaciones mayores. Pregunta por los planes disponibles al momento de tu cotizacion."
       }
     ]
   },
