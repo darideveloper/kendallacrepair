@@ -59,19 +59,19 @@
   "badges": {
     "licensed": {
       "title": "Licensed",
-      "subtitle": "State of Florida"
+      "subtitle": "Florida State CAC#"
     },
     "insured": {
       "title": "Insured",
-      "subtitle": "Full coverage"
+      "subtitle": "$1M Liability"
     },
     "emergency": {
       "title": "24/7 Emergency",
-      "subtitle": "Always available"
+      "subtitle": "60 min response"
     },
     "estimates": {
       "title": "Free Estimates",
-      "subtitle": "No commitment"
+      "subtitle": "$0 diagnostic visit"
     }
   },
   "services": {
@@ -265,7 +265,7 @@
   },
   "coverage": {
     "title": "Our Service Area",
-    "subtitle": "Full coverage in Kendall and Miami-Dade",
+    "subtitle": "⏰ Technician at your door in 1-3 hours in all of Kendall",
     "map_title": "Service coverage map in Kendall"
   },
   "final_cta": {

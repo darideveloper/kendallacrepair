@@ -78,7 +78,7 @@ const coverageBadges = [
         <h2 class="text-3xl font-extrabold text-white mb-2 font-heading">
           {t('coverage.title')}
         </h2>
-        <p class="text-[15px] text-white/50 mb-8">
+        <p class="text-[15px] text-brand-orange font-bold mb-8">
           {t('coverage.subtitle')}
         </p>
 
@@ -98,7 +98,7 @@ const coverageBadges = [
         <div class="flex flex-wrap gap-2">
           {neighborhoods.map((area) => (
             <Badge variant="tag" class="bg-brand-sky/10 border-brand-sky/20 text-brand-sky py-1.5 px-3">
-              {area}
+              📍 {area}
             </Badge>
           ))}
         </div>

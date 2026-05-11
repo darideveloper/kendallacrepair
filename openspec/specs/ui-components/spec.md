@@ -95,21 +95,20 @@ The application SHALL provide floating action buttons that remain accessible and
 ### Requirement: Coverage Badge Molecule
 The application SHALL provide a `CoverageBadge.astro` molecule for trust-building information cards.
 
-#### Scenario: Trust card with glassmorphism
-- Given a `CoverageBadge.astro` component
-- When it is rendered with an `icon`, `title`, and `subtitle`
-- Then it SHALL use a semi-transparent background (`bg-white/6`) and a semi-transparent border (`border-white/10`)
-- And it SHALL display the icon within a circular or rounded container using a brand gradient background
+#### Scenario: Visual inspection of the coverage section badges
+- **GIVEN** a `CoverageBadge.astro` component
+- **THEN** it SHALL use a stroke width of 2.5 for the `Icon.astro` component to ensure a bold visual style
+- **AND** it SHALL use brand-specific gradients for icon backgrounds (Blue for trust, Orange for urgency, Green for value)
+- **AND** the subtitle text SHALL use an opacity of `white/60` for better contrast against the glass surface
 
 ### Requirement: Coverage Organism
 The application SHALL provide a `Coverage.astro` organism to display the service area map and trust information.
 
-#### Scenario: Responsive two-column layout
-- Given a `Coverage.astro` component
-- When viewed on a desktop (width >= 900px)
-- Then it SHALL display a 1.1fr 0.9fr grid with a Google Map on the left and information on the right
-- And when viewed on mobile (width < 900px)
-- Then it SHALL stack the map and information vertically
+#### Scenario: Visual and content parity with high-conversion design
+- **GIVEN** a `Coverage.astro` component
+- **THEN** it SHALL display a subtitle emphasizing speed ("⏰ Tecnico en tu puerta en 1-3 horas en todo Kendall") with `text-brand-orange` and `font-bold` styling
+- **AND** it SHALL display neighborhood items prepended with a location pin (📍)
+- **AND** the map iframe SHALL use a localized title fetched from the i18n system
 
 ### Requirement: Accessibility for Embedded Media
 The application SHALL ensure that embedded media like Google Maps follow accessibility best practices.

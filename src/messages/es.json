@@ -59,19 +59,19 @@
   "badges": {
     "licensed": {
       "title": "Licenciado",
-      "subtitle": "Estado de Florida"
+      "subtitle": "Florida State CAC#"
     },
     "insured": {
       "title": "Asegurado",
-      "subtitle": "Cobertura completa"
+      "subtitle": "$1M responsabilidad"
     },
     "emergency": {
       "title": "Emergencia 24/7",
-      "subtitle": "Siempre disponibles"
+      "subtitle": "Respuesta en 60 min"
     },
     "estimates": {
       "title": "Estimados Gratis",
-      "subtitle": "Sin compromiso"
+      "subtitle": "$0 visita diagnostica"
     }
   },
   "services": {
@@ -264,8 +264,8 @@
     ]
   },
   "coverage": {
-    "title": "Nuestra Área de Servicio",
-    "subtitle": "Cobertura completa en Kendall y Miami-Dade",
+    "title": "Nuestra Zona de Servicio",
+    "subtitle": "⏰ Tecnico en tu puerta en 1-3 horas en todo Kendall",
     "map_title": "Mapa de cobertura de servicio en Kendall"
   },
   "final_cta": {
