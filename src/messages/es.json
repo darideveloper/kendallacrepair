@@ -47,14 +47,15 @@
     "open_menu": "Abrir Menú"
   },
   "footer": {
-    "about": "Conectamos a los dueños de casa en Kendall con los mejores técnicos de AC.",
+    "about": "Conectamos a los dueños de casa en Kendall con técnicos de AC licenciados y asegurados. No somos una compañía de AC — somos tu coordinador de servicio, asegurándonos de que el mejor técnico disponible llegue a tu puerta lo más rápido posible.",
     "services_title": "Servicios",
     "areas_title": "Áreas de Servicio",
+    "info_title": "Informacion",
     "privacy": "Privacidad",
     "terms": "Términos"
   },
   "neighborhoods": [
-    "Kendall", "The Hammocks", "Kendale Lakes", "Tamiami", "Country Walk", "Three Lakes", "Richmond West"
+    "Kendall", "The Hammocks", "Kendale Lakes", "Tamiami", "Country Walk", "Three Lakes", "Richmond West", "Pinecrest"
   ],
   "badges": {
     "licensed": {

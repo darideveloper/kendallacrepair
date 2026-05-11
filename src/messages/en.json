@@ -47,14 +47,15 @@
     "open_menu": "Open Menu"
   },
   "footer": {
-    "about": "Connecting homeowners in Kendall with the best AC technicians.",
+    "about": "Connecting homeowners in Kendall with licensed and insured AC technicians. We're not an AC company — we're your service coordinator, making sure the best available technician arrives at your door as fast as possible.",
     "services_title": "Services",
     "areas_title": "Service Areas",
+    "info_title": "Information",
     "privacy": "Privacy",
     "terms": "Terms"
   },
   "neighborhoods": [
-    "Kendall", "The Hammocks", "Kendale Lakes", "Tamiami", "Country Walk", "Three Lakes", "Richmond West"
+    "Kendall", "The Hammocks", "Kendale Lakes", "Tamiami", "Country Walk", "Three Lakes", "Richmond West", "Pinecrest"
   ],
   "badges": {
     "licensed": {

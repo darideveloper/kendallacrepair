@@ -11,14 +11,13 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const featuredServices = t('services.featured') as any;
-const neighborhoods = t('neighborhoods') as string[];
 ---
 
 <footer class="bg-footer-bg text-footer-text py-24">
-  <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr] gap-8 md:gap-12">
+  <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8 md:gap-12">
     <div>
       <div class="mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="180" height="40" class="h-9 w-auto block">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80" class="w-auto block max-w-[220px]">
           <g transform="translate(8, 8)">
             <rect x="0" y="0" width="64" height="64" rx="14" fill="#1A6FAF"/>
             <rect x="2.5" y="2.5" width="59" height="59" rx="12" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
@@ -31,8 +30,8 @@ const neighborhoods = t('neighborhoods') as string[];
             <rect x="40" y="44" width="20" height="3" rx="1.5" fill="#F76707"/>
             <rect x="44" y="50" width="16" height="3" rx="1.5" fill="#F76707" opacity="0.7"/>
             <rect x="48" y="56" width="12" height="3" rx="1.5" fill="#F76707" opacity="0.4"/>
-            <text x="80" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" letter-spacing="-0.3" fill="#ffffff">KENDALL</text>
-            <text x="80" y="54" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="4.5" fill="#5DADE2">AC REPAIRS</text>
+            <text x="80" y="30" font-family="'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif" font-size="28" font-weight="800" letter-spacing="-0.3" fill="#ffffff">KENDALL</text>
+            <text x="80" y="54" font-family="'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif" font-size="17" font-weight="600" letter-spacing="4.5" fill="#5DADE2">AC REPAIRS</text>
             <rect x="80" y="60" width="120" height="2" rx="1" fill="#F76707"/>
           </g>
         </svg>
@@ -58,28 +57,28 @@ const neighborhoods = t('neighborhoods') as string[];
 
     <div>
       <h4 class="text-[15px] font-bold text-white mb-4 font-heading">{t('footer.areas_title')}</h4>
-      <div class="flex flex-wrap gap-x-2 gap-y-1 text-[14px] leading-[1.8] text-footer-text">
-        {neighborhoods.map((area, index) => (
-          <>
-            <span>{area}</span>
-            {index < neighborhoods.length - 1 && <span class="text-footer-text/50">&bull;</span>}
-          </>
-        ))}
-        <span>Miami-Dade</span>
-      </div>
+      <p class="text-[14px] leading-[1.8] text-footer-text">Kendall &bull; The Hammocks</p>
+      <p class="text-[14px] leading-[1.8] text-footer-text">Kendale Lakes &bull; Tamiami</p>
+      <p class="text-[14px] leading-[1.8] text-footer-text">Country Walk &bull; Three Lakes</p>
+      <p class="text-[14px] leading-[1.8] text-footer-text">Richmond West &bull; Pinecrest</p>
+    </div>
+
+    <div>
+      <h4 class="text-[15px] font-bold text-white mb-4 font-heading">{t('footer.info_title')}</h4>
+      <p class="text-[14px] leading-[1.8] text-footer-text">Horario: 24/7 Emergencias</p>
+      <p class="text-[14px] leading-[1.8] text-footer-text">Licencia: Florida CAC#</p>
+      <p class="text-[14px] leading-[1.8] text-footer-text">Seguro: $1M cobertura</p>
+      <p class="text-[14px] leading-[1.8] text-footer-text">Se habla espanol</p>
+      <p class="mt-3 text-[14px] leading-[1.8] text-footer-text">
+        <a href="#" class="hover:text-brand-sky transition-colors">{t('footer.privacy')}</a>
+        <span class="mx-1">&bull;</span>
+        <a href="#" class="hover:text-brand-sky transition-colors">{t('footer.terms')}</a>
+      </p>
     </div>
   </div>
 
-  <div class="max-w-[1200px] mx-auto mt-8 pt-6 px-6 border-t border-footer-border flex flex-col md:flex-row justify-between items-center text-[13px] gap-4 text-center">
-    <span class="md:flex-1 md:text-left">&copy; {new Date().getFullYear()} {SITE.name}.</span>
-    <span class="md:flex-1 md:text-center text-footer-text/80">
-      Powered by <a href="https://api.whatsapp.com/send?phone=5214493402622" target="_blank" rel="noopener noreferrer" class="text-brand-sky hover:text-white transition-colors font-medium">DariDeveloper</a>
-    </span>
-    <span class="md:flex-1 md:text-right">
-      <a href="#" class="hover:text-brand-sky transition-colors">{t('footer.privacy')}</a> 
-      <span class="mx-1">&bull;</span> 
-      <a href="#" class="hover:text-brand-sky transition-colors">{t('footer.terms')}</a>
-    </span>
+  <div class="max-w-[1200px] mx-auto mt-8 pt-6 px-6 border-t border-footer-border flex flex-col md:flex-row justify-between items-center text-[13px] gap-2 text-center">
+    <span>&copy; {new Date().getFullYear()} Kendall AC Repairs. DHY Solutions LLC.</span>
+    <span>kendallacrepairs.com</span>
   </div>
-  <div>V 1.8</div>
 </footer>
