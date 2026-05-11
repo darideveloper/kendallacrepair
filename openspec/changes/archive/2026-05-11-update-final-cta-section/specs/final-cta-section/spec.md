@@ -1,8 +1,5 @@
-# final-cta-section Specification
+## MODIFIED Requirements
 
-## Purpose
-TBD - created by archiving change add-final-cta. Update Purpose after archive.
-## Requirements
 ### Requirement: Implement the Final CTA Banner
 The landing page MUST include a high-impact, full-width banner at the end of the content to drive final user conversion.
 
@@ -36,4 +33,3 @@ The landing page MUST include a high-impact, full-width banner at the end of the
 - Then it must change color to `brand-orange` with a smooth transition.
 - When the availability indicator is rendered
 - Then the pulsing dot must have `aria-hidden="true"` since it is decorative.
-

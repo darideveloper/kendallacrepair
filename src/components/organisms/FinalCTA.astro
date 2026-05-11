@@ -30,29 +30,35 @@ const t = useTranslations(lang);
     <div class="absolute inset-0 bg-how-overlay"></div>
   </div>
 
-  <div class="relative z-10 max-w-[1200px] mx-auto px-6">
-    <h2 class="text-[clamp(28px,4vw,42px)] font-extrabold text-white mb-4 leading-tight font-heading animate-fade-in-up" set:html={t('final_cta.title')}>
+  <div class="relative z-10 si">
+    <div class="inline-flex items-center gap-2 text-emerald-400 text-sm font-semibold mb-4 animate-fade-in-up">
+      <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse-green" aria-hidden="true"></div>
+      {t('final_cta.available_agents')}
+    </div>
+
+    <h2 class="text-[clamp(26px,4vw,40px)] font-extrabold text-white mb-4 leading-tight font-heading animate-fade-in-up" set:html={t('final_cta.title')}>
     </h2>
     
     <a 
       href={`tel:${SITE.phone.value}`}
-      class="text-[clamp(32px,5vw,56px)] font-extrabold text-white mb-8 block transition-colors duration-300 hover:text-brand-orange hover:no-underline font-heading animate-fade-in-up"
+      class="text-[clamp(32px,5vw,52px)] font-extrabold text-white mb-7 block transition-colors duration-300 hover:text-brand-orange hover:no-underline font-heading animate-fade-in-up"
       style="animation-delay: 0.1s;"
       aria-label={`${t('ui.call_now')} ${SITE.phone.display}`}
     >
       {SITE.phone.display}
     </a>
     
-    <p class="text-lg text-white/60 mb-9 animate-fade-in-up" style="animation-delay: 0.2s;" set:html={t('final_cta.benefits')}>
+    <p class="text-lg text-white/60 mb-8 animate-fade-in-up" style="animation-delay: 0.15s;" set:html={t('final_cta.benefits')}>
     </p>
 
-    <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
+    <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.2s;">
       <Button href={`tel:${SITE.phone.value}`}>
         <Icon name="phone" size={20} slot="before" />
         {t('ui.call_now')}
       </Button>
-      <Button href="#formulario" variant="secondary">
-        {t('hero.cta_online')}
+      <Button href={`https://wa.me/${SITE.whatsapp.phone}`} variant="whatsapp" ariaLabel={t('final_cta.cta_whatsapp')}>
+        <Icon name="whatsapp" size={20} slot="before" />
+        {t('final_cta.cta_whatsapp')}
       </Button>
     </div>
   </div>

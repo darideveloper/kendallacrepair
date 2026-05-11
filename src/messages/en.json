@@ -344,8 +344,10 @@
   },
   "final_cta": {
     "bg_alt": "AC repair in Kendall",
-    "title": "Your AC Needs Repair?<br />Don't Wait Any Longer.",
-    "benefits": "Free estimates &bull; Same-day service &bull; Available 24/7"
+    "available_agents": "Available now — agents attending",
+    "title": "Your AC Broken?<br />Don't Wait Until Tomorrow.",
+    "benefits": "Free estimates &bull; Same-day service &bull; Available 24/7",
+    "cta_whatsapp": "WhatsApp"
   },
   "forms": {
     "hero": {

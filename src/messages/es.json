@@ -344,8 +344,10 @@
   },
   "final_cta": {
     "bg_alt": "Reparación de aire acondicionado en Kendall",
-    "title": "¿Tu AC Necesita Reparación?<br />No Esperes Más.",
-    "benefits": "Estimados gratis &bull; Servicio el mismo día &bull; Disponible 24/7"
+    "available_agents": "Disponible ahora — agentes atendiendo",
+    "title": "Tu AC esta Roto?<br />No Esperes Hasta Manana.",
+    "benefits": "Estimados gratis &bull; Servicio el mismo dia &bull; Disponible 24/7",
+    "cta_whatsapp": "WhatsApp"
   },
   "forms": {
     "hero": {

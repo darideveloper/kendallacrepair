@@ -33,3 +33,5 @@ openspec/changes/*
 
 # skip docs
 docs/
+
+.opencode

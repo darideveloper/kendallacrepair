@@ -1,0 +1,14 @@
+## 1. Implementation
+- [ ] 1.1 Add `final_cta.available_agents` and `final_cta.cta_whatsapp` translation keys to `src/messages/es.json`
+- [ ] 1.2 Add corresponding `final_cta.available_agents` and `final_cta.cta_whatsapp` translation keys to `src/messages/en.json`
+- [ ] 1.3 Update `final_cta.title` copy in both locale files to match the HTML: "Tu AC esta Roto?<br>No Esperes Hasta Manana." (ES) and "Your AC Broken?<br>Don't Wait Until Tomorrow." (EN)
+- [ ] 1.4 Update `final_cta.benefits` copy to match HTML
+- [ ] 1.5 Restructure `FinalCTA.astro`:
+  - [ ] 1.5.1 Add availability badge with green pulsing dot before the heading
+  - [ ] 1.5.2 Update heading to use the new translation value
+  - [ ] 1.5.3 Add subtitle `<p>` using `t('final_cta.subtitle')` or `t('final_cta.benefits')`
+  - [ ] 1.5.4 Replace both CTA buttons with phone + WhatsApp pair using existing `Button.astro` variants
+  - [ ] 1.5.5 Remove the secondary "Solicita Cotización" form button and its form reference
+  - [ ] 1.5.6 Apply appropriate container structure (`si` class for inner wrapper)
+- [ ] 1.6 Verify multi-language parity: both ES and EN render correct text
+- [ ] 1.7 Verify all links point to `SITE.phone.value` and `SITE.whatsapp` correctly
