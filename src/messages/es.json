@@ -4,7 +4,7 @@
     "description": "Servicio de reparación de aire acondicionado el mismo día en Kendall. Técnicos licenciados, estimados gratis y servicio de emergencia 24/7.",
     "keywords": "reparación de aire acondicionado Kendall, servicio de AC, emergencia aire acondicionado, técnico de aire acondicionado, Kendall FL, instalación de aire acondicionado, mantenimiento HVAC",
     "location": "Kendall, FL",
-    "whatsapp_message": "¡Hola! Necesito una reparación de AC en Kendall."
+    "whatsapp_message": "Hola, necesito reparacion de AC en Kendall"
   },
   "pages": {
     "home": {
@@ -28,15 +28,15 @@
     }
     },
   "hero": {
-    "image_alt": "Reparación de AC Kendall",
-    "badge": "Técnicos disponibles ahora en Kendall",
-    "title_part1": "Reparación de AC en Kendall",
-    "title_part2": "Rápido. Confiable. Hoy Mismo.",
-    "description": "Conectamos a los dueños de casa en Kendall con técnicos de AC licenciados y asegurados — servicio el mismo día, estimados gratis.",
+    "image_alt": "AC Repair Kendall FL",
+    "badge": "Tecnicos disponibles ahora en Kendall",
+    "title_part1": "Reparacion de AC en Kendall",
+    "title_part2": "Rapido. Confiable. Hoy Mismo.",
+    "description": "Tecnicos licenciados en tu puerta HOY. Presupuesto gratis. Sin pagos por adelantado.",
     "cta_call": "Llama Ahora — Estimado Gratis",
     "cta_online": "Solicita Cotización Online",
     "trust_licensed": "Licenciado y Asegurado",
-    "trust_same_day": "Servicio Mismo Día",
+    "trust_same_day": "Respuesta en 60 min",
     "trust_estimates": "Estimados Gratis"
   },
   "nav": {
@@ -275,18 +275,18 @@
   },
   "forms": {
     "hero": {
-      "title": "Cotización Gratis",
-      "subtitle": "Recibe respuesta en minutos",
+      "title": "Presupuesto en 5 Minutos",
+      "subtitle": "Tecnico en tu puerta hoy",
       "subject": "Nuevo Lead",
       "name_label": "Tu Nombre",
       "name_placeholder": "Ej. Maria Gonzalez",
-      "phone_label": "Teléfono",
+      "phone_label": "Telefono",
       "email_label": "Email (opcional)",
-      "message_label": "¿Cuál es el problema?",
-      "message_placeholder": "Ej. Mi AC enciende pero no enfría...",
-      "submit": "Solicita Tu Cotización Gratis",
+      "message_label": "Cual es el problema?",
+      "message_placeholder": "Ej. Mi AC enciende pero no enfria...",
+      "submit": "Solicita Tu Presupuesto Gratis",
       "success": "¡Gracias! Te contactaremos pronto.",
-      "privacy_note": "🔒 Tu información está segura. Sin spam."
+      "privacy_note": "<strong>⚡ Te llamamos en menos de 5 minutos.</strong><br>🔒 Tu informacion esta segura. Sin spam."
     }
   },
   "ui": {

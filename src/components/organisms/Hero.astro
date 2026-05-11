@@ -37,7 +37,7 @@ const t = useTranslations(lang);
   
   <div class="hero-inner max-w-[1200px] mx-auto px-6 py-10 lg:py-[60px] grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-[60px] items-center relative z-[2] w-full">
     <div class="hero-content">
-      <Badge class="mb-6">
+      <Badge class="mb-6" variant="status">
         {t('hero.badge')}
       </Badge>
       
@@ -58,14 +58,19 @@ const t = useTranslations(lang);
           {t('hero.cta_call')}
         </Button>
         
-        <Button href="#formulario" variant="secondary">
-          {t('hero.cta_online')}
+        <Button 
+          href={`https://wa.me/${SITE.whatsapp.phone}?text=${encodeURIComponent(t('site.whatsapp_message'))}`} 
+          variant="whatsapp"
+          target="_blank"
+        >
+          <Icon name="whatsapp" size={20} slot="before" />
+          {t('ui.whatsapp')}
         </Button>
       </div>
       
       <div class="trust-row flex flex-wrap gap-6">
         <TrustItem icon="🛡️">{t('hero.trust_licensed')}</TrustItem>
-        <TrustItem icon="🕒">{t('hero.trust_same_day')}</TrustItem>
+        <TrustItem icon="⏰">{t('hero.trust_same_day')}</TrustItem>
         <TrustItem icon="⭐">{t('hero.trust_estimates')}</TrustItem>
       </div>
     </div>

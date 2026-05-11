@@ -32,11 +32,11 @@
     "badge": "Technicians available now in Kendall",
     "title_part1": "AC Repair in Kendall",
     "title_part2": "Fast. Reliable. Today.",
-    "description": "Connecting homeowners in Kendall with licensed and insured AC technicians — same-day service, free estimates.",
+    "description": "Licensed technicians at your door TODAY. Free estimate. No upfront payments.",
     "cta_call": "Call Now — Free Estimate",
     "cta_online": "Request Online Quote",
     "trust_licensed": "Licensed and Insured",
-    "trust_same_day": "Same-Day Service",
+    "trust_same_day": "60 min response",
     "trust_estimates": "Free Estimates"
   },
   "nav": {
@@ -275,8 +275,8 @@
   },
   "forms": {
     "hero": {
-      "title": "Free Estimate",
-      "subtitle": "Get a technician today",
+      "title": "Estimate in 5 Minutes",
+      "subtitle": "Technician at your door today",
       "subject": "New Lead",
       "name_label": "Your Name",
       "name_placeholder": "e.g. Maria Gonzalez",
@@ -284,9 +284,9 @@
       "email_label": "Email (optional)",
       "message_label": "What is the problem?",
       "message_placeholder": "e.g. My AC turns on but doesn't cool...",
-      "submit": "Get Your Free Estimate",
+      "submit": "Request Your Free Estimate",
       "success": "Thank you! We'll contact you shortly.",
-      "privacy_note": "🔒 Your information is safe. No spam."
+      "privacy_note": "<strong>⚡ We call you in less than 5 minutes.</strong><br>🔒 Your information is safe. No spam."
     }
   },
   "ui": {

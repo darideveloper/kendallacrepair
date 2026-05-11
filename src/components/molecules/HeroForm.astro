@@ -59,12 +59,6 @@ const redirectUrl = `${siteUrl}${redirectPath}`;
       placeholder="(305) 000-0000" 
       required 
     />
-    <Input 
-      label={t('forms.hero.email_label')} 
-      name="email" 
-      type="email" 
-      placeholder="tu@email.com" 
-    />
     <Textarea 
       label={t('forms.hero.message_label')} 
       name="message" 
@@ -76,8 +70,7 @@ const redirectUrl = `${siteUrl}${redirectPath}`;
       {t('forms.hero.submit')} &rarr;
     </Button>
     
-    <p class="text-center text-[12px] text-[#adb5bd] mt-3">
-      {t('forms.hero.privacy_note')}
-    </p>
+    <div class="text-center text-[12px] text-[#adb5bd] mt-3 leading-relaxed" set:html={t('forms.hero.privacy_note')}>
+    </div>
   </form>
 </div>
