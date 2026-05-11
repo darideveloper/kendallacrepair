@@ -6,7 +6,7 @@ import Button from '../atoms/Button.astro';
 import Icon from '../atoms/Icon.astro';
 import { useTranslations } from '../../lib/i18n/utils';
 import type { Lang } from '../../lib/i18n/ui';
-import bgImage from '../../assets/images/hero/foto-trane-single.webp';
+import bgImage from '../../assets/images/services/foto-trane-dual.jpg';
 
 interface Props {
   lang: Lang;
@@ -23,7 +23,7 @@ const t = useTranslations(lang);
       src={bgImage} 
       alt={t('final_cta.bg_alt')}
       title={t('final_cta.bg_alt')}
-      class="w-full h-full object-cover opacity-40"
+      class="w-full h-full object-cover opacity-100"
       loading="lazy"
       decoding="async"
     />
