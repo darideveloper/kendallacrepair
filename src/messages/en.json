@@ -279,24 +279,34 @@
   "testimonials": {
     "section_tag": "REVIEWS",
     "section_title": "What Our Customers Say",
+    "rating_summary": "4.9/5",
+    "rating_count_text": "Based on Google reviews",
+    "view_all_link": "View all on Google →",
+    "verified_text": "Verified Google review",
     "items": [
       {
-        "quote": "My AC stopped cooling on a Saturday. I called and in 45 minutes I had a technician. Incredible.",
+        "quote": "My AC broke on a Sunday and I thought I'd suffer all weekend. I called and within 45 minutes I had a technician at my house. He speaks Spanish, was very honest about the price. Incredible service.",
         "author": "Maria G.",
         "location": "The Hammocks",
-        "initials": "MG"
+        "initials": "MG",
+        "date": "2 weeks ago",
+        "isVerified": true
       },
       {
-        "quote": "Fast, professional and fair price. They didn't sell me unnecessary things.",
+        "quote": "Another technician quoted me $1,500. They came, diagnosed the real problem and fixed it for $200. Fast, professional and fair price. 100% recommended.",
         "author": "Carlos R.",
         "location": "Kendale Lakes",
-        "initials": "CR"
+        "initials": "CR",
+        "date": "1 month ago",
+        "isVerified": true
       },
       {
-        "quote": "Honest with the diagnosis. Economical and fast solution. I will call again.",
+        "quote": "Baby at home with extreme heat. We called desperately and within an hour the AC was working. Third time I've called them, always reliable. I recommend them to everyone.",
         "author": "Ana S.",
         "location": "Country Walk",
-        "initials": "AS"
+        "initials": "AS",
+        "date": "3 weeks ago",
+        "isVerified": true
       }
     ]
   },

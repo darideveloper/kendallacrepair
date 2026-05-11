@@ -2,12 +2,16 @@
 import { Image } from 'astro:assets';
 import clsx from 'clsx';
 import type { Testimonial } from '../../constants/site';
+import { useTranslations } from '../../lib/i18n/utils';
+import type { Lang } from '../../lib/i18n/ui';
 
 interface Props extends Testimonial {
   class?: string;
+  lang: Lang;
 }
 
-const { quote, author, location, initials, image, class: className } = Astro.props;
+const { quote, author, location, initials, image, date, isVerified, lang, class: className } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <div class={clsx(
@@ -20,7 +24,7 @@ const { quote, author, location, initials, image, class: className } = Astro.pro
   <blockquote class="text-[15px] text-gray-600 leading-[1.7] mb-5 italic font-body">
     &ldquo;{quote}&rdquo;
   </blockquote>
-  <div class="flex items-center gap-3">
+  <div class="flex items-center gap-3 mb-3">
     <div class="w-11 h-11 rounded-full bg-brand-blue-grad overflow-hidden shrink-0 flex items-center justify-center font-bold text-[16px] font-heading">
       {image ? (
         <Image 
@@ -39,7 +43,12 @@ const { quote, author, location, initials, image, class: className } = Astro.pro
     </div>
     <div>
       <strong class="block text-[14px] text-gray-800 font-heading">{author}</strong>
-      <span class="text-[13px] text-gray-500 font-body">{location}</span>
+      <span class="text-[13px] text-gray-500 font-body">{location}{date ? ` \u2022 ${date}` : ''}</span>
     </div>
   </div>
+  {isVerified && (
+    <div class="inline-flex items-center gap-1 text-[12px] text-[#4285F4] font-semibold">
+      ✅ {t('testimonials.verified_text')}
+    </div>
+  )}
 </div>

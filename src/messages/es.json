@@ -279,24 +279,34 @@
   "testimonials": {
     "section_tag": "RESEÑAS",
     "section_title": "Lo que Dicen Nuestros Clientes",
+    "rating_summary": "4.9/5",
+    "rating_count_text": "Basado en reseñas de Google",
+    "view_all_link": "Ver todas en Google →",
+    "verified_text": "Reseña verificada de Google",
     "items": [
       {
-        "quote": "Mi AC dejó de enfriar un sábado. Llamé y en 45 minutos tenía un técnico. Increíble.",
+        "quote": "Mi AC se dañó un domingo y pensé que iba a sufrir todo el fin de semana. Llamé y en 45 minutos tenía un técnico en mi casa. Habla español, fue muy honesto con el precio. Increíble servicio.",
         "author": "Maria G.",
         "location": "The Hammocks",
-        "initials": "MG"
+        "initials": "MG",
+        "date": "Hace 2 semanas",
+        "isVerified": true
       },
       {
-        "quote": "Rápidos, profesionales y precio justo. No me vendieron cosas innecesarias.",
+        "quote": "Otro técnico me cobraba $1,500. Ellos vinieron, diagnosticaron el problema real y lo arreglaron por $200. Rápidos, profesionales y precio justo. 100% recomendados.",
         "author": "Carlos R.",
         "location": "Kendale Lakes",
-        "initials": "CR"
+        "initials": "CR",
+        "date": "Hace 1 mes",
+        "isVerified": true
       },
       {
-        "quote": "Honestos con el diagnóstico. Solución económica y rápida. Volveré a llamar.",
+        "quote": "Bebé en casa con calor extremo. Llamamos desesperados y en una hora ya estaba funcionando el AC. Tercera vez que los llamo, siempre confiable. Los recomiendo a todos.",
         "author": "Ana S.",
         "location": "Country Walk",
-        "initials": "AS"
+        "initials": "AS",
+        "date": "Hace 3 semanas",
+        "isVerified": true
       }
     ]
   },

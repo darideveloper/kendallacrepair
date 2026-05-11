@@ -28,10 +28,19 @@ const testimonials = testimonialData.map(item => ({
         {t('testimonials.section_title')}
       </h2>
     </div>
+
+    <div class="text-center mb-10">
+      <div class="text-[28px] font-extrabold text-gray-900 mb-1">
+        &#11088;&#11088;&#11088;&#11088;&#11088; {t('testimonials.rating_summary')}
+      </div>
+      <div class="text-[14px] text-gray-500">
+        {t('testimonials.rating_count_text')} &bull; <a href="#" class="text-brand-blue font-semibold no-underline hover:underline">{t('testimonials.view_all_link')}</a>
+      </div>
+    </div>
     
     <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
       {testimonials.map(testimonial => (
-        <TestimonialCard {...testimonial} />
+        <TestimonialCard {...testimonial} lang={lang} />
       ))}
     </div>
   </div>

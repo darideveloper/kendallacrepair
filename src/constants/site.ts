@@ -74,6 +74,8 @@ export interface Testimonial {
   location: string
   initials: string
   image?: ImageMetadata
+  date?: string
+  isVerified?: boolean
 }
 
 export const CLIENT_IMAGES: Record<string, ImageMetadata> = {
