@@ -1,0 +1,14 @@
+## 1. Implementation
+- [x] 1.1 Update `ui.emergency_call_banner` in `src/messages/es.json` to: `⚡ EMERGENCIA 24/7 — TOCA PARA LLAMAR ☎️ (305) 306-4511`
+- [x] 1.2 Update `ui.emergency_call_banner` in `src/messages/en.json` to: `⚡ 24/7 EMERGENCY — TAP TO CALL ☎️ (305) 306-4511`
+- [x] 1.3 Update `src/components/molecules/UrgencyBanner.astro`:
+  - [x] 1.3.1 Replace `<span class="animate-blink mr-1">●</span>` with `<span class="animate-blink">⚡</span>`
+  - [x] 1.3.2 Keep `{t('ui.emergency_call_banner')}` as the rendered text (translations updated in 1.1/1.2)
+  - [x] 1.3.3 Add `cursor-pointer` to the outer `<div>` class list
+  - [x] 1.3.4 Remove `hover:underline` from the `<a>` tag
+  - [x] 1.3.5 Add `flex items-center justify-center gap-2` to the `<a>` tag class list
+  - [x] 1.3.6 Remove `aria-label` from the `<a>` tag
+- [x] 1.4 Verify mobile responsiveness: font-size and padding at <640px match target (12px, 8px 12px)
+- [x] 1.5 Verify multi-language parity: both ES and EN render correct text
+- [x] 1.6 Verify all links point to `SITE.phone.value` correctly
+- [x] 1.7 Verify blink animation still works with `animate-blink` class
