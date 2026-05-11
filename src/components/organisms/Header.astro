@@ -95,7 +95,11 @@ const homePath = getLocalizedPath('home', lang);
             </a>
           </li>
         ))}
-        <li class="pt-4">
+        <li class="pt-4 flex justify-between items-center border-b border-gray-100 pb-4">
+          <span class="text-base font-medium text-[#495057] font-body">Language / Idioma</span>
+          <LangToggle {lang} {pageKey} />
+        </li>
+        <li class="pt-2">
           <Button href={`tel:${SITE.phone.value}`} variant="primary" class="w-full">
             <Icon name="phone" size={20} slot="before" />
             {t('ui.call_now')}
