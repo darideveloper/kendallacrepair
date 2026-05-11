@@ -225,23 +225,34 @@
   },
   "how_it_works": {
     "bg_alt": "Servicios de Reparación de AC en Kendall",
-    "section_tag": "ASÍ DE FÁCIL",
-    "section_title": "3 Pasos para Resolver tu Problema",
-    "section_description": "Sin complicaciones, sin esperas.",
+    "section_tag": "ASI DE FACIL",
+    "section_title": "3 Pasos. AC Funcionando Hoy.",
+    "section_description": "Sin esperas, sin sorpresas.",
     "steps": [
       {
-        "title": "Llama o Escríbenos",
-        "description": "Por teléfono, formulario, WhatsApp o chat. Cuéntanos el problema."
+        "title": "Cuentanos que Pasa",
+        "time": "⏱ 30 segundos",
+        "description": "Por telefono, WhatsApp o chat. Sin formularios, sin espera en linea."
       },
       {
-        "title": "Diagnóstico Rápido",
-        "description": "Un técnico llega a tu hogar y te da un estimado gratis."
+        "title": "Tecnico en tu Puerta",
+        "time": "⏱ 1 a 3 horas",
+        "description": "Te conectamos con un tecnico licenciado de nuestra red. Diagnostico gratis + presupuesto sin compromiso. Solo pagas si apruebas."
       },
       {
-        "title": "Problema Resuelto",
-        "description": "Aprueba y reparamos tu AC el mismo día con garantía."
+        "title": "AC Funcionando",
+        "time": "⏱ Mismo dia",
+        "description": "Reparacion el mismo dia.",
+        "badge": "🛡 Garantia 90 dias en piezas y mano de obra"
       }
-    ]
+    ],
+    "trust_items": [
+      "✅ Licenciado y Asegurado",
+      "✅ Disponible 24/7",
+      "✅ Se habla espanol",
+      "✅ Sin cargos ocultos"
+    ],
+    "cta": "Comenzar Paso 1 → Llamar (305) 306-4511"
   },
   "faq": {
     "section_tag": "PREGUNTAS FRECUENTES",

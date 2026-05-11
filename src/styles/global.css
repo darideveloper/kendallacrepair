@@ -129,4 +129,19 @@
 
   .sh h2 { @apply text-[28px] md:text-[34px] lg:text-[40px] font-extrabold text-gray-900 mb-3 font-heading; }
   .sh p { @apply text-[17px] text-gray-500 max-w-[560px] mx-auto leading-relaxed font-body; }
+
+  /* How It Works Section Short Classes */
+  .hiw { @apply relative py-20 overflow-hidden; }
+  .hiw .sh h2 { @apply text-white; }
+  .hiw .sh p { @apply text-white/60; }
+  .hiw .st { background: rgba(46, 134, 193, 0.15); color: #5DADE2; }
+  .stg { @apply grid grid-cols-1 tablet-lg:grid-cols-3 gap-8 max-w-sm tablet-lg:max-w-none mx-auto mb-10; }
+  .stc { @apply text-center py-10 px-7 bg-glass-surface border border-glass-border rounded-[20px] transition-all hover:bg-white/10 hover:-translate-y-1; }
+  .stc .stn { @apply w-[60px] h-[60px] rounded-2xl text-white flex items-center justify-center text-2xl font-extrabold mx-auto mb-5 font-heading; background: var(--background-brand-orange-grad); box-shadow: 0 4px 16px rgba(247, 103, 7, 0.3); }
+  .stc .time { font-size: 13px; color: #F76707; font-weight: 600; margin-bottom: 8px; }
+  .stc .wbadge { display: inline-flex; align-items: center; gap: 6px; background: rgba(39, 174, 96, 0.15); border: 1px solid rgba(39, 174, 96, 0.25); color: #2ECC71; padding: 6px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; margin-top: 10px; }
+  .tstrip { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; padding: 20px 0 32px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+  .tstrip-item { color: rgba(255, 255, 255, 0.5); font-size: 13px; font-weight: 500; }
+  .bp { display: inline-flex; align-items: center; gap: 10px; background: var(--background-brand-orange-grad); color: #fff; padding: 18px 36px; border-radius: 12px; font-size: 19px; font-weight: 700; text-decoration: none; transition: .25s; box-shadow: 0 4px 20px rgba(247, 103, 7, 0.35); font-family: var(--font-heading); }
+  .bp:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(247, 103, 7, 0.45); }
 }

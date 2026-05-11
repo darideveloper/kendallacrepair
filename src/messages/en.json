@@ -226,22 +226,33 @@
   "how_it_works": {
     "bg_alt": "Kendall AC Repair Services",
     "section_tag": "THAT EASY",
-    "section_title": "3 Steps to Solve your Problem",
-    "section_description": "No complications, no waiting.",
+    "section_title": "3 Steps. AC Working Today.",
+    "section_description": "No waiting, no surprises.",
     "steps": [
       {
-        "title": "Call or Write Us",
-        "description": "By phone, form, WhatsApp or chat. Tell us the problem."
+        "title": "Tell Us What's Wrong",
+        "time": "⏱ 30 seconds",
+        "description": "By phone, WhatsApp or chat. No forms, no waiting on hold."
       },
       {
-        "title": "Quick Diagnosis",
-        "description": "A technician arrives at your home and gives you a free estimate."
+        "title": "Technician at Your Door",
+        "time": "⏱ 1 to 3 hours",
+        "description": "We connect you with a licensed technician from our network. Free diagnosis + no-obligation quote. You only pay if you approve."
       },
       {
-        "title": "Problem Solved",
-        "description": "Approve and we repair your AC the same day with a warranty."
+        "title": "AC Working",
+        "time": "⏱ Same day",
+        "description": "Repair the same day.",
+        "badge": "🛡 90-day warranty on parts and labor"
       }
-    ]
+    ],
+    "trust_items": [
+      "✅ Licensed & Insured",
+      "✅ Available 24/7",
+      "✅ Spanish spoken",
+      "✅ No hidden fees"
+    ],
+    "cta": "Start Step 1 → Call (305) 306-4511"
   },
   "faq": {
     "section_tag": "FREQUENTLY ASKED QUESTIONS",
