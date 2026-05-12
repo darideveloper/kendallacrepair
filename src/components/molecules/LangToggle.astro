@@ -24,6 +24,7 @@ const inactiveBtn = 'bg-transparent text-[#868E96] hover:text-[#1B4F72]'
     class={clsx(
       baseBtn,
       lang === 'es' ? activeBtn : inactiveBtn,
+      lang === 'es' ? 'pointer-events-none' : '',
     )}
     aria-label='Cambiar a Español'
   >
@@ -34,7 +35,7 @@ const inactiveBtn = 'bg-transparent text-[#868E96] hover:text-[#1B4F72]'
     class={clsx(
       baseBtn,
       lang === 'en' ? activeBtn : inactiveBtn,
-      'pointer-events-none',
+      lang === 'en' ? 'pointer-events-none' : '',
     )}
     aria-label='Change to English'
   >
