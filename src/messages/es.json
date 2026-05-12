@@ -4,7 +4,7 @@
     "description": "Servicio de reparación de aire acondicionado el mismo día en Kendall. Técnicos licenciados, estimados gratis y servicio de emergencia 24/7.",
     "keywords": "reparación de aire acondicionado Kendall, servicio de AC, emergencia aire acondicionado, técnico de aire acondicionado, Kendall FL, instalación de aire acondicionado, mantenimiento HVAC",
     "location": "Kendall, FL",
-    "whatsapp_message": "Hola, necesito reparacion de AC en Kendall"
+    "whatsapp_message": "Hola, necesito reparación de AC en Kendall"
   },
   "pages": {
     "home": {
@@ -24,15 +24,16 @@
       "description": "La página que estás buscando no existe.",
       "h1": "¡Oops! Página no encontrada",
       "message": "La página que estás buscando podría haber sido eliminada, haber cambiado de nombre o no estar disponible temporalmente.",
-      "back_home": "Volver al Inicio"
+      "back_home": "Volver al Inicio",
+      "call_support": "Llamar a Soporte"
     }
     },
   "hero": {
     "image_alt": "AC Repair Kendall FL",
-    "badge": "Tecnicos disponibles ahora en Kendall",
-    "title_part1": "Reparacion de AC en Kendall",
-    "title_part2": "Rapido. Confiable. Hoy Mismo.",
-    "description": "Tecnicos licenciados en tu puerta HOY. Presupuesto gratis. Sin pagos por adelantado.",
+    "badge": "Técnicos disponibles ahora en Kendall",
+    "title_part1": "Reparación de AC en Kendall",
+    "title_part2": "Rápido. Confiable. Hoy Mismo.",
+    "description": "Técnicos licenciados en tu puerta HOY. Presupuesto gratis. Sin pagos por adelantado.",
     "cta_call": "Llama Ahora — Estimado Gratis",
     "cta_online": "Solicita Cotización Online",
     "trust_licensed": "Licenciado y Asegurado",
@@ -45,13 +46,14 @@
     "testimonials": "Reseñas",
     "faq": "FAQ",
     "open_menu": "Abrir Menú",
-    "open": "Disponible"
+    "open": "Disponible",
+    "language_label": "Idioma"
   },
   "footer": {
     "about": "Conectamos a los dueños de casa en Kendall con técnicos de AC licenciados y asegurados. No somos una compañía de AC — somos tu coordinador de servicio, asegurándonos de que el mejor técnico disponible llegue a tu puerta lo más rápido posible.",
     "services_title": "Servicios",
     "areas_title": "Áreas de Servicio",
-    "info_title": "Informacion",
+    "info_title": "Información",
     "privacy": "Privacidad",
     "terms": "Términos",
     "hours": "Horario: 24/7 Emergencias",
@@ -104,6 +106,7 @@
     },
     "detail_title": "Todos Nuestros Servicios",
     "detail_subtitle": "Residencial y comercial — todas las marcas",
+    "cta_call": "Llamar",
     "detailed_services_v2": [
       {
         "title": "Reparación",
@@ -231,81 +234,82 @@
   },
   "how_it_works": {
     "bg_alt": "Servicios de Reparación de AC en Kendall",
-    "section_tag": "ASI DE FACIL",
+    "section_tag": "ASÍ DE FÁCIL",
     "section_title": "3 Pasos. AC Funcionando Hoy.",
     "section_description": "Sin esperas, sin sorpresas.",
     "steps": [
       {
-        "title": "Cuentanos que Pasa",
+        "title": "Cuéntanos qué Pasa",
         "time": "⏱ 30 segundos",
-        "description": "Por telefono, WhatsApp o chat. Sin formularios, sin espera en linea."
+        "description": "Por teléfono, WhatsApp o chat. Sin formularios, sin espera en línea."
       },
       {
-        "title": "Tecnico en tu Puerta",
+        "title": "Técnico en tu Puerta",
         "time": "⏱ 1 a 3 horas",
-        "description": "Te conectamos con un tecnico licenciado de nuestra red. Diagnostico gratis + presupuesto sin compromiso. Solo pagas si apruebas."
+        "description": "Te conectamos con un técnico licenciado de nuestra red. Diagnóstico gratis + presupuesto sin compromiso. Solo pagas si apruebas."
       },
       {
         "title": "AC Funcionando",
-        "time": "⏱ Mismo dia",
-        "description": "Reparacion el mismo dia.",
-        "badge": "🛡 Garantia 90 dias en piezas y mano de obra"
+        "time": "⏱ Mismo día",
+        "description": "Reparación el mismo día.",
+        "badge": "🛡 Garantía 90 días en piezas y mano de obra"
       }
     ],
     "trust_items": [
       "✅ Licenciado y Asegurado",
       "✅ Disponible 24/7",
-      "✅ Se habla espanol",
+      "✅ Se habla español",
       "✅ Sin cargos ocultos"
     ],
     "cta": "Comenzar Paso 1 → Llamar (305) 306-4511"
   },
   "faq": {
     "section_tag": "PREGUNTAS FRECUENTES",
-    "section_title": "Preguntas? Tenemos Respuestas",
-    "cta": "Mas preguntas?",
-    "cta_phone": "Llamanos al (305) 306-4511",
-    "cta_whatsapp": "escribenos por WhatsApp 💬",
+    "section_title": "¿Preguntas? Tenemos Respuestas",
+    "cta": "¿Más preguntas?",
+    "or": "o",
+    "cta_phone": "Llámanos al (305) 306-4511",
+    "cta_whatsapp": "escríbenos por WhatsApp 💬",
     "items": [
       {
-        "question": "Cuanto cuesta reparar un AC en Kendall?",
-        "answer": "Visita diagnostica: GRATIS. Reparaciones comunes van de $150 a $850 dependiendo del problema. Te damos un presupuesto por escrito ANTES de comenzar — sin sorpresas."
+        "question": "¿Cuánto cuesta reparar un AC en Kendall?",
+        "answer": "Visita diagnóstica: GRATIS. Reparaciones comunes van de $150 a $850 dependiendo del problema. Te damos un presupuesto por escrito ANTES de comenzar — sin sorpresas."
       },
       {
-        "question": "Ofrecen servicio de emergencia?",
-        "answer": "Si — 24/7, 365 dias al ano. Tiempo promedio de respuesta en Kendall: 60-90 minutos. Trabajamos noches, fines de semana y feriados a tarifas estandar."
+        "question": "¿Ofrecen servicio de emergencia?",
+        "answer": "Sí — 24/7, 365 días al año. Tiempo promedio de respuesta en Kendall: 60-90 minutos. Trabajamos noches, fines de semana y feriados a tarifas estándar."
       },
       {
-        "question": "Los tecnicos estan licenciados?",
-        "answer": "Si. Todos los tecnicos tienen licencia CAC del Estado de Florida y seguro de responsabilidad de $1M. Podemos mostrarte la prueba antes de cualquier trabajo."
+        "question": "¿Los técnicos están licenciados?",
+        "answer": "Sí. Todos los técnicos tienen licencia CAC del Estado de Florida y seguro de responsabilidad de $1M. Podemos mostrarte la prueba antes de cualquier trabajo."
       },
       {
-        "question": "Que areas cubren?",
-        "answer": "Todo Kendall y alrededores: The Hammocks (33196), Kendale Lakes (33183), Tamiami (33184), Country Walk (33196), Three Lakes (33177), Richmond West (33186) y Pinecrest. Fuera de estas zonas? Llamanos — puede que te cubramos."
+        "question": "¿Qué áreas cubren?",
+        "answer": "Todo Kendall y alrededores: The Hammocks (33196), Kendale Lakes (33183), Tamiami (33184), Country Walk (33196), Three Lakes (33177), Richmond West (33186) y Pinecrest. ¿Fuera de estas zonas? Llámanos — puede que te cubramos."
       },
       {
-        "question": "Hablan espanol?",
-        "answer": "Si! Nuestro equipo es completamente bilingue. Te atendemos en espanol por telefono, WhatsApp y en persona. Tu comodidad es nuestra prioridad."
+        "question": "¿Hablan español?",
+        "answer": "¡Sí! Nuestro equipo es completamente bilingüe. Te atendemos en español por teléfono, WhatsApp y en persona. Tu comodidad es nuestra prioridad."
       },
       {
-        "question": "Cuanto demoran en llegar?",
-        "answer": "En Kendall y zonas cercanas, el tiempo promedio de llegada es 1-3 horas. En emergencias, puede ser tan rapido como 60 minutos."
+        "question": "¿Cuánto demoran en llegar?",
+        "answer": "En Kendall y zonas cercanas, el tiempo promedio de llegada es 1-3 horas. En emergencias, puede ser tan rápido como 60 minutos."
       },
       {
-        "question": "Cobran por venir a diagnosticar?",
-        "answer": "No. La visita diagnostica es 100% gratis. Te damos un presupuesto detallado sin compromiso. Solo pagas si decides aprobar la reparacion."
+        "question": "¿Cobran por venir a diagnosticar?",
+        "answer": "No. La visita diagnóstica es 100% gratis. Te damos un presupuesto detallado sin compromiso. Solo pagas si decides aprobar la reparación."
       },
       {
-        "question": "Trabajan con todas las marcas?",
-        "answer": "Si. Carrier, Trane, Goodman, Lennox, Rheem, York, Daikin, Mitsubishi y todas las marcas principales. Sistemas centrales y mini splits."
+        "question": "¿Trabajan con todas las marcas?",
+        "answer": "Sí. Carrier, Trane, Goodman, Lennox, Rheem, York, Daikin, Mitsubishi y todas las marcas principales. Sistemas centrales y mini splits."
       },
       {
-        "question": "Ofrecen garantia?",
-        "answer": "Si. Garantia de 90 dias en piezas y mano de obra en todas las reparaciones. Instalaciones nuevas incluyen garantia del fabricante."
+        "question": "¿Ofrecen garantía?",
+        "answer": "Sí. Garantía de 90 días en piezas y mano de obra en todas las reparaciones. Instalaciones nuevas incluyen garantía del fabricante."
       },
       {
-        "question": "Aceptan pagos a plazos?",
-        "answer": "Si, ofrecemos opciones de financiamiento para instalaciones y reparaciones mayores. Pregunta por los planes disponibles al momento de tu cotizacion."
+        "question": "¿Aceptan pagos a plazos?",
+        "answer": "Sí, ofrecemos opciones de financiamiento para instalaciones y reparaciones mayores. Pregunta por los planes disponibles al momento de tu cotización."
       }
     ]
   },
@@ -323,8 +327,7 @@
         "location": "The Hammocks",
         "initials": "MG",
         "date": "Hace 2 semanas",
-        "isVerified": true,
-        "englishSubtext": "My AC broke on a Sunday and I thought I'd suffer the whole weekend. I called and within 45 minutes I had a technician at my house. He speaks Spanish, was very honest about the price. Incredible service."
+        "isVerified": true
       },
       {
         "quote": "Otro técnico me cobraba $1,500. Ellos vinieron, diagnosticaron el problema real y lo arreglaron por $200. Rápidos, profesionales y precio justo. 100% recomendados.",
@@ -346,30 +349,30 @@
   },
   "coverage": {
     "title": "Nuestra Zona de Servicio",
-    "subtitle": "⏰ Tecnico en tu puerta en 1-3 horas en todo Kendall",
+    "subtitle": "⏰ Técnico en tu puerta en 1-3 horas en todo Kendall",
     "map_title": "Mapa de cobertura de servicio en Kendall"
   },
   "final_cta": {
     "bg_alt": "Reparación de aire acondicionado en Kendall",
     "available_agents": "Disponible ahora — agentes atendiendo",
-    "title": "Tu AC esta Roto?<br />No Esperes Hasta Manana.",
-    "benefits": "Estimados gratis &bull; Servicio el mismo dia &bull; Disponible 24/7",
+    "title": "¿Tu AC está Roto?<br />No Esperes Hasta Mañana.",
+    "benefits": "Estimados gratis &bull; Servicio el mismo día &bull; Disponible 24/7",
     "cta_whatsapp": "WhatsApp"
   },
   "forms": {
     "hero": {
       "title": "Presupuesto en 5 Minutos",
-      "subtitle": "Tecnico en tu puerta hoy",
+      "subtitle": "Técnico en tu puerta hoy",
       "subject": "Nuevo Lead",
       "name_label": "Tu Nombre",
-      "name_placeholder": "Ej. Maria Gonzalez",
-      "phone_label": "Telefono",
+      "name_placeholder": "Ej. María González",
+      "phone_label": "Teléfono",
       "email_label": "Email (opcional)",
-      "message_label": "Cual es el problema?",
-      "message_placeholder": "Ej. Mi AC enciende pero no enfria...",
+      "message_label": "¿Cuál es el problema?",
+      "message_placeholder": "Ej. Mi AC enciende pero no enfría...",
       "submit": "Solicita Tu Presupuesto Gratis",
       "success": "¡Gracias! Te contactaremos pronto.",
-      "privacy_note": "<strong>⚡ Te llamamos en menos de 5 minutos.</strong><br>🔒 Tu informacion esta segura. Sin spam."
+      "privacy_note": "<strong>⚡ Te llamamos en menos de 5 minutos.</strong><br>🔒 Tu información está segura. Sin spam."
     }
   },
   "ui": {
@@ -381,6 +384,7 @@
     "chat_agent_name": "Ana - Asistente AC",
     "chat_agent_status": "En línea • Respuesta instantánea",
     "chat_welcome": "¡Hola! 👋 ¿Tu AC no está enfriando? Podemos tener un técnico en tu zona de Kendall <strong>hoy mismo</strong>.<br><br>¿Cuál es el problema que estás teniendo?",
-    "chat_placeholder": "Escribe tu mensaje..."
+    "chat_placeholder": "Escribe tu mensaje...",
+    "close_chat": "Cerrar chat"
   }
 }

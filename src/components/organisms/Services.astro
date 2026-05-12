@@ -50,7 +50,7 @@ const detailedServices = DETAILED_SERVICES.map((svc, index) => ({
           description={svc.description}
           image={svc.image}
           icon={svc.icon}
-          ctaText={lang === 'es' ? 'Llamar' : 'Call'}
+          ctaText={t('services.cta_call')}
         />
       ))}
     </div>

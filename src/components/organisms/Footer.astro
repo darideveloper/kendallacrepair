@@ -11,6 +11,11 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const featuredServices = t('services.featured') as any;
+const neighborhoods = t('neighborhoods') as string[];
+const neighborhoodPairs: string[][] = [];
+for (let i = 0; i < neighborhoods.length; i += 2) {
+  neighborhoodPairs.push(neighborhoods.slice(i, i + 2));
+}
 ---
 
 <footer class="bg-footer-bg text-footer-text py-24">
@@ -57,10 +62,9 @@ const featuredServices = t('services.featured') as any;
 
     <div>
       <h4 class="text-[15px] font-bold text-white mb-4 font-heading">{t('footer.areas_title')}</h4>
-      <p class="text-[14px] leading-[1.8] text-footer-text">Kendall &bull; The Hammocks</p>
-      <p class="text-[14px] leading-[1.8] text-footer-text">Kendale Lakes &bull; Tamiami</p>
-      <p class="text-[14px] leading-[1.8] text-footer-text">Country Walk &bull; Three Lakes</p>
-      <p class="text-[14px] leading-[1.8] text-footer-text">Richmond West &bull; Pinecrest</p>
+      {neighborhoodPairs.map((pair) => (
+        <p class="text-[14px] leading-[1.8] text-footer-text">{pair.join(' \u2022 ')}</p>
+      ))}
     </div>
 
     <div>

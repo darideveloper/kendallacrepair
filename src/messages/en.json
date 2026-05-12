@@ -24,7 +24,8 @@
       "description": "The page you are looking for does not exist.",
       "h1": "Oops! Page not found",
       "message": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
-      "back_home": "Return to Home"
+      "back_home": "Return to Home",
+      "call_support": "Call Support"
     }
   },
   "hero": {
@@ -45,7 +46,8 @@
     "testimonials": "Reviews",
     "faq": "FAQ",
     "open_menu": "Open Menu",
-    "open": "Open"
+    "open": "Open",
+    "language_label": "Language"
   },
   "footer": {
     "about": "Connecting homeowners in Kendall with licensed and insured AC technicians. We're not an AC company — we're your service coordinator, making sure the best available technician arrives at your door as fast as possible.",
@@ -104,6 +106,7 @@
     },
     "detail_title": "All Our Services",
     "detail_subtitle": "Residential and commercial — all brands",
+    "cta_call": "Call",
     "detailed_services_v2": [
       {
         "title": "Repair",
@@ -264,6 +267,7 @@
     "section_tag": "FREQUENTLY ASKED QUESTIONS",
     "section_title": "Questions? We Have Answers",
     "cta": "More questions?",
+    "or": "or",
     "cta_phone": "Call us at (305) 306-4511",
     "cta_whatsapp": "message us on WhatsApp 💬",
     "items": [
@@ -380,6 +384,7 @@
     "chat_agent_name": "Ana - AC Assistant",
     "chat_agent_status": "Online • Instant response",
     "chat_welcome": "Hello! 👋 Your AC is not cooling? We can have a technician in your Kendall area <strong>today</strong>.<br><br>What problem are you having?",
-    "chat_placeholder": "Write your message..."
+    "chat_placeholder": "Write your message...",
+    "close_chat": "Close chat"
   }
 }
