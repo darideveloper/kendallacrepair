@@ -64,6 +64,10 @@ const homePath = getLocalizedPath('home', lang);
 
     <div class="header-right flex items-center gap-4">
       <LangToggle {lang} {pageKey} class="hidden md:flex" />
+      <div class="hidden md:flex items-center gap-1.5 text-[13px] font-medium text-emerald-600">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse-green"></span>
+        {t('nav.open')}
+      </div>
       <Button href={`tel:${SITE.phone.value}`} variant="navy" class="md:px-5 md:py-2.5">
         <Icon name="phone" size={18} slot="before" />
         <span class="hidden md:inline">{SITE.phone.display}</span>

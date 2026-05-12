@@ -23,7 +23,7 @@ export const SITE = {
 }
 
 export const MAP_EMBED_URL =
-  'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57486.10!2d-80.39!3d25.68!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus'
+  'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28740!2d-80.3964!3d25.6793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1700000000000'
 
 export interface FeaturedService {
   id: string
@@ -76,6 +76,7 @@ export interface Testimonial {
   image?: ImageMetadata
   date?: string
   isVerified?: boolean
+  englishSubtext?: string
 }
 
 export const CLIENT_IMAGES: Record<string, ImageMetadata> = {

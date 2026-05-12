@@ -2,9 +2,7 @@
 
 ## Purpose
 The structured data specification defines the requirements for injecting Schema.org JSON-LD blocks into the website to improve SEO and search engine visibility.
-
 ## Requirements
-
 ### Requirement: Local Business Schema
 The system SHALL provide structured data for search engines to identify the business as an HVAC service provider in Kendall, FL.
 
@@ -36,3 +34,15 @@ The system SHALL provide breadcrumb structured data to enhance SERP results.
 - When the page is rendered
 - Then it SHALL include a `BreadcrumbList` schema in the JSON-LD block
 - And it SHALL correctly map the path from Home to the current page.
+
+### Requirement: The system SHALL provide FAQPage structured data as JSON-LD in the document `<head>`.
+A dedicated `application/ld+json` script block SHALL be injected into the page head containing all FAQ question-answer pairs marked up as FAQPage schema.
+
+#### Scenario: FAQPage JSON-LD renders with all 10 items
+- **GIVEN** the FAQ section renders with 10 Q&A items
+- **WHEN** the page head is inspected
+- **THEN** a `<script type="application/ld+json">` block SHALL exist with `@type: "FAQPage"`
+- **AND** it SHALL contain a `mainEntity` array with 10 entries
+- **AND** each entry SHALL have `@type: "Question"` with `name` (question) and `acceptedAnswer` (answer)
+- **AND** questions and answers SHALL use localized values from the current language
+

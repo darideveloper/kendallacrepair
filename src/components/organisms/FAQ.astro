@@ -12,8 +12,22 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const faqItems = t('faq.items') as any as { question: string; answer: string }[];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
 ---
 
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
 <section id="faq" class="faq py-20 bg-white">
   <div class="section-inner max-w-[1200px] mx-auto px-6">
     <div class="section-header text-center mb-14 animate-fade-in-up">

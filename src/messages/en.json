@@ -9,7 +9,7 @@
   "pages": {
     "home": {
       "title": "Kendall AC Repair - 24/7 Same-Day Emergency Service",
-      "description": "Expert AC repair, maintenance and installation in Kendall, FL. Licensed technicians, free estimates and emergency service available."
+      "description": "AC Repair Kendall FL — Same-day service, free estimates, 24/7 emergency. Licensed technicians, se habla español. Call (305) 306-4511."
     },
     "thank_you": {
       "title": "Thank You - Kendall AC Repair",
@@ -44,7 +44,8 @@
     "how_it_works": "How It Works",
     "testimonials": "Reviews",
     "faq": "FAQ",
-    "open_menu": "Open Menu"
+    "open_menu": "Open Menu",
+    "open": "Open"
   },
   "footer": {
     "about": "Connecting homeowners in Kendall with licensed and insured AC technicians. We're not an AC company — we're your service coordinator, making sure the best available technician arrives at your door as fast as possible.",
@@ -52,7 +53,11 @@
     "areas_title": "Service Areas",
     "info_title": "Information",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "hours": "Hours: 24/7 Emergency Service",
+    "license": "License: Florida State CAC# (pending)",
+    "insurance": "Insurance: $1M Liability",
+    "languages": "Languages: English · Español"
   },
   "neighborhoods": [
     "Kendall", "The Hammocks", "Kendale Lakes", "Tamiami", "Country Walk", "Three Lakes", "Richmond West", "Pinecrest"
@@ -68,11 +73,11 @@
     },
     "emergency": {
       "title": "24/7 Emergency",
-      "subtitle": "60 min response"
+      "subtitle": "Response in 60 min"
     },
     "estimates": {
       "title": "Free Estimates",
-      "subtitle": "$0 diagnostic visit"
+      "subtitle": "$0 service call"
     }
   },
   "services": {
@@ -275,6 +280,10 @@
         "answer": "Yes. All technicians have a Florida State CAC license and $1M liability insurance. We can show you proof before any work."
       },
       {
+        "question": "What areas do you cover?",
+        "answer": "All of Kendall and surrounding areas: The Hammocks (33196), Kendale Lakes (33183), Tamiami (33184), Country Walk (33196), Three Lakes (33177), Richmond West (33186), and Pinecrest. Outside these areas? Call us — we may still cover you."
+      },
+      {
         "question": "Do you speak Spanish?",
         "answer": "Yes! Our team is fully bilingual. We serve you in Spanish by phone, WhatsApp, and in person. Your comfort is our priority."
       },
@@ -293,10 +302,6 @@
       {
         "question": "Do you offer a warranty?",
         "answer": "Yes. 90-day warranty on parts and labor for all repairs. New installations include the manufacturer's warranty."
-      },
-      {
-        "question": "What areas do you cover?",
-        "answer": "All of Kendall and surrounding areas: The Hammocks (33196), Kendale Lakes (33183), Tamiami (33184), Country Walk (33196), Three Lakes (33177), Richmond West (33186), and Pinecrest. Outside these areas? Call us — we may still cover you."
       },
       {
         "question": "Do you offer payment plans?",

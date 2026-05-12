@@ -1,8 +1,5 @@
-# testimonials Specification
+## MODIFIED Requirements
 
-## Purpose
-TBD - created by archiving change align-testimonials-section. Update Purpose after archive.
-## Requirements
 ### Requirement: Testimonial Photo Support
 The `TestimonialCard.astro` component SHALL support displaying a customer profile photo with a fallback to text-based initials and SHALL include trust signals and metadata.
 
@@ -24,17 +21,7 @@ The `TestimonialCard.astro` component SHALL support displaying a customer profil
 - **THEN** it SHALL display the subtext below the primary `quote` in gray (`text-gray-400`) at `text-[12px]`
 - **AND** the subtext SHALL be formatted as `"(English: {englishSubtext})"`
 
-### Requirement: Testimonials Section Layout
-The `Testimonials.astro` organism SHALL provide a structured layout that includes a global rating summary.
-
-#### Scenario: Google Rating Counter
-- **GIVEN** the `Testimonials.astro` component
-- **WHEN** it is rendered
-- **THEN** it SHALL display a centered summary block containing:
-  - A 5-star rating visual with the text "4.9/5"
-  - The text "Basado en resenas de Google"
-  - A link "Ver todas en Google →"
-- **AND** this block SHALL be positioned between the section title and the testimonials grid
+## ADDED Requirements
 
 ### Requirement: The testimonials data model SHALL support an optional `englishSubtext` field.
 The testimonial items in translation files SHALL support an optional `englishSubtext` field for bilingual display of Spanish testimonials.
@@ -43,4 +30,3 @@ The testimonial items in translation files SHALL support an optional `englishSub
 - **GIVEN** Maria G.'s testimonial data in `es.json`
 - **WHEN** the testimonial card renders
 - **THEN** its `englishSubtext` value SHALL be: `"My AC broke on a Sunday and I thought I'd suffer the whole weekend. I called and within 45 minutes I had a technician at my house. He speaks Spanish, was very honest about the price. Incredible service."`
-

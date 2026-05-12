@@ -12,6 +12,12 @@ The application SHALL store geographic configuration in `src/constants/site.ts`,
 - Then it SHALL use structural configuration (icons, categories) in the constant
 - And localized labels SHALL be retrieved via the i18n system
 
+#### Scenario: Map embed centered on Kendall
+- **GIVEN** the `MAP_EMBED_URL` constant in `src/constants/site.ts`
+- **WHEN** the Coverage section map renders
+- **THEN** the URL SHALL use latitude `25.6793`, longitude `-80.3964`, and zoom level `12`
+- **AND** the coordinates SHALL center on Kendall, FL
+
 ### Requirement: Centralized Services Configuration
 The application SHALL store service-related structural data (images, icons) in a centralized configuration file.
 

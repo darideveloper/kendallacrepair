@@ -227,7 +227,7 @@ Update `src/layouts/Layout.astro` to import and render the `Footer` component.
 #### Scenario: Information column content
 - **GIVEN** the fourth column of the footer
 - **THEN** it SHALL have a heading "Informacion" ("Information" in English)
-- **AND** it SHALL display: hours (24/7 Emergencias), license (Florida CAC#), insurance ($1M cobertura), "Se habla espanol"
+- **AND** it SHALL display: hours, license, insurance, languages — all translated via i18n keys
 - **AND** it SHALL display "Privacidad" and "Terminos" links ("Privacy" / "Terms" in English) separated by a bullet
 
 #### Scenario: Bottom bar content
@@ -289,4 +289,17 @@ The application SHALL provide an `UrgencyBanner.astro` component that displays a
 - Given the `UrgencyBanner.astro` is rendered
 - When the page is active
 - Then the ⚡ emoji SHALL blink with opacity oscillating between 0.6 and 1 over 1.5 seconds, using the existing `animate-blink` class
+
+### Requirement: The Header SHALL display an availability status indicator next to the phone button.
+The system SHALL show a green pulsing dot with "Open" text next to the phone call button in the Header component.
+
+#### Scenario: Header availability indicator in English
+- **GIVEN** the `Header.astro` component
+- **WHEN** it renders in English
+- **THEN** it SHALL display a green pulsing dot followed by text "Open" immediately before the phone button
+
+#### Scenario: Header availability indicator in Spanish
+- **GIVEN** the `Header.astro` component
+- **WHEN** it renders in Spanish
+- **THEN** it SHALL display a green pulsing dot followed by text "Disponible" before the phone button
 

@@ -44,7 +44,8 @@
     "how_it_works": "Cómo Funciona",
     "testimonials": "Reseñas",
     "faq": "FAQ",
-    "open_menu": "Abrir Menú"
+    "open_menu": "Abrir Menú",
+    "open": "Disponible"
   },
   "footer": {
     "about": "Conectamos a los dueños de casa en Kendall con técnicos de AC licenciados y asegurados. No somos una compañía de AC — somos tu coordinador de servicio, asegurándonos de que el mejor técnico disponible llegue a tu puerta lo más rápido posible.",
@@ -52,7 +53,11 @@
     "areas_title": "Áreas de Servicio",
     "info_title": "Informacion",
     "privacy": "Privacidad",
-    "terms": "Términos"
+    "terms": "Términos",
+    "hours": "Horario: 24/7 Emergencias",
+    "license": "Licencia: Florida CAC# (pendiente)",
+    "insurance": "Seguro: $1M cobertura",
+    "languages": "Idiomas: English · Español"
   },
   "neighborhoods": [
     "Kendall", "The Hammocks", "Kendale Lakes", "Tamiami", "Country Walk", "Three Lakes", "Richmond West", "Pinecrest"
@@ -72,7 +77,7 @@
     },
     "estimates": {
       "title": "Estimados Gratis",
-      "subtitle": "$0 visita diagnostica"
+      "subtitle": "$0 llamada de servicio"
     }
   },
   "services": {
@@ -275,6 +280,10 @@
         "answer": "Si. Todos los tecnicos tienen licencia CAC del Estado de Florida y seguro de responsabilidad de $1M. Podemos mostrarte la prueba antes de cualquier trabajo."
       },
       {
+        "question": "Que areas cubren?",
+        "answer": "Todo Kendall y alrededores: The Hammocks (33196), Kendale Lakes (33183), Tamiami (33184), Country Walk (33196), Three Lakes (33177), Richmond West (33186) y Pinecrest. Fuera de estas zonas? Llamanos — puede que te cubramos."
+      },
+      {
         "question": "Hablan espanol?",
         "answer": "Si! Nuestro equipo es completamente bilingue. Te atendemos en espanol por telefono, WhatsApp y en persona. Tu comodidad es nuestra prioridad."
       },
@@ -293,10 +302,6 @@
       {
         "question": "Ofrecen garantia?",
         "answer": "Si. Garantia de 90 dias en piezas y mano de obra en todas las reparaciones. Instalaciones nuevas incluyen garantia del fabricante."
-      },
-      {
-        "question": "Que areas cubren?",
-        "answer": "Todo Kendall y alrededores: The Hammocks (33196), Kendale Lakes (33183), Tamiami (33184), Country Walk (33196), Three Lakes (33177), Richmond West (33186) y Pinecrest. Fuera de estas zonas? Llamanos — puede que te cubramos."
       },
       {
         "question": "Aceptan pagos a plazos?",
@@ -318,7 +323,8 @@
         "location": "The Hammocks",
         "initials": "MG",
         "date": "Hace 2 semanas",
-        "isVerified": true
+        "isVerified": true,
+        "englishSubtext": "My AC broke on a Sunday and I thought I'd suffer the whole weekend. I called and within 45 minutes I had a technician at my house. He speaks Spanish, was very honest about the price. Incredible service."
       },
       {
         "quote": "Otro técnico me cobraba $1,500. Ellos vinieron, diagnosticaron el problema real y lo arreglaron por $200. Rápidos, profesionales y precio justo. 100% recomendados.",

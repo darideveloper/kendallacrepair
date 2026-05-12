@@ -14,6 +14,11 @@ The system SHALL provide high-quality social sharing previews with branded image
 - And it SHALL include `og:title`, `og:description`, `twitter:title`, and `twitter:description` using localized values
 - And it SHALL include `og:site_name`, `twitter:site`, and `twitter:creator` metadata.
 
+#### Scenario: Home page meta description updated per client spec
+- **GIVEN** the `BaseSEO.astro` component renders the English home page
+- **WHEN** the `<meta name="description">` tag is inspected
+- **THEN** its `content` SHALL be: `"AC Repair Kendall FL — Same-day service, free estimates, 24/7 emergency. Licensed technicians, se habla español. Call (305) 306-4511."`
+
 ### Requirement: Title Tagline Strategy
 The system SHALL provide localized titles with branding for non-home pages.
 
